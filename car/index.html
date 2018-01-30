@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>京东救援队</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <meta name="full-screen" content="true" />
+
+  <meta name="screen-orientation" content="portrait" />
+
+  <meta name="x5-fullscreen" content="true" />
+
+  <meta name="360-fullscreen" content="true" />
+
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="x5-page-mode" content="app" />
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body style="background:#000">
+
+
+
+    <video id="video1" class="video1 hide" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="" x5-video-player-type="h5"
+    x5-video-player-fullscreen="true" src="http://video.whalesgeek.net/campaign/2017/Html5_B_jd_battery/img/videoaaa.mp4"></video>
+
+
+
+  <div class="load-wrap top1 hide">
+
+    <img class="load-text" src="img/load_text.png">
+
+    <div class="loadimg"></div>
+
+    <p class="load-percent">0%</p>
+
+    <img class="btn-enter btnenter hide" src="img/start.png">
+
+
+
+  </div>
+
+
+
+  <div class="page-1 hide">
+
+    <img class="hand-left" rsrc="img/hand_left.png">
+
+    <img class="hand-right" rsrc="img/hand_right.png">
+
+    <div id="hot"></div>
+
+  </div>
+
+
+
+  <div class="white-page opacity-0 hide"></div>
+
+
+
+  <div class="last-page hide">
+
+    <img class="last-bg" rsrc="img/last_bg.png">
+
+    <img class="last-person hide" rsrc="img/last_person.png">
+
+    <img class="last-line" rsrc="img/last_line.png">
+
+    <img class="last-text1 hide" rsrc="img/last_text1.png">
+
+    <img class="last-text2" rsrc="img/last_text2.png">
+
+    <img class="btn-return" rsrc="img/last_return.png">
+
+    <img class="btn-jump" rsrc="img/last_jump.png">
+
+    <img class="btn-share" rsrc="img/last_share.png">
+
+  </div>
+
+
+
+  <div class="share-page hide">
+
+    <img class="share-img" src="img/share_ing.png">
+
+  </div>
+
+
+
+  <div class="btn-music hide"></div>
+
+
+
+  <div id="orientLayer" class="mod-orient-layer">
+
+    <div class="mod-orient-layer__content">
+
+      <i class="icon-wx mod-orient-layer__icon-orient"></i>
+
+      <div class="mod-orient-layer__desc">
+
+        为了更好的体验，请使用竖屏浏览
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+
+<script type="text/javascript" src="js/teemo.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+
+  var imglist = ["img/BG.png", "img/hand_left.png", "img/hand_right.png", "img/last_bg.png", "img/last_jump.png", "img/last_line.png", "img/last_person.png", "img/last_return.png", "img/last_share.png", "img/last_text1.png", "img/last_text2.png", "img/load_img.png", "img/load_text.png", "img/music.png", "img/poster.jpg", "img/share_ing.png", "img/share_icon.jpg", "img/start.png"];
+
+
+
+  var isFromShare = false;
+
+  window.onload = function () {
+    //MtaH5.clickStat("20");//总
+  }
+
+  fitscreen();
+
+  $('.load-wrap').removeClass('hide');
+
+
+
+  document.addEventListener("touchmove", function (e) {
+
+    e.preventDefault();
+
+  }, false);
+
+
+
+  $('.hand-left').attr('src', $('.hand-left').attr('rsrc'));
+
+  $('.hand-right').attr('src', $('.hand-right').attr('rsrc'));
+
+  $('.last-bg').attr('src', $('.last-bg').attr('rsrc'));
+
+  $('.last-line').attr('src', $('.last-line').attr('rsrc'));
+
+  $('.last-person').attr('src', $('.last-person').attr('rsrc'));
+
+  $('.last-text1').attr('src', $('.last-text1').attr('rsrc'));
+
+  $('.last-text2').attr('src', $('.last-text2').attr('rsrc'));
+
+  $('.btn-return').attr('src', $('.btn-return').attr('rsrc'));
+
+  $('.btn-jump').attr('src', $('.btn-jump').attr('rsrc'));
+
+  $('.btn-share').attr('src', $('.btn-share').attr('rsrc'));
+
+  $('.load-wrap').css('opacity', '1');
+
+  $('.video1').removeClass('hide');
+
+
+
+  Teemo.self.setData(imglist);
+
+  var percent = 0;
+
+  var percent_before = 0;
+
+  Teemo.load.on('loading', function (e) {
+
+    percent_before = 0 + Math.floor((e.nowProgress / e.allProgress) * 100);
+
+
+
+  })
+
+  Teemo.load.on('complete', function () {
+
+
+
+  });
+
+
+
+  var loadtimer = setInterval(function () {
+
+
+
+    if (percent >= 100) {
+
+      $('.btn-enter').removeClass('hide');
+
+      clearInterval(loadtimer);
+
+    }
+
+
+
+    $('.load-percent').text(percent + '%');
+
+    if (percent < percent_before) percent++;
+
+  }, 50);
+
+
+
+  Teemo.load.start();
+
+
+
+
+
+
+
+</script>
+
+
+</html>
