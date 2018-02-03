@@ -1,0 +1,17 @@
+{
+  "name": "car",
+  "version": "1.0.0",
+  "description": "for fun",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "decsev",
+  "license": "ISC"
+}

@@ -122,7 +122,7 @@ $('.btn-enter').click(function(){
 	// 	}
 	// 	video2.play();
 	// }else{
-		video1.currentTime = 150;
+		video1.currentTime = 80;
 		$('.video1').addClass('top1');
 		$('.btn-music').removeClass('hide');
 		for(var i=0;i<100;i++){
