@@ -3,7 +3,8 @@ const config = {
     devtool: 'eval-source-map',
     entry: {
         bundle: __dirname + "/app/main.js",
-        car: __dirname + "/app/car.js"
+        car: __dirname + "/app/car.js",
+        hero: __dirname + "/app/hero.js"
     },
     output: {
         path: __dirname + "/dist",

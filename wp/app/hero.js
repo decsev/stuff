@@ -1,8 +1,9 @@
 import Qy from './js/qy.js';
 
 var video1 = document.getElementById('video1');
-var key1 = false, key2 = false, hastouch = false;
+var key1 = false, key2 = false, key3 = false, hastouch = false,hastouch2 = false;
 var hot = document.getElementById('hot');
+var hot2 = document.getElementById('hot2');
 
 function fitscreen() {
   var ratio = parseFloat((1500 / 1754) * innerHeight / 750);
@@ -34,11 +35,18 @@ video1.addEventListener('x5videoenterfullscreen', function () {
 });
 
 var videotimer = setInterval(function () {
-  if (video1.currentTime > (90 + 10 / 30) && !key1) {
+  if (video1.currentTime > (82) && !key1) {
     video1.pause();
     $('.page-1').removeClass('hide').addClass('top1');
     $('.btn-music').addClass('hide');
     key1 = true;
+  }
+
+  if (video1.currentTime > (85) && !key3) {
+    video1.pause();
+    $('.page-2').removeClass('hide').addClass('top1');
+    $('.btn-music').addClass('hide');
+    key3 = true;
   }
 
   if (video1.ended && !key2) {
@@ -68,6 +76,20 @@ hot.addEventListener('touchend', function (e) {
   $('.btn-music').removeClass('hide');
 }, false);
 
+hot2.addEventListener('touchend', function (e) {
+  if (e.touches.length >= 2 && !hastouch2) {
+    setTimeout(function () {
+      video1.play();
+      $('.page-2').addClass('hide').removeClass('top1');
+      $('.btn-music').removeClass('hide');
+    }, 200);
+    hastouch2 = true;
+  }
+  video1.play();
+  $('.page-2').addClass('hide').removeClass('top1');
+  $('.btn-music').removeClass('hide');
+}, false);
+
 $('.btn-enter').click(function () {
   $('.load-wrap').addClass('hide').removeClass('top1');
   video1.currentTime = 80;
@@ -80,7 +102,7 @@ $('.btn-return').click(function () {
   $('.last-page').addClass('hide').removeClass('top1');
   $('.video1').addClass('top1').removeClass('hide');
   video1.currentTime = 80;
-  key1 = false, key2 = false, hastouch = false;
+  key1 = false, key2 = false,key3 = false, hastouch = false,hastouch2 = false;
   video1.play();
 
 });
@@ -122,29 +144,28 @@ document.addEventListener("touchmove", function (e) {
 }, false);
 
 // 加载进度
-
 var percent = 0;
 var percent_beforeLoad = 0;
 var opt = {
   data: [
-    "./src/img/car/BG.png",
-    "./src/img/car/hand_left.png",
-    "./src/img/car/hand_right.png",
-    "./src/img/car/last_bg.png",
-    "./src/img/car/last_jump.png",
-    "./src/img/car/last_line.png",
-    "./src/img/car/last_person.png",
-    "./src/img/car/last_return.png",
-    "./src/img/car/last_share.png",
-    "./src/img/car/last_text1.png",
-    "./src/img/car/last_text2.png",
-    "./src/img/car/load_img.png",
-    "./src/img/car/load_text.png",
-    "./src/img/car/music.png",
-    "./src/img/car/poster.jpg",
-    "./src/img/car/share_ing.png",
-    "./src/img/car/share_icon.jpg",
-    "./src/img/car/start.png",
+    "./src/img/hero/BG.png",
+    "./src/img/hero/hand_left.png",
+    "./src/img/hero/hand_right.png",
+    "./src/img/hero/last_bg.png",
+    "./src/img/hero/last_jump.png",
+    "./src/img/hero/last_line.png",
+    "./src/img/hero/last_person.png",
+    "./src/img/hero/last_return.png",
+    "./src/img/hero/last_share.png",
+    "./src/img/hero/last_text1.png",
+    "./src/img/hero/last_text2.png",
+    "./src/img/hero/load_img.png",
+    "./src/img/hero/load_text.png",
+    "./src/img/hero/music.png",
+    "./src/img/hero/poster.jpg",
+    "./src/img/hero/share_ing.png",
+    "./src/img/hero/share_icon.jpg",
+    "./src/img/hero/start.png",
   ],
   allType: {
     image: [
