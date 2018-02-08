@@ -147,6 +147,9 @@ body{
 .enter-bg{
     background-image: url(../img/han/bg.jpg);
     background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
 }
 .bg{
     position: absolute;
