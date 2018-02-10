@@ -100,7 +100,7 @@ $('.btn-enter').click(function () {
   video1.play();
 });
 
-$('.btn-return').click(function () {
+$('.btn-return, .btn-return-play').click(function () {
   $('.last-page').addClass('hide').removeClass('top1');
   $('.video1').addClass('top1').removeClass('hide');
   video1.currentTime = 80;
@@ -201,6 +201,19 @@ var opt = {
     $('.btn-jump').attr('src', $('.btn-jump').attr('rsrc'));
     $('.btn-share').attr('src', $('.btn-share').attr('rsrc'));
     $('.video1').removeClass('hide');
+
+    $.each($('.rsrc'), function(i,item){
+      $(item).attr('src', $(item).attr('rsrc'));
+    })
   }
 }
 new Qy(opt);
+var swiper = new Swiper('.swiper-container', {
+  // pagination: '.swiper-pagination',
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  slidesPerView: 1,
+  // paginationClickable: true,
+  spaceBetween: 30,
+  loop: true
+});

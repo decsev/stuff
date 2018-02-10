@@ -12,6 +12,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="x5-page-mode" content="app" />
   <title>car</title>
+  <link rel="stylesheet" type="text/css" href="./src/js/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="./src/css/hero.css">
 </head>
 
@@ -22,7 +23,7 @@
     poster=""
   >
   </video>
-  <div class="load-wrap top1">
+  <div class="load-wrap">
     <div class="loadimg"></div>
     <div class="loadimg2"></div>
     <div class="loadimg3"></div>
@@ -37,15 +38,45 @@
     <div class="fangxiangpan" id="hot2"></div>
   </div>
   <div class="white-page opacity-0 hide"></div>
-  <div class="last-page hide">
-    <img class="last-bg" rsrc="./src/img/hero/last_bg.png">
-    <img class="last-person hide" rsrc="./src/img/hero/last_person.png">
-    <img class="last-line" rsrc="./src/img/hero/last_line.png">
-    <img class="last-text1 hide" rsrc="./src/img/hero/last_text1.png">
-    <img class="last-text2" rsrc="./src/img/hero/last_text2.png">
-    <img class="btn-return" rsrc="./src/img/hero/last_return.png">
-    <img class="btn-jump" rsrc="./src/img/hero/last_jump.png">
-    <img class="btn-share" rsrc="./src/img/hero/last_share.png">
+  <div class="last-page  top1">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="rsrc-box">
+                <img class="rsrc" rsrc="./src/img/hero/dongli.png">
+              </div>
+              <p class="hero-intro">关于...</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="rsrc-box">
+                <img class="rsrc" rsrc="./src/img/hero/fanghu.png">
+              </div>
+              <p class="hero-intro">关于...</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="rsrc-box">
+              <img class="rsrc" rsrc="./src/img/hero/feixing.png">
+            </div>
+              <p class="hero-intro">关于...</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="rsrc-box">
+              <img class="rsrc" rsrc="./src/img/hero/kongjian.png">
+            </div>
+              <p class="hero-intro">关于...</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="rsrc-box">
+              <img class="rsrc" rsrc="./src/img/hero/qinang.png">
+            </div>
+              <p class="hero-intro">关于...</p>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <div class="btn-box"><img class="rsrc btn-return-play" rsrc="./src/img/hero/last_return.png"></div>
   </div>
   <div class="share-page hide">
     <img class="share-img" src="./src/img/hero/share_ing.png">
@@ -59,6 +90,7 @@
   </div>
 </body>
 <script type="text/javascript" src="src/js/zepto.min.js"></script>
+<script type="text/javascript" src="src/js/swiper.min.js"></script>
 <script type="text/javascript" src="hero.js"></script>
 
 </html>

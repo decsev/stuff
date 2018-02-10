@@ -405,7 +405,9 @@ body{
     height: 100%;
     left: 0;
     top: 0;
-    background-color: #fff;
+    background-image: url(../img/hero/beijing750.png);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
 }
 .last-bg{
     position: absolute;
@@ -565,4 +567,37 @@ body{
 @-webkit-keyframes fadein{
     0%{opacity: 0;;}
     100%{opacity: 1;;}
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+.btn-box{
+    height: 20%;
+    text-align: center;
+}
+.btn-box img{
+    height: 30%;
+}
+.swiper-slide .rsrc-box{
+    height: 60%;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding:20% 0 0;
+}
+.swiper-slide .rsrc-box img{
+    height:100%;
+}
+.swiper-slide .hero-intro{
+    text-align: left;
+    padding:10px 20px;
 }
