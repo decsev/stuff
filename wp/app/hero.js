@@ -201,7 +201,6 @@ var opt = {
     $('.btn-jump').attr('src', $('.btn-jump').attr('rsrc'));
     $('.btn-share').attr('src', $('.btn-share').attr('rsrc'));
     $('.video1').removeClass('hide');
-
     $.each($('.rsrc'), function(i,item){
       $(item).attr('src', $(item).attr('rsrc'));
     })
