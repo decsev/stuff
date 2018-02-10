@@ -222,22 +222,62 @@ body{
 }
 .loadimg{
     position: absolute;
-    height: 30%;
+    height: 17%;
     left: 50%;
     bottom: 38%;
-    background-image: url('../img/hero/load_img.png');
-    background-size: 1300% 100%;
+    background-image: url('../img/hero/loading1.png');
+    background-size: 3000% 100%;
     background-position: 0% 0%;
-    animation: loadimg 1s steps(13) infinite;
-    -webkit-animation: loadimg 1s steps(13) infinite;
+    animation: loadimg 2s steps(30) infinite;
+    -webkit-animation: loadimg 2s steps(30) infinite;
 }
 @keyframes loadimg{
     0%{background-position: 0% 0%}
-    100%{background-position: -1300% 0%}
+    100%{background-position: -3000% 0%}
 }
 @-webkit-keyframes loadimg{
     0%{background-position: 0% 0%}
-    100%{background-position: -1300% 0%}
+    100%{background-position: -3000% 0%}
+}
+
+.loadimg2{
+    position: absolute;
+    height: 4%;
+    left: 25%;
+    top: 20%;
+    background-image: url('../img/hero/loading2.png');
+    background-size: 3000% 100%;
+    background-position: 0% 0%;
+    animation: loadimg2 2s steps(30) infinite;
+    -webkit-animation: loadimg2 2s steps(30) infinite;
+}
+@keyframes loadimg2{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+@-webkit-keyframes loadimg2{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+
+.loadimg3{
+    position: absolute;
+    height: 4%;
+    left: 70%;
+    top: 30%;
+    background-image: url('../img/hero/loading3.png');
+    background-size: 3000% 100%;
+    background-position: 0% 0%;
+    animation: loadimg3 2s steps(30) infinite;
+    -webkit-animation: loadimg3 2s steps(30) infinite;
+}
+@keyframes loadimg3{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+@-webkit-keyframes loadimg3{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
 }
 .load-percent{
     position: absolute;
@@ -256,12 +296,25 @@ body{
     height: 10%;
     left: 50%;
     bottom: 13%;
-    
+    background-image: url('../img/hero/startbtn.png');
+    background-size: 3000% 100%;
+    background-position: 0% 0%;
+    animation: loadimg4 2s steps(30) infinite;
+    -webkit-animation: loadimg4 2s steps(30) infinite;
+}
+@keyframes loadimg4{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+@-webkit-keyframes loadimg4{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
 }
 .btnenter{
     animation: btnenter 1.5s infinite;
     -webkit-animation: btnenter 1.5s infinite; 
 }
+
 @keyframes btnenter{
     0%{transform: scale(1);opacity: 1}
     25%{transform: scale(0.9);opacity: 0.5}

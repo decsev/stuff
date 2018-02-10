@@ -4,7 +4,8 @@ const config = {
     entry: {
         bundle: __dirname + "/app/main.js",
         car: __dirname + "/app/car.js",
-        hero: __dirname + "/app/hero.js"
+        hero: __dirname + "/app/hero.js",
+        han: __dirname + "/app/han.js"
     },
     output: {
         path: __dirname + "/dist",

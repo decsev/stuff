@@ -8,8 +8,10 @@ var hot2 = document.getElementById('hot2');
 function fitscreen() {
   var ratio = parseFloat((1500 / 1754) * innerHeight / 750);
   $('.load-text').css('margin-left', -((0.21 * innerHeight) * (417 / 382)) / 2 + 'px');
-  $('.loadimg').css('width', (0.3 * innerHeight) * (490 / 530) + 'px').css('margin-left', -(0.3 * innerHeight) * (490 / 530) / 2 + 'px');
-  $('.btn-enter').css('margin-left', -((0.1 * innerHeight) * (401 / 181)) / 2 + 'px');
+  $('.loadimg').css('width', (0.17 * innerHeight) * (545 / 214) + 'px').css('margin-left', -(0.17 * innerHeight) * (545 / 214) / 2 + 'px');
+  $('.loadimg2').css('width', (0.04 * innerHeight) * (73 / 38) + 'px');
+  $('.loadimg3').css('width', (0.04 * innerHeight) * (86 / 38) + 'px');
+  $('.btn-enter').css('width', (0.1 * innerHeight) * (450 / 193) + 'px').css('margin-left', -((0.1 * innerHeight) * (450 / 193)) / 2 + 'px');
   $('.bg').css('margin-left', -((1500 / 1754) * innerHeight / 2) + 'px');
   $('.video1').css('margin-left', -((750 / 876) * innerHeight / 2) + 'px');
   $('.last-bg').css('margin-left', -((1500 / 1754) * innerHeight / 2) + 'px');
