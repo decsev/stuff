@@ -184,60 +184,65 @@ body{
     30%,50%,100%{opacity: 1;}
     40%{opacity: 0.6;}
 }
-.load-2-off{
-    position: absolute;
-    width: 750px;
-    height: 359px;
-    left: 50%;
-    margin-left: -375px;
-    bottom: 24.4%;
-    background-image: url('../img/hero/2-off.png');
-    transform-origin: 50% 100%;
-    isolation: isolate;
-}
-.load-2-on{
-    position: absolute;
-    width: 160px;
-    height: 359px;
-    left: 0%;
-    top: 0%;
-    background-image: url('../img/hero/2-on.png');
-}
-.load-2-Overlay{
-    position: absolute;
-    width: 750px;
-    height: 359px;
-    left: 0%;
-    top: 0%;
-    box-shadow: 5px 0 blur 5px;
-    background-image: url('../img/hero/2-Overlay.png');
-    mix-blend-mode: overlay;
-    opacity: 0;
-}
-.load-text{
-    position: absolute;
-    height: 21%;
-    left: 50%;
-    bottom: 54%;
-}
+
 .loadimg{
     position: absolute;
-    height: 30%;
+    height: 17%;
     left: 50%;
     bottom: 38%;
-    background-image: url('../img/hero/load_img.png');
-    background-size: 1300% 100%;
+    background-image: url('../img/hero/loading1.png');
+    background-size: 3000% 100%;
     background-position: 0% 0%;
-    animation: loadimg 1s steps(13) infinite;
-    -webkit-animation: loadimg 1s steps(13) infinite;
+    animation: loadimg 2s steps(30) infinite;
+    -webkit-animation: loadimg 2s steps(30) infinite;
 }
 @keyframes loadimg{
     0%{background-position: 0% 0%}
-    100%{background-position: -1300% 0%}
+    100%{background-position: -3000% 0%}
 }
 @-webkit-keyframes loadimg{
     0%{background-position: 0% 0%}
-    100%{background-position: -1300% 0%}
+    100%{background-position: -3000% 0%}
+}
+
+.loadimg2{
+    position: absolute;
+    height: 4%;
+    left: 25%;
+    top: 20%;
+    background-image: url('../img/hero/loading2.png');
+    background-size: 3000% 100%;
+    background-position: 0% 0%;
+    animation: loadimg2 2s steps(30) infinite;
+    -webkit-animation: loadimg2 2s steps(30) infinite;
+}
+@keyframes loadimg2{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+@-webkit-keyframes loadimg2{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+
+.loadimg3{
+    position: absolute;
+    height: 4%;
+    left: 70%;
+    top: 30%;
+    background-image: url('../img/hero/loading3.png');
+    background-size: 3000% 100%;
+    background-position: 0% 0%;
+    animation: loadimg3 2s steps(30) infinite;
+    -webkit-animation: loadimg3 2s steps(30) infinite;
+}
+@keyframes loadimg3{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+@-webkit-keyframes loadimg3{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
 }
 .load-percent{
     position: absolute;
@@ -256,12 +261,69 @@ body{
     height: 10%;
     left: 50%;
     bottom: 13%;
-    
+    background-image: url('../img/hero/startbtn.png');
+    background-size: 3000% 100%;
+    background-position: 0% 0%;
+    animation: loadimg4 2s steps(30) infinite;
+    -webkit-animation: loadimg4 2s steps(30) infinite;
 }
+@keyframes loadimg4{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+@-webkit-keyframes loadimg4{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+
+.btn1{
+    position: absolute;
+    height: 17.2535%;
+    left: 50%;
+    bottom: 45.6%;
+    background-image: url('../img/hero/btn1.png');
+    background-size: 3000% 100%;
+    background-position: 0% 0%;
+    animation: btn1 2s steps(30) infinite;
+    -webkit-animation: btn1 2s steps(30) infinite;
+}
+
+.btn2{
+    position: absolute;
+    height: 17.2535%;
+    left: 50%;
+    bottom: 45.6%;
+    background-image: url('../img/hero/btn2.png');
+    background-size: 1400% 100%;
+    background-position: 0% 0%;
+    animation: btn2 2s steps(14) infinite;
+    -webkit-animation: btn2 2s steps(14) infinite;
+}
+
+
+@keyframes btn1{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+@-webkit-keyframes btn1{
+    0%{background-position: 0% 0%}
+    100%{background-position: -3000% 0%}
+}
+
+@keyframes btn2{
+    0%{background-position: 0% 0%}
+    100%{background-position: -1400% 0%}
+}
+@-webkit-keyframes btn2{
+    0%{background-position: 0% 0%}
+    100%{background-position: -1400% 0%}
+}
+
 .btnenter{
     animation: btnenter 1.5s infinite;
     -webkit-animation: btnenter 1.5s infinite; 
 }
+
 @keyframes btnenter{
     0%{transform: scale(1);opacity: 1}
     25%{transform: scale(0.9);opacity: 0.5}
@@ -287,12 +349,7 @@ body{
     left: 50%;
     top: 0;
 }
-.video2{
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    top: 0;
-}
+
 .page-1{
     position: absolute;
     width: 100%;
@@ -309,19 +366,7 @@ body{
     top: 0;
     overflow: hidden;
 }
-.fangxiangpan{
-    width: 150px;
-    height: 150px;
-    background: green;
-    animation: btnenter 1.5s infinite;
-    -webkit-animation: btnenter 1.5s infinite; 
-    position: absolute;
-    left:50%;
-    top:50%;
-    border-radius: 100%;
-    margin-left:-75px;
-    margin-top:-75px;
-}
+
 .top1{
     z-index: 9 !important;
 }
@@ -352,7 +397,9 @@ body{
     height: 100%;
     left: 0;
     top: 0;
-    background-color: #fff;
+    background-image: url(../img/hero/beijing750.png);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
 }
 .last-bg{
     position: absolute;
@@ -360,54 +407,7 @@ body{
     left: 50%;
     top: 0;
 }
-.last-person{
-    position: absolute;
-    height: 57%;
-    left: 50%;
-    bottom: 39%;
-    transform-origin: 50% 100%;
-    animation: lastperson .5s ease-in;
-    -webkit-animation: lastperson .5s ease-in;
-}
-@keyframes lastperson{
-    0%{transform: scale(0.8);opacity: 0.5;}
-    100%{transform: scale(1);opacity: 1;}
-}
-@-webkit-keyframes lastperson{
-    0%{transform: scale(0.8);opacity: 0.5;}
-    100%{transform: scale(1);opacity: 1;}
-}
-.last-line{
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    bottom: 0;
-}
-.last-text1{
-    position: absolute;
-    height: 30%;
-    left: 50%;
-    bottom: 46%;
-    transform-origin: 50% 50%;
-    animation: lasttext1 1s ease-in-out;
-    -webkit-animation: lasttext1 1s ease-in-out;
-}
-@keyframes lasttext1{
-    0%{transform: scale(2);opacity: 0;}
-    50%{transform: scale(2);opacity: 0;}
-    100%{transform: scale(1);opacity: 1;}
-}
-@-webkit-keyframes lasttext1{
-    0%{transform: scale(2);opacity: 0;}
-    50%{transform: scale(2);opacity: 0;}
-    100%{transform: scale(1);opacity: 1;}
-}
-.last-text2{
-    position: absolute;
-    height: 29%;
-    left: 50%;
-    bottom: 22%;
-}
+
 .btn-return{
     position: absolute;
     height: 3%;
@@ -512,4 +512,37 @@ body{
 @-webkit-keyframes fadein{
     0%{opacity: 0;;}
     100%{opacity: 1;;}
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+.btn-box{
+    height: 20%;
+    text-align: center;
+}
+.btn-box img{
+    height: 30%;
+}
+.swiper-slide .rsrc-box{
+    height: 60%;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding:20% 0 0;
+}
+.swiper-slide .rsrc-box img{
+    height:100%;
+}
+.swiper-slide .hero-intro{
+    text-align: left;
+    padding:10px 20px;
 }
