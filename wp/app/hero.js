@@ -11,6 +11,8 @@ function fitscreen() {
   $('.loadimg').css('width', (0.17 * innerHeight) * (545 / 214) + 'px').css('margin-left', -(0.17 * innerHeight) * (545 / 214) / 2 + 'px');
   $('.loadimg2').css('width', (0.04 * innerHeight) * (73 / 38) + 'px');
   $('.loadimg3').css('width', (0.04 * innerHeight) * (86 / 38) + 'px');
+  $('.btn1').css('width', innerHeight * 0.172535 + 'px').css('margin-left', -innerHeight * 0.172535 / 2 + 'px');
+  $('.btn2').css('width', innerHeight * 0.172535 + 'px').css('margin-left', -innerHeight * 0.172535 / 2 + 'px');
   $('.btn-enter').css('width', (0.1 * innerHeight) * (450 / 193) + 'px').css('margin-left', -((0.1 * innerHeight) * (450 / 193)) / 2 + 'px');
   $('.bg').css('margin-left', -((1500 / 1754) * innerHeight / 2) + 'px');
   $('.video1').css('margin-left', -((750 / 876) * innerHeight / 2) + 'px');
@@ -37,14 +39,14 @@ video1.addEventListener('x5videoenterfullscreen', function () {
 });
 
 var videotimer = setInterval(function () {
-  if (video1.currentTime > (82) && !key1) {
+  if (video1.currentTime > (17) && !key1) {
     video1.pause();
     $('.page-1').removeClass('hide').addClass('top1');
     $('.btn-music').addClass('hide');
     key1 = true;
   }
 
-  if (video1.currentTime > (85) && !key3) {
+  if (video1.currentTime > (81) && !key3) {
     video1.pause();
     $('.page-2').removeClass('hide').addClass('top1');
     $('.btn-music').addClass('hide');
@@ -55,6 +57,15 @@ var videotimer = setInterval(function () {
     $('.video1').addClass('hide').removeClass('top1');
     $('.white-page').removeClass('hide').addClass('top1');
     $('.last-page').removeClass('hide');
+    var swiper = null;
+      swiper = new Swiper('.swiper-container', {
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 30,
+    });
+
     key2 = true;
     setTimeout(function () {
       $('.white-page').addClass('hide').removeClass('top1');
@@ -94,7 +105,7 @@ hot2.addEventListener('touchend', function (e) {
 
 $('.btn-enter').click(function () {
   $('.load-wrap').addClass('hide').removeClass('top1');
-  video1.currentTime = 80;
+  //video1.currentTime = 78;
   $('.video1').addClass('top1');
   $('.btn-music').removeClass('hide');
   video1.play();
@@ -150,24 +161,23 @@ var percent = 0;
 var percent_beforeLoad = 0;
 var opt = {
   data: [
-    "./src/img/hero/BG.png",
-    "./src/img/hero/hand_left.png",
-    "./src/img/hero/hand_right.png",
-    "./src/img/hero/last_bg.png",
-    "./src/img/hero/last_jump.png",
-    "./src/img/hero/last_line.png",
-    "./src/img/hero/last_person.png",
+    "./src/img/hero/anniu.png",
+    "./src/img/hero/beijing750.png",
+    "./src/img/hero/btn1.png",
+    "./src/img/hero/btn2.png",
+    "./src/img/hero/dongli.png",
+    "./src/img/hero/fanghu.png",
+    "./src/img/hero/feixing.png",
+    "./src/img/hero/kongjian.png",
     "./src/img/hero/last_return.png",
-    "./src/img/hero/last_share.png",
-    "./src/img/hero/last_text1.png",
-    "./src/img/hero/last_text2.png",
     "./src/img/hero/load_img.png",
-    "./src/img/hero/load_text.png",
+    "./src/img/hero/loading1.png",
+    "./src/img/hero/loading2.png",
+    "./src/img/hero/loading3.png",
     "./src/img/hero/music.png",
-    "./src/img/hero/poster.jpg",
+    "./src/img/hero/qinang.png",
     "./src/img/hero/share_ing.png",
-    "./src/img/hero/share_icon.jpg",
-    "./src/img/hero/start.png",
+    "./src/img/hero/startbtn.png",
   ],
   allType: {
     image: [
@@ -190,13 +200,6 @@ var opt = {
       , 50);
   },
   complate: function () {
-    $('.hand-left').attr('src', $('.hand-left').attr('rsrc'));
-    $('.hand-right').attr('src', $('.hand-right').attr('rsrc'));
-    $('.last-bg').attr('src', $('.last-bg').attr('rsrc'));
-    $('.last-line').attr('src', $('.last-line').attr('rsrc'));
-    $('.last-person').attr('src', $('.last-person').attr('rsrc'));
-    $('.last-text1').attr('src', $('.last-text1').attr('rsrc'));
-    $('.last-text2').attr('src', $('.last-text2').attr('rsrc'));
     $('.btn-return').attr('src', $('.btn-return').attr('rsrc'));
     $('.btn-jump').attr('src', $('.btn-jump').attr('rsrc'));
     $('.btn-share').attr('src', $('.btn-share').attr('rsrc'));
@@ -207,12 +210,3 @@ var opt = {
   }
 }
 new Qy(opt);
-var swiper = new Swiper('.swiper-container', {
-  // pagination: '.swiper-pagination',
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-  slidesPerView: 1,
-  // paginationClickable: true,
-  spaceBetween: 30,
-  loop: true
-});
