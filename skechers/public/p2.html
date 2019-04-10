@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="full-screen" content="true" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="x5-page-mode" content="app" />
+  <title>斯凯奇</title>
+  <link rel="stylesheet" type="text/css" href="./src/css/han.css">
+  <link href="" type="image/x-icon" rel="shortcut icon">
+  <script>
+      var config = {
+          t1: 11.80, // 开始工作按钮出现时间
+          pause1: 20.17, // 第一次暂停时间
+          pause2: 43.07, //第二次暂停时间
+          ct1:0, // 15视频1跳播时间上线设为0
+      }
+  </script>
+</head>
+
+<body style="background:#000">
+    <video id="video1" class="video1 hide" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="" x5-video-player-type="h5"
+    x5-video-player-fullscreen="true"
+    src="./src/video/p2.mp4"
+    poster=""
+  >
+  </video>
+
+
+
+  <div class="load-wrap top1">
+    <p class="load-percent">0%</p>
+    <div class="after-loading hide">
+        <img class="btn-enter btnenter rsrc" rsrc="./src/img/start_02.png">
+        <div id="fingerprint" class="start"></div>
+    </div>
+    <!-- <div id="start"></div> -->
+  </div>
+  <div class="page-1 hide">
+        <a href="javascript:void(0)" class="mybtn introduction work" id="introduction"></a>
+  </div>
+  <div class="pause-page hide">
+      <img class="goonbtn goon-btn rsrc" rsrc="./src/img/goon.png">
+      <div id="goOnPlay" class="start"></div>
+  </div>
+  <div class="white-page opacity-0 hide"></div>
+  <div class="last-page last-page2 hide">
+        <img class="rsrc erweima" rsrc="./src/img/er.png">
+        <img class="btn-share rsrc" rsrc="./src/img/share.png">
+        <a href="p1.html"><img class="btn-huigu rsrc" rsrc="./src/img/p2/huigu.png"></a>
+    </div>
+  <div class="share-page hide">
+    <img class="share-img rsrc" rsrc="./src/img/share-top.png">
+  </div>
+  <div class="btn-music hide"></div>
+  <div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content">
+      <i class="icon-wx mod-orient-layer__icon-orient"></i>
+      <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="src/js/zepto.min.js"></script>
+<script type="text/javascript" src="p2.js"></script>
+</html>

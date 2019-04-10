@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PS Group</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <script>
+      (function () {
+        var html = document.documentElement;
+        var width = html.getBoundingClientRect().height;
+        var fs = width / 10;
+        html.style.fontSize = fs + "px";
+      })()
+    </script>
+  </head>
+
+  <body>
+    <audio preload id="music" loop>
+      <source src="img/m.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="js/swiper.js"></script>
+    <div class="swiper-container">
+      <div class="loading" style="display: none">
+        <p>0%</p>
+      </div>
+      <div class="swiper-wrapper" style="opacity: 0">
+        <div class="swiper-slide first">
+          <div id="logo"></div>
+          <div class="line">
+            <span class="span1"></span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+          </div>
+          <div class="next"></div>
+        </div>
+        <div class="swiper-slide second">
+          <div class="headerLogo"></div>
+          <img class="intro" src="img/p2_2.png" />
+          <div class="licheng"></div>
+          <img class="l1" src="img/p2_3.png" />
+          <img class="t1" src="img/t1.png" />
+          <img class="l2" src="img/p2_4.png" />
+          <img class="t2" src="img/t2.png" />
+          <img class="l3" src="img/p2_5.png" />
+          <img class="t3" src="img/t3.png" />
+          <img class="l4" src="img/p2_6.png" />
+          <img class="t4" src="img/t4.png" />
+          <div class="footerImg"></div>
+          <div class="next"></div>
+        </div>
+        <div class="swiper-slide third ">
+          <div class="headerLogo"></div>
+          <img class="brand" src="img/p3-1.png" />
+          <div class="brandList">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="footerImg"></div>
+          <div class="next"></div>
+        </div>
+        <div class="swiper-slide forth">
+          <img class="leaf" src="img/p4_1.png" />
+          <img class="sun" src="img/p4_2.png" />
+          <img class="c0" src="img/c0.png" />
+          <div class="proList">
+            <span class="c1"></span>
+            <span class="c2"></span>
+            <span class="c3"></span>
+            <span class="c4"></span>
+            <span class="c5"></span>
+            <span class="c6"></span>
+            <span class="c7"></span>
+            <span class="c8"></span>
+            <span class="c9"></span>
+          </div>
+          <div class="next"></div>
+        </div>
+        <div class="swiper-slide fifth">
+          <img class="f1" src="img/p5_2.png" />
+          <img class="f2" src="img/p5_1.png" />
+          <img class="f3" src="img/p5_3.png" />
+          <img class="f4" src="img/p5_4.png" />
+          <div class="next"></div>
+        </div>
+        <div class="swiper-slide sixth">
+          <img class="s1" src="img/p6_1.png" />
+          <img class="s2" src="img/p6_2.png" />
+          <img class="s3" src="img/p6_3.png" />
+          <img class="s4" src="img/p6_4.png" />
+          <div class="next"></div>
+        </div>
+
+        <div class="swiper-slide sevth">
+          <img class="sev0" src="img/p7_0.png" />
+          <img class="sev1 aa" src="img/p7_1.png" />
+          <img class="sev2 aa" src="img/p7_2.png" />
+          <img class="sev3 aa" src="img/p7_3.png" />
+          <img class="sev4 aa" src="img/p7_4.png" />
+          <img class="sev5" src="img/p7_5.png" />
+          <div class="next"></div>
+        </div>
+
+        <div class="swiper-slide end">
+          <a class="tel" href="tel:15989121938">
+            <img src="img/tel.png" />
+          </a>
+          <img class="er" src="img/er.png" />
+        </div>
+      </div>
+      <div class="musicControl">
+        <span class="play" id="mc"></span>
+      </div>
+    </div>
+    <script src="js/TweenMax.min.js"></script>
+  </body>
+  <script type="text/javascript" src="./app.js"></script>
+
+</html>

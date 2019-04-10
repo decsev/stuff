@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = {
+            "template": {
+                "fullnameOverride": "ded",
+                "app": {
+                    "image": {
+                        "repository": "hub.haomoney.com/lark/lark-almonds",
+                        "tag": "v2.1.3.2018080101"
+                    }
+                },
+                "env": {
+                    "ALMONDS_DB": "mysql:3306",
+                    "DB_NAME": "almonds",
+                    "DB_USER": "root",
+                    "DB_PSW": "1t5a53cret"
+                },
+                "ingress": {
+                    "hosts": "aaa,bbb,ccc,ddd"
+                }
+            }
+        };
+        let temp = {};
+        const fun = (obj, str)=>{
+            // if(typeof(obj)!=='object' || obj === null) {
+            //     return obj;
+            // }
+            for(key in obj) {
+                if(typeof(obj[key])==='object') {
+                    str += (str == '' ? key : '.'+key);
+                    fun(obj[key],str);
+                } else {
+                    temp[str += (str == '' ? key : '.'+key)] = obj[key];
+                }
+            }
+            
+        }
+        fun(data, '');
+        console.log(temp);
+    </script>
+</body>
+</html>

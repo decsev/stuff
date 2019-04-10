@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="full-screen" content="true" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="x5-page-mode" content="app" />
+  <title>汉兰达</title>
+  <link rel="stylesheet" type="text/css" href="http://guangzhou.auto.qq.com/hanlanda/css/han.css">
+  <link href="http://www.yetcar.com/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+</head>
+
+<body style="background:#000">
+    <video id="video1" class="video1 hide" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="" x5-video-player-type="h5"
+    x5-video-player-fullscreen="true"
+    src="https://bbsphoto.gdtengnan.com/zhengwu/qiche/qiche.mp4"
+    poster=""
+  >
+  </video>
+
+  <video id="video2" class="video1" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="" x5-video-player-type="h5"
+    x5-video-player-fullscreen="true"
+    src="http://video.whalesgeek.net/campaign/2017/Html5_B_jd_battery/img/videoaaa.mp4"
+    poster=""
+  >
+  </video>
+
+  <div class="load-wrap top1">
+    <p class="load-percent">0%</p>
+    <img class="btn-enter btnenter hide rsrc" rsrc="/src/img/arr.png">
+    <div id="start"></div>
+  </div>
+  <div >
+
+  </div>
+  <div class="page-1 hide">
+    <img class="rsrc red-tips" rsrc="http://img1.gtimg.com/autoguangzhou/pics/hv1/26/136/207/13494881.png">
+    <div id="hot"></div>
+  </div>
+  <div class="white-page opacity-0 hide"></div>
+  <div class="last-page hide">
+      <div class="p40bg-box">
+          <img class="rsrc" rsrc="http://img1.gtimg.com/autoguangzhou/pics/hv1/28/136/207/13494883.png">
+      </div>
+      <div class="btn-box">
+          <a href="https://www.gac-toyota.com.cn">
+            <img class="last-bg2 rsrc" rsrc="http://img1.gtimg.com/autoguangzhou/pics/hv1/25/136/207/13494880.png">
+          </a>
+          <img class="btn-share rsrc" rsrc="http://img1.gtimg.com/autoguangzhou/pics/hv1/24/136/207/13494879.png">
+        </div>
+    </div>
+  <div class="share-page hide">
+    <img class="share-img rsrc" rsrc="http://img1.gtimg.com/autoguangzhou/pics/hv1/30/136/207/13494885.png">
+  </div>
+  <div class="btn-music hide"></div>
+  <div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content">
+      <i class="icon-wx mod-orient-layer__icon-orient"></i>
+      <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+  </div>
+</body>
+<script src="http://guangzhou.auto.qq.com/hanlanda/js/zepto.min.js"></script>
+<script type="text/javascript" src="han.js"></script>
+
+<!--微信分享 开始-->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    //微信分享标题
+    var shareTitle = '小编卧底，二手车市场探案';
+    //微信分享简介
+    var descContent = '职场新人小编，入职第一天被上司安排探案二手车市场';
+    //朋友圈转发标题
+    var shareTimeLineTitle = '职场新人小编，入职第一天被上司安排探案二手车市场';
+    //分享小图(120x120)
+    var imgUrl = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/33/136/207/13494888.jpg';
+    //分享地址(默认为当前地址)
+    var lineLink = window.location.href;
+    var appid = '';
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "120",
+            "img_height": "120",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            _report('send_msg', res.err_msg);
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url": imgUrl,
+            "img_width": "120",
+            "img_height": "120",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTimeLineTitle
+        }, function(res) {
+            _report('timeline', res.err_msg);
+        });
+    }
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo',{
+            "content": descContent,
+            "url": lineLink,
+        }, function(res) {
+            _report('weibo', res.err_msg);
+        });
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv){
+            shareWeibo();
+        });
+    }, false);
+</script>
+</html>

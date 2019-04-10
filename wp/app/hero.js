@@ -12,20 +12,26 @@ function fitscreen() {
   $('.loadimg2').css('width', (0.04 * innerHeight) * (73 / 38) + 'px');
   $('.loadimg3').css('width', (0.04 * innerHeight) * (86 / 38) + 'px');
   $('.btn1').css('width', innerHeight * 0.172535 + 'px').css('margin-left', -innerHeight * 0.172535 / 2 + 'px');
-  $('.btn2').css('width', innerHeight * 0.172535 + 'px').css('margin-left', -innerHeight * 0.172535 / 2 + 'px');
+  $('.btn2').css('width', innerHeight * 0.172535*189/151 + 'px').css('margin-left', -innerHeight * 0.172535*189/151 / 2 + 'px');
   $('.btn-enter').css('width', (0.1 * innerHeight) * (450 / 193) + 'px').css('margin-left', -((0.1 * innerHeight) * (450 / 193)) / 2 + 'px');
   $('.bg').css('margin-left', -((1500 / 1754) * innerHeight / 2) + 'px');
   $('.video1').css('margin-left', -((750 / 876) * innerHeight / 2) + 'px');
-  $('.last-bg').css('margin-left', -((1500 / 1754) * innerHeight / 2) + 'px');
-  $('.last-person').css('margin-left', -((0.57 * innerHeight) * (1197 / 1015)) / 2 + 'px');
-  $('.last-line').css('margin-left', -((1500 / 1754) * innerHeight / 2) + 'px');
-  $('.last-text1').css('margin-left', -((0.30 * innerHeight) * (875 / 536)) / 2 + 'px');
-  $('.last-text2').css('margin-left', -((0.29 * innerHeight) * (805 / 510)) / 2 + 'px');
+  
   $('.btn-return').css('margin-left', (((750 / 877) * innerHeight) * 0.18) + 'px');
   $('.btn-jump').css('margin-right', (((750 / 877) * innerHeight) * 0.02) + 'px');
   $('.btn-share').css('margin-left', (((750 / 877) * innerHeight) * 0.02) + 'px');
-  $('.hand-left').css('margin-left', (((750 / 876) * innerHeight) * 0.09) - (0.08 * innerHeight) + 'px');
-  $('.hand-right').css('margin-left', (((750 / 876) * innerHeight) * 0.09) + 'px');
+
+
+
+  $.each(config.swiper, function(i, item){
+
+    var _html = '<div class="swiper-slide">'
+                  +'<div class="rsrc-box">'
+                  +'<img class="rsrc" rsrc="'+ item.src +'">'
+                  +'</div>'
+                  +'</div>'
+    $('.swiper-wrapper').append(_html);
+  })
 };
 
 window.onresize = function () {
@@ -39,14 +45,13 @@ video1.addEventListener('x5videoenterfullscreen', function () {
 });
 
 var videotimer = setInterval(function () {
-  if (video1.currentTime > (17) && !key1) {
+  if (video1.currentTime > config.pauseTime1 && !key1) {
     video1.pause();
     $('.page-1').removeClass('hide').addClass('top1');
     $('.btn-music').addClass('hide');
     key1 = true;
   }
-
-  if (video1.currentTime > (81) && !key3) {
+  if (video1.currentTime > config.pauseTime2 && !key3) {
     video1.pause();
     $('.page-2').removeClass('hide').addClass('top1');
     $('.btn-music').addClass('hide');
@@ -59,12 +64,17 @@ var videotimer = setInterval(function () {
     $('.last-page').removeClass('hide');
     var swiper = null;
       swiper = new Swiper('.swiper-container', {
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
+      nextButton: '.swiper-button-next1',
+      prevButton: '.swiper-button-prev2',
       slidesPerView: 1,
       paginationClickable: true,
       spaceBetween: 30,
+      onSlideChangeEnd: function(swiper){
+        $('.intro_img img').hide();
+        $('.intro_img img').eq(swiper.activeIndex).show();
+      }
     });
+
 
     key2 = true;
     setTimeout(function () {
@@ -105,19 +115,23 @@ hot2.addEventListener('touchend', function (e) {
 
 $('.btn-enter').click(function () {
   $('.load-wrap').addClass('hide').removeClass('top1');
-  //video1.currentTime = 78;
+  //video1.currentTime = config.pauseTime1 - 1;
   $('.video1').addClass('top1');
   $('.btn-music').removeClass('hide');
   video1.play();
 });
-
 $('.btn-return, .btn-return-play').click(function () {
   $('.last-page').addClass('hide').removeClass('top1');
   $('.video1').addClass('top1').removeClass('hide');
-  video1.currentTime = 80;
+  //video1.currentTime = 80;
+
   key1 = false, key2 = false,key3 = false, hastouch = false,hastouch2 = false;
   video1.play();
 
+});
+
+$('.btn-reload').click(function () {
+  window.location.reload();
 });
 
 $('.btn-share').click(function () {
@@ -165,19 +179,27 @@ var opt = {
     "./src/img/hero/beijing750.png",
     "./src/img/hero/btn1.png",
     "./src/img/hero/btn2.png",
-    "./src/img/hero/dongli.png",
-    "./src/img/hero/fanghu.png",
-    "./src/img/hero/feixing.png",
-    "./src/img/hero/kongjian.png",
     "./src/img/hero/last_return.png",
     "./src/img/hero/load_img.png",
     "./src/img/hero/loading1.png",
     "./src/img/hero/loading2.png",
     "./src/img/hero/loading3.png",
     "./src/img/hero/music.png",
-    "./src/img/hero/qinang.png",
-    "./src/img/hero/share_ing.png",
     "./src/img/hero/startbtn.png",
+    "./src/img/hero/a1.png",
+    "./src/img/hero/b0.png",
+    "./src/img/hero/b1.png",
+    "./src/img/hero/b2.png",
+    "./src/img/hero/b3.png",
+    "./src/img/hero/b4.png",
+    "./src/img/hero/a1.png",
+    "./src/img/hero/b00.png",
+    "./src/img/hero/b11.png",
+    "./src/img/hero/b22.png",
+    "./src/img/hero/b33.png",
+    "./src/img/hero/b44.png",
+    "./src/img/hero/left.png",
+    "./src/img/hero/right.png",
   ],
   allType: {
     image: [
