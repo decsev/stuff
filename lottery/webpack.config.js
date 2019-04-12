@@ -2,7 +2,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const config = {
     devtool: 'eval-source-map',
     entry: {
-        app: __dirname + "/app/app.js"
+        app: __dirname + "/app/app.js",
+        app1: __dirname + "/app/app1.js"
     },
     output: {
         path: __dirname + "/dist",

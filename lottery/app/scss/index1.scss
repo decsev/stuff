@@ -1,0 +1,35 @@
+@function px2rem($px) {
+  $rem: 75;
+  @return ($px / $rem) + rem;
+}
+
+.lotteryTable{
+  width: px2rem(675);
+  margin: px2rem(50) auto;
+  border-radius: px2rem(10);
+  tr{
+    td{
+      padding: 0;
+      width: px2rem(225);
+      height: px2rem(225);
+      position: relative;
+      img{
+        width: px2rem(225);
+        height: px2rem(225);
+      }
+      &.active{
+        .mask{
+          width: px2rem(225);
+          height: px2rem(225);
+          background: #f3da00;
+          opacity: 0.5;
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: px2rem(10);
+        }
+      }
+      
+    }
+  }
+}

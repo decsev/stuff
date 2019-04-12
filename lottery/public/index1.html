@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lottery</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <script>
+      (function () {
+        var html = document.documentElement;
+        var width = html.getBoundingClientRect().width;
+        var fs = width / 10;
+        html.style.fontSize = fs + "px";
+      })()
+    </script>
+  </head>
+
+  <body>
+    <table cellspacing="0" class="lotteryTable">
+      <tr>
+        <td class="lottery-unit lottery-unit-0"><img src="img/lottery/1.jpg">
+          <div class="mask"></div>
+        </td>
+        <td class="lottery-unit lottery-unit-1"><img src="img/lottery/2.jpg">
+          <div class="mask"></div>
+        </td>
+        <td class="lottery-unit lottery-unit-2"><img src="img/lottery/3.jpg">
+          <div class="mask"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="lottery-unit lottery-unit-7"><img src="img/lottery/4.jpg">
+          <div class="mask"></div>
+        </td>
+        <td><img id="runLottery" src="img/lottery/9.jpg"></td>
+        <td class="lottery-unit lottery-unit-3"><img src="img/lottery/5.jpg">
+          <div class="mask"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="lottery-unit lottery-unit-6"><img src="img/lottery/6.jpg">
+          <div class="mask"></div>
+        </td>
+        <td class="lottery-unit lottery-unit-5"><img src="img/lottery/7.jpg">
+          <div class="mask"></div>
+        </td>
+        <td class="lottery-unit lottery-unit-4"><img src="img/lottery/8.jpg">
+          <div class="mask"></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script type="text/javascript" src="./app1.js"></script>
+
+</html>
