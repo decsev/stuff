@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lottery</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <script>
+      // (function () {
+      //   var html = document.documentElement;
+      //   var width = html.getBoundingClientRect().height;
+      //   var fs = width / 10;
+      //   html.style.fontSize = fs + "px";
+      // })()
+    </script>
+  </head>
+
+  <body>
+    <dl>
+      <dd><label>起值：</label><input value="0" id="startInput" type="number" /></dd>
+      <dd><label>终值：</label><input value="1" id="endInput" type="number" /></dd>
+      <dd>
+        <p id="rollText">ready</p>
+      </dd>
+      <dd><button id="reset">重置</button> <button id="start">开始</button></dd>
+    </dl>
+    <ul id="takeOutList" class="list">
+      <li>中奖号码列表</li>
+    </ul>
+  </body>
+  <script type="text/javascript" src="./app.js"></script>
+
+</html>
