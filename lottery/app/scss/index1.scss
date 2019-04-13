@@ -6,7 +6,6 @@
 .lotteryTable{
   width: px2rem(675);
   margin: px2rem(50) auto;
-  border-radius: px2rem(10);
   tr{
     td{
       padding: 0;
@@ -26,10 +25,19 @@
           position: absolute;
           left: 0;
           top: 0;
-          border-radius: px2rem(10);
         }
       }
       
     }
   }
+}
+
+.box{
+  width: 200px;
+  height: 50px;
+  background: red;
+  position: absolute;
+  transform-origin: center center;
+  //left: 50%;
+  //transform: translateX(-50%);
 }

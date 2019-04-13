@@ -91,3 +91,31 @@ class Lottery {
 }
 
 let lotteryObj = new Lottery();
+
+let ele = document.querySelector('#box');
+ele.addEventListener('click', () => {
+  window.endDeg = parseInt(Math.random() * 360);
+  rotate(window.endDeg);
+})
+
+function rotate(_deg) {
+  let deg = _deg + 360 * 5;
+  let transitionStr = 'all 5s ease 0s';
+  let transformStr = `rotate(${deg}deg)`;
+  ele.style.transition = transitionStr;
+  ele.style.transform = transformStr;
+  ele.style.WebkitTransition = transitionStr;
+  ele.style.WebkitTransform = transformStr;
+}
+
+ele.addEventListener("webkitTransitionEnd", transitionendFunction);
+ele.addEventListener("transitionend", transitionendFunction);
+
+function transitionendFunction() {
+  let transitionStr = 'none';
+  let transformStr = `rotate(${window.endDeg}deg)`;
+  ele.style.transition = transitionStr;
+  ele.style.transform = transformStr;
+  ele.style.WebkitTransition = transitionStr;
+  ele.style.WebkitTransform = transformStr;
+}
