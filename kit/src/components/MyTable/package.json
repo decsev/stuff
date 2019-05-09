@@ -1,0 +1,6 @@
+{
+  "name": "MyTable",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MyTable.js"
+}
