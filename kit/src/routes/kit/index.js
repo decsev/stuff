@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'dva';
 import {routerRedux} from 'dva/router';
 import {Link} from 'react-router-dom';
-import {changeTitle, queryURL} from 'utils';
+import {changeTitle, queryURL, fNum} from 'utils';
 import {Row, Col, Button, Modal, Form, Card, Select, Tabs, Spin, message, Tag, Table, Radio, Tooltip, Icon} from 'antd';
 import {MyInput, MyTable, MyBreadcrumb, DynamicArrayInput, MyEmpty} from 'components';
 import styles from './index.less';
@@ -112,7 +112,7 @@ class Index extends Component {
   }
   calcHold(dealList, items) {
     if (!dealList) {return [];}
-    let {current_realPrice, current_showType, current_isAuto} = this.props.kit;
+    let {current_realPrice, current_showType, current_isAuto, current_upRatio, current_downRatio} = this.props.kit;
     const {needstampFree, freeRatio, stockCode} = items;
     if (current_isAuto) {
       current_realPrice = this.getCurrentPrice(stockCode, this.state.hq);
@@ -140,17 +140,19 @@ class Index extends Component {
         let exFreeObj = this.calcExFree(data.b_price, data.s_price, data.amount, freeRatio, needstampFree);
         exFree = exFreeObj.free;
         exFreeIntro = exFreeObj.intro;
-        selloutProfit = Number(((data.s_price - data.b_price) * data.amount - exFree).toFixed(2));
+        selloutProfit = fNum((data.s_price - data.b_price) * data.amount - exFree, 2);
       } else {
         // 实时盈亏
         let exFreeObj = this.calcExFree(data.b_price, current_realPrice, data.amount, freeRatio, needstampFree);
         exFree = exFreeObj.free;
         exFreeIntro = exFreeObj.intro;
-        realProfit = Number(((current_realPrice - data.b_price) * data.amount - exFree).toFixed(2));
+        realProfit = fNum((current_realPrice - data.b_price) * data.amount - exFree, 2);
       }
       let param = {
         level: i + 1,
         b_price: data.b_price,
+        upRatioPrice: data.b_price * (current_upRatio / 100 + 1),
+        downRatioPrice: data.b_price * (1 - current_upRatio / 100),
         current_realPrice: current_realPrice,
         amount: data.amount,
         s_price: data.s_price,
@@ -169,13 +171,13 @@ class Index extends Component {
     // bp买入价格，sp卖出价格，am量, fr费率, ns是否需要交印花税
     let intro = '';
     let free = 0;
-    let bfree = Number((bp * am * fr > 5 ? bp * am * fr : 5).toFixed(2));
-    let sfree = Number((sp * am * fr > 5 ? sp * am * fr : 5).toFixed(2));
-    free = Number((bfree + sfree).toFixed(2));
+    let bfree = fNum(bp * am * fr > 5 ? bp * am * fr : 5, 2);
+    let sfree = fNum(sp * am * fr > 5 ? sp * am * fr : 5, 2);
+    free = fNum(bfree + sfree, 2);
     intro = `买：${bfree} 卖：${sfree}`
     if (ns) {
-      free = Number((free + sp * am * 0.001).toFixed(2));
-      intro = `${intro} 印：${Number((sp * am * 0.001).toFixed(2))}`;
+      free = fNum(free + sp * am * 0.001, 2);
+      intro = `${intro} 印：${fNum(sp * am * 0.001, 2)}`;
     }
     return {free, intro};
   }
@@ -183,7 +185,7 @@ class Index extends Component {
     // bp买入价格，sp卖出价格，am量, fr费率, ns是否需要交印花税
     let intro = '';
     let free = 0;
-    free = Number((bp * am * fr > 5 ? bp * am * fr : 5).toFixed(2));
+    free = fNum(bp * am * fr > 5 ? bp * am * fr : 5, 2);
     intro = `买：${free}`;
     return {free, intro};
   }
@@ -208,13 +210,13 @@ class Index extends Component {
       }
       yk += o[i].selloutProfit || o[i].realProfit;
     }
-    result.yk = Number(yk.toFixed(2));
-    result.buyAmount = Number(buyAmount.toFixed(2));
+    result.yk = fNum(yk, 2);
+    result.buyAmount = fNum(buyAmount, 2);
     return result;
   }
   render() {
     const {form, dispatch, kit} = this.props;
-    const {gridData, stockFromData} = kit;
+    const {gridData, stockFromData, current_upRatio, current_downRatio} = kit;
     const {strategyList} = gridData;
     const openList = (strategyList || []).filter((item) => {
       return item.isOpen;
@@ -235,7 +237,10 @@ class Index extends Component {
       {
         title: '买入价格',
         dataIndex: 'b_price',
-        key: 'b_price'
+        key: 'b_price',
+        render: (param, o) => {
+          return <Tooltip title={`${fNum(o.upRatioPrice, 3)}(${current_upRatio}%) / ${fNum(o.downRatioPrice, 3)}(-${current_downRatio}%)`}>{param}</Tooltip>;
+        }
       },
       {
         title: '数量',
@@ -261,7 +266,7 @@ class Index extends Component {
           if (o.s_price) {
             return '已获利了结'
           }
-          let percent = Number(Number(p) * 100 / (Number(o.b_price) * Number(o.amount))).toFixed(2) + '%';
+          let percent = fNum(Number(p) * 100 / (Number(o.b_price) * Number(o.amount)), 2) + '%';
           return p + '(' + percent + ')';
 
         }
@@ -274,7 +279,7 @@ class Index extends Component {
           if (!o.s_price) {
             return '末实现盈亏'
           }
-          let percent = Number(Number(p) * 100 / (Number(o.b_price) * Number(o.amount))).toFixed(2) + '%';
+          let percent = fNum(Number(p) * 100 / (Number(o.b_price) * Number(o.amount)), 2) + '%';
           return p + '(' + percent + ')';
         }
       },
@@ -301,6 +306,22 @@ class Index extends Component {
           }
           return '--'
         }
+      },
+      {
+        title: '卖出价格',
+        dataIndex: 'upRatioPrice',
+        key: 'upRatioPrice',
+        render: (param, o) => {
+          return `${fNum(param, 3)}(${current_upRatio}%)`
+        }
+      },
+      {
+        title: '买入价格',
+        dataIndex: 'downRatioPrice',
+        key: 'downRatioPrice',
+        render: (param, o) => {
+          return `${fNum(param, 3)}(-${current_downRatio}%)`
+        }
       }
     ];
     const paginationProps = {
@@ -325,7 +346,7 @@ class Index extends Component {
         dataIndex: 'last',
         key: 'last',
         render: (param) => {
-          return Number(param).toFixed(2);
+          return fNum(param);
         }
       },
       {
@@ -333,8 +354,8 @@ class Index extends Component {
         dataIndex: 'c',
         key: 'c',
         render: (param, o) => {
-          let a = Number(o.last - param).toFixed(2);
-          let b = (Number(o.last / param - 1) * 100).toFixed(2) + '%';
+          let a = fNum(o.last - param);
+          let b = (fNum(o.last / param - 1) * 100, 2) + '%';
           return <p>{a}({b})</p>
         }
       },
@@ -343,7 +364,7 @@ class Index extends Component {
         dataIndex: 'h',
         key: 'h',
         render: (param) => {
-          return Number(param).toFixed(2);
+          return fNum(param);
         }
       },
       {
@@ -351,7 +372,7 @@ class Index extends Component {
         dataIndex: 'l',
         key: 'l',
         render: (param) => {
-          return Number(param).toFixed(2);
+          return fNum(param);
         }
       },
       {
@@ -366,7 +387,7 @@ class Index extends Component {
         <nav className={styles.my_nav}>
           <ul>
             <li className={styles.active}><Link to="/kit">我的持仓</Link></li>
-            <li><Link to="/kit/myInterest">我的利息</Link></li>
+            <li><Link to="/kit/myInterest">我的借贷</Link></li>
             <li><Link to="/kit/grid">网格工具</Link></li>
             <li><Link to="/kit/interest">计息工具</Link></li>
           </ul>
@@ -467,7 +488,7 @@ class Index extends Component {
                       bordered
                       scroll={{x: true}}
                       title={() => {return '当前股价:' + this.getCurrentPrice(item.stockCode, this.state.hq)}}
-                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + (r.yk * 100 / r.buyAmount).toFixed(2) + '%)' : null}}
+                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' : null}}
                     />
                   </TabPane>
                 })
@@ -488,7 +509,7 @@ class Index extends Component {
                       dataSource={this.calcHold(item.dealList, item)}
                       bordered
                       scroll={{x: true}}
-                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + (r.yk * 100 / r.buyAmount).toFixed(2) + '%)' : null}}
+                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' : null}}
                     />
                   </TabPane>
                 })

@@ -1,5 +1,6 @@
+// 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sz000069',
+  stockCodesList: 'sh000001,sz000002,sz000069,sz002751,sh512880',
   closeCodeList: 'sh600741',
   strategyList: [
     {
@@ -205,6 +206,38 @@ const gridData = {
       ]
     },
     {
+      strategyName: 'dec_etf', // 策略名
+      isOpen: true, // 是否当前持仓
+      stockCode: 'sh512880', // 股票代码
+      needstampFree: false, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      dealList: [
+        {
+          b_price: 0.918,
+          s_price: null,
+          amount: 11200,
+          b_time: '2019-05-16',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: 'dec_yszs', // 策略名
+      isOpen: true, // 是否当前持仓
+      stockCode: 'sz002751', // 股票代码
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      dealList: [
+        {
+          b_price: 21.88,
+          s_price: null,
+          amount: 500,
+          b_time: '2019-05-16',
+          s_time: null
+        }
+      ]
+    },
+    {
       strategyName: 'dec_hyqc', // 策略名
       isOpen: false, // 是否当前持仓
       stockCode: 'sh600741', // 股票代码
@@ -223,18 +256,29 @@ const gridData = {
   ]
 }
 
+// 网格配置
 const gridFromData = [{
   title: '参数设置',
   col: 24,
   // cats: ['基础配置', '高级配置'],
   form: [
     {
+      col: 12,
+      type: 'number',
+      text: '投入资金',
+      name: 'capital',
+      required: true,
+      pattern: '^[+]{0,1}(\\d+)$|^[+]{0,1}(\\d+\\.\\d+)$',
+      patternMsg: '请填写大于零的数字',
+      value: 100000
+    },
+    {
       type: 'select',
       text: '仓位模式',
       name: 'type',
       options: [
         {label: '等量开仓', value: '1'},
-        {label: '增量开仓', value: '2'}
+        {label: '2倍量开仓', value: '2'}
       ],
       required: true,
       value: '1'
@@ -262,16 +306,6 @@ const gridFromData = [{
     {
       col: 12,
       type: 'number',
-      text: '投入资金',
-      name: 'capital',
-      required: true,
-      pattern: '^[+]{0,1}(\\d+)$|^[+]{0,1}(\\d+\\.\\d+)$',
-      patternMsg: '请填写大于零的数字',
-      value: 100000
-    },
-    {
-      col: 12,
-      type: 'number',
       text: '底仓价格',
       name: 'firstPrice',
       required: true,
@@ -279,6 +313,16 @@ const gridFromData = [{
       patternMsg: '请填写大于零的数字',
       value: 30
     },
+    // {
+    //   col: 12,
+    //   type: 'number',
+    //   text: '当前价格',
+    //   name: 'realPrice',
+    //   required: true,
+    //   pattern: '^[+]{0,1}(\\d+)$|^[+]{0,1}(\\d+\\.\\d+)$',
+    //   patternMsg: '请填写大于零的数字',
+    //   value: 29.39
+    // },
     {
       col: 12,
       type: 'number',
@@ -292,17 +336,25 @@ const gridFromData = [{
     {
       col: 12,
       type: 'number',
-      text: '当前价格',
-      name: 'realPrice',
+      text: '首次加仓数量',
+      name: 'firstAddAmount',
       required: true,
-      pattern: '^[+]{0,1}(\\d+)$|^[+]{0,1}(\\d+\\.\\d+)$',
-      patternMsg: '请填写大于零的数字',
-      value: 29.39
+      pattern: '^[1-9]\\d*$',
+      patternMsg: '请填写大于零的整数',
+      value: 400
+    },
+    {
+      col: 12,
+      type: 'text',
+      text: '网格名称',
+      name: 'myGridName',
+      value: '惠风和畅',
+      required: false
     }
   ]
 }
 ]
-
+// 我的持仓显示配置
 const stockFromData = [{
   title: '显示设置',
   col: 24,
@@ -349,11 +401,34 @@ const stockFromData = [{
       pattern: '^[1-9]\\d*$',
       patternMsg: '请填写大于零的整数',
       value: 1
+    },
+    {
+      col: 12,
+      type: 'number',
+      text: '上涨(%)',
+      description: '基于买入价上涨多个点卖出',
+      name: 'upRatio',
+      required: true,
+      pattern: '^[+]{0,1}(\\d+)$|^[+]{0,1}(\\d+\\.\\d+)$',
+      patternMsg: '请填写大于零的数字',
+      value: 2
+    },
+    {
+      col: 12,
+      type: 'number',
+      text: '下跌(%)',
+      description: '基于买入价下跌多个点再买入',
+      name: 'downRatio',
+      required: true,
+      pattern: '^[+]{0,1}(\\d+)$|^[+]{0,1}(\\d+\\.\\d+)$',
+      patternMsg: '请填写大于零的数字',
+      value: 2
     }
   ]
 }
 ]
 
+// 计息工具配置
 const interestFormData = [{
   title: '参数设置',
   col: 24,
@@ -403,7 +478,7 @@ const interestFormData = [{
   ]
 }]
 
-
+// 我的借贷显示配置
 const myInterestFormData = [{
   title: '显示设置',
   col: 24,
@@ -436,20 +511,28 @@ const myInterestFormData = [{
   ]
 }]
 
+// 我的借贷列表
 const myInterestList = [
   {
     origin: 'zfb',
     startTime: '2019-4-26',
-    endTime: null,
+    endTime: '2019-5-16',
     ratio: 9,
     capital: 30000
   },
   {
     origin: 'zfb',
     startTime: '2019-4-26',
-    endTime: null,
+    endTime: '2019-5-16',
     ratio: 9,
     capital: 40000
+  },
+  {
+    origin: 'yh',
+    startTime: '2019-5-15',
+    endTime: null,
+    ratio: 4.5,
+    capital: 50000
   }
 ]
 export {gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList};

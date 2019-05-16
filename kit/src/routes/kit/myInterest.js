@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'dva';
 import {routerRedux} from 'dva/router';
 import {Link} from 'react-router-dom';
-import {changeTitle, queryURL} from 'utils';
+import {changeTitle, queryURL, fNum} from 'utils';
 import {Row, Col, Button, Modal, Form, Card, Select, Tabs, Spin, message, Tag, Table, Radio, Tooltip, Icon} from 'antd';
 import {MyInput, MyTable, MyBreadcrumb, DynamicArrayInput, MyEmpty} from 'components';
 import styles from './index.less';
@@ -74,7 +74,7 @@ class Index extends Component {
       allInterest = allInterest + arr[i].payInterest;
     }
     result.list = arr;
-    result.allInterest = allInterest;
+    result.allInterest = fNum(allInterest, 2);
     return result;
   }
   render() {
@@ -94,7 +94,7 @@ class Index extends Component {
         dataIndex: 'payInterest',
         key: 'payInterest',
         render: (param, o) => {
-          return `${param} 元`
+          return `${fNum(param, 2)} 元`
         }
       },
       {
@@ -154,7 +154,7 @@ class Index extends Component {
         <nav className={styles.my_nav}>
           <ul>
             <li><Link to="/kit">我的持仓</Link></li>
-            <li className={styles.active}><Link to="/kit/myInterest">我的利息</Link></li>
+            <li className={styles.active}><Link to="/kit/myInterest">我的借贷</Link></li>
             <li><Link to="/kit/grid">网格工具</Link></li>
             <li><Link to="/kit/interest">计息工具</Link></li>
           </ul>

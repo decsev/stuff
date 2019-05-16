@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'dva';
 import {routerRedux} from 'dva/router';
 import {Link} from 'react-router-dom';
-import {changeTitle, queryURL} from 'utils';
+import {changeTitle, queryURL, fNum} from 'utils';
 import {Row, Col, Button, Modal, Form, Card, Select, Tabs, Spin, message, Tag, Table, Radio, Tooltip, Icon} from 'antd';
 import {MyInput, MyTable, MyBreadcrumb, DynamicArrayInput} from 'components';
 import styles from './index.less';
@@ -35,10 +35,10 @@ class Index extends Component {
       current_type,
       current_firstPrice,
       current_firstAmount,
-      current_realPrice
+      current_firstAddAmount
     } = this.props.kit;
 
-    if (!!current_buyChange && !!current_sellChange && !!current_capital && !!current_type && !!current_firstPrice && !!current_firstAmount && !!current_realPrice) {
+    if (!!current_buyChange && !!current_sellChange && !!current_capital && !!current_type && !!current_firstPrice && !!current_firstAmount && !!current_firstAddAmount) {
       let usedMoney = 0;
       let b_price = 0;
       let s_price = 0;
@@ -46,50 +46,53 @@ class Index extends Component {
       let result = [];
       let level = 1;
       let profit = 0;
-      let realProfit = 0;
       if (current_type === '1') {
         // 等量
         usedMoney = current_firstPrice * current_firstAmount;
         b_price = current_firstPrice;
         amount = current_firstAmount;
         while (usedMoney < current_capital) {
-          s_price = Number(b_price * (1 + current_sellChange / 100)).toFixed(2);
-          profit = Number(b_price * current_sellChange / 100 * amount).toFixed(2);
-          realProfit = ((current_realPrice - b_price) * amount).toFixed(2);
+          if (level === 2) {
+            amount = current_firstAddAmount;
+          }
+          s_price = fNum(b_price * (1 + current_sellChange / 100), 2);
+          profit = fNum(b_price * current_sellChange / 100 * amount, 2);
           let param = {
             level: level,
             b_price: b_price,
             s_price: s_price,
             amount: amount,
             profit: profit,
-            realProfit: realProfit
+            current_firstPrice
           };
           result.push(param);
           level++;
-          b_price = Number(b_price * (1 - current_buyChange / 100)).toFixed(2);
+          b_price = fNum(b_price * (1 - current_buyChange / 100), 2);
           usedMoney = usedMoney + b_price * amount;
         }
         return result;
       } else if (current_type === '2') {
-        // 增量
+        // 倍量
         usedMoney = current_firstPrice * current_firstAmount;
         b_price = current_firstPrice;
         amount = current_firstAmount;
         while (usedMoney < current_capital) {
-          s_price = Number(b_price * (1 + current_sellChange / 100)).toFixed(2);
-          profit = Number(b_price * current_sellChange / 100 * amount).toFixed(2);
-          realProfit = ((current_realPrice - b_price) * amount).toFixed(2);
+          if (level === 2) {
+            amount = current_firstAddAmount;
+          }
+          s_price = fNum(b_price * (1 + current_sellChange / 100), 2);
+          profit = fNum(b_price * current_sellChange / 100 * amount, 2);
           let param = {
             level: level,
             b_price: b_price,
             s_price: s_price,
             amount: amount,
             profit: profit,
-            realProfit: realProfit
+            current_firstPrice
           };
           result.push(param);
           level++;
-          b_price = Number(b_price * (1 - current_buyChange / 100)).toFixed(2);
+          b_price = fNum(b_price * (1 - current_buyChange / 100), 2);
           usedMoney = usedMoney + b_price * amount;
           amount = amount * 2;
         }
@@ -102,7 +105,7 @@ class Index extends Component {
 
   render() {
     const {form, dispatch, kit} = this.props;
-    const {gridFromData} = kit;
+    const {gridFromData, current_myGridName} = kit;
 
     const isEdit = false;
     const columns = [
@@ -134,10 +137,18 @@ class Index extends Component {
         dataIndex: 'profit',
         key: 'profit'
       },
+      // {
+      //   title: '当前价格盈亏',
+      //   dataIndex: 'realProfit',
+      //   key: 'realProfit'
+      // },
       {
-        title: '当前价格盈亏',
-        dataIndex: 'realProfit',
-        key: 'realProfit'
+        title: '同比底仓价格跌幅',
+        dataIndex: 'current_firstPrice',
+        key: 'current_firstPrice',
+        render: (param, o) => {
+          return fNum((o.b_price / param - 1) * 100, 2) + '%';
+        }
       }
     ];
     const mydata = this.calcData();
@@ -151,7 +162,7 @@ class Index extends Component {
         <nav className={styles.my_nav}>
           <ul>
             <li><Link to="/kit">我的持仓</Link></li>
-            <li><Link to="/kit/myInterest">我的利息</Link></li>
+            <li><Link to="/kit/myInterest">我的借贷</Link></li>
             <li className={styles.active}><Link to="/kit/grid">网格工具</Link></li>
             <li><Link to="/kit/interest">计息工具</Link></li>
           </ul>
@@ -231,6 +242,7 @@ class Index extends Component {
         <Table
           size="middle"
           key={0}
+          title={() => {return current_myGridName;}}
           columns={columns}
           dataSource={mydata}
           bordered

@@ -141,6 +141,9 @@ const changeTitle = (title) => {
   document.title = title;
 }
 
+const fNum = (str, tail = 4) => {
+  return parseFloat(Number(str).toFixed(tail));
+}
 module.exports = {
   config,
   request,
@@ -150,5 +153,6 @@ module.exports = {
   queryArray,
   arrayToTree,
   deepClone,
-  changeTitle
+  changeTitle,
+  fNum
 }
