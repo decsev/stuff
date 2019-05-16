@@ -135,18 +135,27 @@ class Index extends Component {
       let realProfit = null;
       let exFree = 0; // 交易手续费
       let exFreeIntro = ''; // 交易手续费构成
+      let bfree = 0; // 买入手续费
+      let exportCapital = 0; // 卖出后获得的资金
+      let importCapital = 0; // 买入股票投入的资金
       if (data.s_price) {
         // 实现盈亏
         let exFreeObj = this.calcExFree(data.b_price, data.s_price, data.amount, freeRatio, needstampFree);
         exFree = exFreeObj.free;
         exFreeIntro = exFreeObj.intro;
         selloutProfit = fNum((data.s_price - data.b_price) * data.amount - exFree, 2);
+        bfree = exFreeObj.bfree;
+        importCapital = fNum(data.b_price * data.amount + bfree, 2);
+        exportCapital = fNum(data.s_price * data.amount - exFreeObj.free + bfree, 2);
       } else {
         // 实时盈亏
         let exFreeObj = this.calcExFree(data.b_price, current_realPrice, data.amount, freeRatio, needstampFree);
         exFree = exFreeObj.free;
         exFreeIntro = exFreeObj.intro;
         realProfit = fNum((current_realPrice - data.b_price) * data.amount - exFree, 2);
+        bfree = exFreeObj.bfree;
+        importCapital = fNum(data.b_price * data.amount + bfree, 2);
+        exportCapital = fNum(current_realPrice * data.amount - exFreeObj.free + bfree, 2);
       }
       let param = {
         level: i + 1,
@@ -161,7 +170,10 @@ class Index extends Component {
         b_time: data.b_time,
         s_time: data.s_time,
         exFree: exFree,
-        exFreeIntro: exFreeIntro
+        exFreeIntro: exFreeIntro,
+        bfree,
+        importCapital,
+        exportCapital
       }
       result.push(param);
     }
@@ -179,7 +191,7 @@ class Index extends Component {
       free = fNum(free + sp * am * 0.001, 2);
       intro = `${intro} 印：${fNum(sp * am * 0.001, 2)}`;
     }
-    return {free, intro};
+    return {free, intro, bfree};
   }
   calcExFree2(bp, sp, am, fr, ns) {
     // bp买入价格，sp卖出价格，am量, fr费率, ns是否需要交印花税
@@ -194,10 +206,24 @@ class Index extends Component {
     let result = {};
     let yk = 0;
     let buyAmount = 0;
+    let allImportCapital = 0;
     for (let i = 0; i < o.length; i++) {
-      if (current_showType === 1 && flag) {
+      // if (current_showType === 1 && flag) {
+      //   if (!o[i].selloutProfit) {
+      //     buyAmount += o[i].b_price * o[i].amount;
+      //   }
+      // }
+      // if (current_showType === 1 && !flag) {
+      //   if (o[i].selloutProfit) {
+      //     buyAmount += o[i].b_price * o[i].amount;
+      //   }
+      // }
+      // if (current_showType === 2 || current_showType === 3) {
+      //   buyAmount += o[i].b_price * o[i].amount;
+      // }
+      if (current_showType === 1 || current_showType === 2) {
         if (!o[i].selloutProfit) {
-          buyAmount += o[i].b_price * o[i].amount;
+          buyAmount += o[i].importCapital;
         }
       }
       if (current_showType === 1 && !flag) {
@@ -205,9 +231,10 @@ class Index extends Component {
           buyAmount += o[i].b_price * o[i].amount;
         }
       }
-      if (current_showType === 2 || current_showType === 3) {
-        buyAmount += o[i].b_price * o[i].amount;
+      if (current_showType === 3) {
+        buyAmount += o[i].importCapital;
       }
+
       yk += o[i].selloutProfit || o[i].realProfit;
     }
     result.yk = fNum(yk, 2);
@@ -234,6 +261,24 @@ class Index extends Component {
           return <div style={{textAlign: 'center'}}>{param}</div>
         }
       },
+      // {
+      //   title: '投入资金',
+      //   dataIndex: 'b_price',
+      //   key: 'b_price',
+      //   render: (param, o) => {
+      //     return `${fNum(param * o.amount + o.bfree, 2)}(${fNum((param * o.amount + o.bfree) / o.amount, 2)})`
+      //   }
+      // },
+      {
+        title: '占用资金',
+        dataIndex: 'importCapital',
+        key: 'importCapital'
+      },
+      // {
+      //   title: '产出资金',
+      //   dataIndex: 'exportCapital',
+      //   key: 'exportCapital'
+      // },
       {
         title: '买入价格',
         dataIndex: 'b_price',
@@ -488,7 +533,7 @@ class Index extends Component {
                       bordered
                       scroll={{x: true}}
                       title={() => {return '当前股价:' + this.getCurrentPrice(item.stockCode, this.state.hq)}}
-                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' : null}}
+                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '累计盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' + ' | 占用资金：' + r.buyAmount : null}}
                     />
                   </TabPane>
                 })

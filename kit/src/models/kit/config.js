@@ -82,17 +82,24 @@ const gridData = {
         },
         {
           b_price: 29.27,
-          s_price: 29.49,
-          amount: 700,
+          s_price: 29.44,
+          amount: 1000,
           b_time: '2019-04-25',
           s_time: '2019-04-29'
         },
         {
           b_price: 29.06,
-          s_price: 29.49,
-          amount: 1300,
+          s_price: 29.54,
+          amount: 1000,
           b_time: '2019-04-26',
           s_time: '2019-04-29'
+        },
+        {
+          b_price: 29.06,
+          s_price: null,
+          amount: 300,
+          b_time: '2019-04-26',
+          s_time: null
         },
         {
           b_price: 28.72,
