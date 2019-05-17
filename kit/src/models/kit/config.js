@@ -121,6 +121,13 @@ const gridData = {
           amount: 500,
           b_time: '2019-05-09',
           s_time: '2019-05-09'
+        },
+        {
+          b_price: 27.83,
+          s_price: null,
+          amount: 300,
+          b_time: '2019-05-17',
+          s_time: null
         }
       ]
     },
@@ -208,6 +215,13 @@ const gridData = {
           s_price: null,
           amount: 1800,
           b_time: '2019-05-09',
+          s_time: null
+        },
+        {
+          b_price: 7.3,
+          s_price: null,
+          amount: 1500,
+          b_time: '2019-05-17',
           s_time: null
         }
       ]
@@ -539,7 +553,7 @@ const myInterestList = [
     startTime: '2019-5-15',
     endTime: null,
     ratio: 4.5,
-    capital: 50000
+    capital: 63754.26
   }
 ]
 export {gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList};

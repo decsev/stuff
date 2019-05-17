@@ -161,7 +161,7 @@ class Index extends Component {
         level: i + 1,
         b_price: data.b_price,
         upRatioPrice: data.b_price * (current_upRatio / 100 + 1),
-        downRatioPrice: data.b_price * (1 - current_upRatio / 100),
+        downRatioPrice: data.b_price * (1 - current_downRatio / 100),
         current_realPrice: current_realPrice,
         amount: data.amount,
         s_price: data.s_price,
@@ -400,7 +400,7 @@ class Index extends Component {
         key: 'c',
         render: (param, o) => {
           let a = fNum(o.last - param);
-          let b = (fNum(o.last / param - 1) * 100, 2) + '%';
+          let b = fNum(a * 100 / param, 2) + '%';
           return <p>{a}({b})</p>
         }
       },
