@@ -19,7 +19,8 @@ class Index extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      hq: []
+      hq: [],
+      isReutrned: true
     }
     this.dispatch = this.props.dispatch;
   }
@@ -35,7 +36,10 @@ class Index extends Component {
     setTimeout(() => {
       let msg = '';
       if (this.isTradingTime()) {
-        if (current_isAuto) {
+        if (current_isAuto && this.state.isReutrned) {
+          this.setState({
+            isReutrned: false
+          })
           this.hq();
           msg = '正在获取';
         } else {
@@ -97,7 +101,8 @@ class Index extends Component {
         hq.push(param);
       }
       this.setState({
-        hq
+        hq,
+        isReutrned: true
       })
     })
   }
