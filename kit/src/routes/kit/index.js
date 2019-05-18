@@ -113,17 +113,17 @@ class Index extends Component {
   calcHold(dealList, items) {
     if (!dealList) {return [];}
     let {current_realPrice, current_showType, current_isAuto, current_upRatio, current_downRatio} = this.props.kit;
-    const {needstampFree, freeRatio, stockCode} = items;
+    const {needstampFree, freeRatio, stockCode, isOpen} = items;
     if (current_isAuto) {
       current_realPrice = this.getCurrentPrice(stockCode, this.state.hq);
     }
 
-    if (current_showType === 2) {
+    if (current_showType === 2 && isOpen) {
       dealList = dealList.filter((item) => {
         return item.s_price === null;
       })
     }
-    if (current_showType === 3) {
+    if (current_showType === 3 && isOpen) {
       dealList = dealList.filter((item) => {
         return item.s_price !== null;
       })

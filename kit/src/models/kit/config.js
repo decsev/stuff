@@ -239,6 +239,13 @@ const gridData = {
           amount: 11200,
           b_time: '2019-05-16',
           s_time: null
+        },
+        {
+          b_price: 0.892,
+          s_price: null,
+          amount: 1900,
+          b_time: '2019-05-17',
+          s_time: null
         }
       ]
     },
@@ -254,6 +261,13 @@ const gridData = {
           s_price: null,
           amount: 500,
           b_time: '2019-05-16',
+          s_time: null
+        },
+        {
+          b_price: 20.9,
+          s_price: null,
+          amount: 400,
+          b_time: '2019-05-17',
           s_time: null
         }
       ]
@@ -406,7 +420,7 @@ const stockFromData = [{
       text: '显示',
       name: 'showType',
       description: null,
-      value: 1,
+      value: 2,
       options: [
         {label: '全部', value: 1},
         {label: '未了结', value: 2},
