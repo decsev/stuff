@@ -128,6 +128,27 @@ const gridData = {
           amount: 300,
           b_time: '2019-05-17',
           s_time: null
+        },
+        {
+          b_price: 26.91,
+          s_price: 27.62,
+          amount: 700,
+          b_time: '2019-05-23',
+          s_time: '2019-05-28'
+        },
+        {
+          b_price: 26.81,
+          s_price: 27.36,
+          amount: 700,
+          b_time: '2019-05-23',
+          s_time: '2019-05-28'
+        },
+        {
+          b_price: 26.80,
+          s_price: null,
+          amount: 400,
+          b_time: '2019-05-30',
+          s_time: null
         }
       ]
     },
@@ -202,6 +223,9 @@ const gridData = {
       stockCode: 'sz000069', // 股票代码
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
+      dividend: 1470, // 分红
+      eachDividend: 0.24, // 除息后每股分红
+      dividendInterest: 294, // 股息
       dealList: [
         {
           b_price: 7.45,
@@ -223,29 +247,36 @@ const gridData = {
           amount: 1500,
           b_time: '2019-05-17',
           s_time: null
+        },
+        {
+          b_price: 6.78,
+          s_price: 7.02,
+          amount: 1800,
+          b_time: '2019-05-23',
+          s_time: '2019-05-28'
         }
       ]
     },
     {
       strategyName: 'dec_etf', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       stockCode: 'sh512880', // 股票代码
       needstampFree: false, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       dealList: [
         {
           b_price: 0.918,
-          s_price: null,
+          s_price: 0.919,
           amount: 11200,
           b_time: '2019-05-16',
-          s_time: null
+          s_time: '2019-05-27'
         },
         {
           b_price: 0.892,
-          s_price: null,
+          s_price: 0.919,
           amount: 1900,
           b_time: '2019-05-17',
-          s_time: null
+          s_time: '2019-05-27'
         }
       ]
     },
@@ -265,9 +296,16 @@ const gridData = {
         },
         {
           b_price: 20.9,
-          s_price: null,
+          s_price: 21.58,
           amount: 400,
           b_time: '2019-05-17',
+          s_time: '2019-05-21'
+        },
+        {
+          b_price: 20.6,
+          s_price: null,
+          amount: 500,
+          b_time: '2019-05-30',
           s_time: null
         }
       ]
@@ -420,7 +458,7 @@ const stockFromData = [{
       text: '显示',
       name: 'showType',
       description: null,
-      value: 2,
+      value: 1,
       options: [
         {label: '全部', value: 1},
         {label: '未了结', value: 2},
@@ -568,6 +606,13 @@ const myInterestList = [
     endTime: null,
     ratio: 4.5,
     capital: 63754.26
+  },
+  {
+    origin: 'yh',
+    startTime: '2019-5-20',
+    endTime: null,
+    ratio: 4.5,
+    capital: 71450.61
   }
 ]
 export {gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList};

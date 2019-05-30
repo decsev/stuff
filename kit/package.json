@@ -71,6 +71,7 @@
     "lint": "eslint --fix --ext .js src",
     "build": "npm run build:prod && npm run build:dev",
     "build:prod": "cross-env sit=prod roadhog build",
+    "build:kit": "cross-env sit=kit roadhog build",
     "build:dev": "cross-env sit=dev roadhog build",
     "start:prod": "cross-env sit=prod roadhog server",
     "start:dev": "cross-env sit=dev roadhog server",

@@ -28,7 +28,7 @@ export default {
     current_firstAmount: 400,
     current_firstAddAmount: 400,
     current_realPrice: 29.39,
-    current_showType: 2,
+    current_showType: 1,
     current_isAuto: true,
     current_span: 5,
     current_upRatio: 2,

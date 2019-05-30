@@ -388,7 +388,7 @@ class Index extends Component {
         dataIndex: 'name',
         key: 'code',
         render: (param, o) => {
-          return <p>{param}({o.code})</p>
+          return <p><a href={`https://xueqiu.com/S/${o.code}`} target="_blank">{param}({o.code})</a></p>
         }
       },
       {
