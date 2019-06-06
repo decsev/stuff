@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sz000069,sz002751,sh512880',
+  stockCodesList: 'sh000001,sz000002,sz000069,sz002751,sh512880,sz002955',
   closeCodeList: 'sh600741',
   strategyList: [
     {
@@ -145,10 +145,10 @@ const gridData = {
         },
         {
           b_price: 26.80,
-          s_price: null,
+          s_price: 27.2,
           amount: 400,
           b_time: '2019-05-30',
-          s_time: null
+          s_time: '2019-06-06'
         },
         {
           b_price: 26.31,
@@ -268,6 +268,13 @@ const gridData = {
           amount: 1800,
           b_time: '2019-05-23',
           s_time: '2019-05-28'
+        },
+        {
+          b_price: 6.8,
+          s_price: null,
+          amount: 1900,
+          b_time: '2019-06-06',
+          s_time: null
         }
       ]
     },
@@ -295,45 +302,52 @@ const gridData = {
       ]
     },
     {
-      strategyName: 'dec_yszs', // 策略名
+      strategyName: 'dec_hhkj', // 策略名
       isOpen: true, // 是否当前持仓
-      stockCode: 'sz002751', // 股票代码
+      stockCode: 'sz002955', // 股票代码
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       dealList: [
         {
-          b_price: 21.88,
+          b_price: 62.22,
           s_price: null,
-          amount: 500,
-          b_time: '2019-05-16',
+          amount: 100,
+          b_time: '2019-06-06',
           s_time: null
         },
         {
-          b_price: 20.9,
-          s_price: 21.58,
-          amount: 400,
-          b_time: '2019-05-17',
-          s_time: '2019-05-21'
-        },
-        {
-          b_price: 20.6,
+          b_price: 61.02,
           s_price: null,
-          amount: 500,
-          b_time: '2019-05-30',
+          amount: 100,
+          b_time: '2019-06-06',
           s_time: null
         },
         {
-          b_price: 20.16,
-          s_price: 20.67,
-          amount: 500,
-          b_time: '2019-06-03',
-          s_time: '2019-06-04'
+          b_price: 60.12,
+          s_price: null,
+          amount: 100,
+          b_time: '2019-06-06',
+          s_time: null
         },
         {
-          b_price: 20.01,
+          b_price: 60.02,
           s_price: null,
-          amount: 500,
-          b_time: '2019-06-05',
+          amount: 100,
+          b_time: '2019-06-06',
+          s_time: null
+        },
+        {
+          b_price: 58.91,
+          s_price: null,
+          amount: 200,
+          b_time: '2019-06-06',
+          s_time: null
+        },
+        {
+          b_price: 58.01,
+          s_price: null,
+          amount: 200,
+          b_time: '2019-06-06',
           s_time: null
         }
       ]
@@ -351,6 +365,50 @@ const gridData = {
           amount: 1400,
           b_time: '2019-04-26',
           s_time: '2019-04-29'
+        }
+      ]
+    },
+    {
+      strategyName: 'dec_yszs', // 策略名
+      isOpen: false, // 是否当前持仓
+      stockCode: 'sz002751', // 股票代码
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      dealList: [
+        {
+          b_price: 21.88,
+          s_price: 20.64,
+          amount: 500,
+          b_time: '2019-05-16',
+          s_time: '2019-06-06'
+        },
+        {
+          b_price: 20.9,
+          s_price: 21.58,
+          amount: 400,
+          b_time: '2019-05-17',
+          s_time: '2019-05-21'
+        },
+        {
+          b_price: 20.6,
+          s_price: 20.64,
+          amount: 500,
+          b_time: '2019-05-30',
+          s_time: '2019-06-06'
+        },
+        {
+          b_price: 20.16,
+          s_price: 20.67,
+          amount: 500,
+          b_time: '2019-06-03',
+          s_time: '2019-06-04'
+        },
+        {
+          b_price: 20.01,
+          s_price: 20.82,
+          amount: 500,
+          b_time: '2019-06-05',
+          s_time: '2019-06-06'
         }
       ]
     }
