@@ -163,6 +163,13 @@ const gridData = {
           amount: 400,
           b_time: '2019-06-04',
           s_time: '2019-06-05'
+        },
+        {
+          b_price: 27.86,
+          s_price: null,
+          amount: 400,
+          b_time: '2019-06-12',
+          s_time: null
         }
       ]
     },
