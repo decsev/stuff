@@ -1,7 +1,7 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sz000069,sz002751,sh512880,sz002955',
-  closeCodeList: 'sh600741',
+  stockCodesList: 'sh000001,sz000002,sh512880',
+  closeCodeList: 'sz002955,sh600741,sz000069,sz002751',
   strategyList: [
     {
       strategyName: 'dec_wka', // 策略名
@@ -124,10 +124,10 @@ const gridData = {
         },
         {
           b_price: 27.83,
-          s_price: null,
+          s_price: 28.42,
           amount: 300,
           b_time: '2019-05-17',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 26.91,
@@ -233,7 +233,7 @@ const gridData = {
     },
     {
       strategyName: 'dec_hqc', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       stockCode: 'sz000069', // 股票代码
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
@@ -243,24 +243,31 @@ const gridData = {
       dealList: [
         {
           b_price: 7.45,
-          s_price: null,
+          s_price: 7.04,
           amount: 1600,
           b_time: '2019-05-08',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 7.18,
-          s_price: null,
-          amount: 1800,
+          s_price: 7.01,
+          amount: 1500,
           b_time: '2019-05-09',
-          s_time: null
+          s_time: '2019-06-11'
+        },
+        {
+          b_price: 7.18,
+          s_price: 6.96,
+          amount: 300,
+          b_time: '2019-05-09',
+          s_time: '2019-06-10'
         },
         {
           b_price: 7.3,
-          s_price: null,
+          s_price: 6.99,
           amount: 1500,
           b_time: '2019-05-17',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 6.78,
@@ -271,10 +278,10 @@ const gridData = {
         },
         {
           b_price: 6.8,
-          s_price: null,
+          s_price: 6.96,
           amount: 1900,
           b_time: '2019-06-06',
-          s_time: null
+          s_time: '2019-06-10'
         }
       ]
     },
@@ -303,52 +310,52 @@ const gridData = {
     },
     {
       strategyName: 'dec_hhkj', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       stockCode: 'sz002955', // 股票代码
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       dealList: [
         {
           b_price: 62.22,
-          s_price: null,
+          s_price: 60.13,
           amount: 100,
           b_time: '2019-06-06',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 61.02,
-          s_price: null,
+          s_price: 60.4,
           amount: 100,
           b_time: '2019-06-06',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 60.12,
-          s_price: null,
+          s_price: 60.65,
           amount: 100,
           b_time: '2019-06-06',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 60.02,
-          s_price: null,
+          s_price: 60.58,
           amount: 100,
           b_time: '2019-06-06',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 58.91,
-          s_price: null,
+          s_price: 60.59,
           amount: 200,
           b_time: '2019-06-06',
-          s_time: null
+          s_time: '2019-06-11'
         },
         {
           b_price: 58.01,
-          s_price: null,
+          s_price: 59.49,
           amount: 200,
           b_time: '2019-06-06',
-          s_time: null
+          s_time: '2019-06-10'
         }
       ]
     },

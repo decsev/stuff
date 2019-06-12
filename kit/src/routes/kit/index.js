@@ -538,7 +538,15 @@ class Index extends Component {
                       bordered
                       scroll={{x: true}}
                       title={() => {return '当前股价:' + this.getCurrentPrice(item.stockCode, this.state.hq)}}
-                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '累计盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' + ' | 占用资金：' + r.buyAmount : null}}
+                      footer={() => {
+                        let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen);
+                        let temp = '';
+                        if (item.dividend) {
+                          temp = ` | 分红：${item.dividend} , 扣税：${item.dividendInterest}`;
+                          r.yk = fNum(r.yk + item.dividend - item.dividendInterest, 2);
+                        }
+                        return r.yk && r.buyAmount ? '累计盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' + ' | 占用资金：' + r.buyAmount + temp : null
+                      }}
                     />
                   </TabPane>
                 })
@@ -559,7 +567,15 @@ class Index extends Component {
                       dataSource={this.calcHold(item.dealList, item)}
                       bordered
                       scroll={{x: true}}
-                      footer={() => {let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen); return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' : null}}
+                      footer={() => {
+                        let temp = '';
+                        let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen);
+                        if (item.dividend) {
+                          temp = `，分红：${item.dividend} , 扣税：${item.dividendInterest}`;
+                          r.yk = fNum(r.yk + item.dividend - item.dividendInterest, 2);
+                        }
+                        return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' + temp : null;
+                      }}
                     />
                   </TabPane>
                 })
