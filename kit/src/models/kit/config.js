@@ -1,7 +1,7 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh512880',
-  closeCodeList: 'sz002955,sh600741,sz000069,sz002751',
+  stockCodesList: 'sh000001,sz000002,sh502012,sz150172',
+  closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880',
   strategyList: [
     {
       strategyName: 'dec_wka', // 策略名
@@ -103,10 +103,10 @@ const gridData = {
         },
         {
           b_price: 28.72,
-          s_price: null,
+          s_price: 30,
           amount: 2700,
           b_time: '2019-04-30',
-          s_time: null
+          s_time: '2019-07-04'
         },
         {
           b_price: 27.81,
@@ -177,6 +177,27 @@ const gridData = {
           amount: 400,
           b_time: '2019-06-25',
           s_time: '2019-07-01'
+        },
+        {
+          b_price: 29.01,
+          s_price: 29.16,
+          amount: 400,
+          b_time: '2019-07-08',
+          s_time: '2019-07-08'
+        },
+        {
+          b_price: 28.77,
+          s_price: 29.16,
+          amount: 400,
+          b_time: '2019-07-08',
+          s_time: '2019-07-08'
+        },
+        {
+          b_price: 28.68,
+          s_price: 29.16,
+          amount: 400,
+          b_time: '2019-07-08',
+          s_time: '2019-07-08'
         }
       ]
     },
@@ -238,9 +259,62 @@ const gridData = {
         },
         {
           b_price: 28.85,
-          s_price: null,
+          s_price: 29.86,
           amount: 500,
           b_time: '2019-04-30',
+          s_time: '2019-07-04'
+        }
+      ]
+    },
+    {
+      strategyName: 'dec_150172', // 策略名
+      isOpen: true, // 是否当前持仓
+      stockCode: 'sz150172', // 股票代码
+      needstampFree: false, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      dealList: [
+        {
+          b_price: 1.401,
+          s_price: null,
+          amount: 10000,
+          b_time: '2019-07-08',
+          s_time: null
+        },
+        {
+          b_price: 1.388,
+          s_price: null,
+          amount: 10000,
+          b_time: '2019-07-08',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: 'dec_502012', // 策略名
+      isOpen: true, // 是否当前持仓
+      stockCode: 'sh502012', // 股票代码
+      needstampFree: false, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      dealList: [
+        {
+          b_price: 1.143,
+          s_price: null,
+          amount: 10000,
+          b_time: '2019-07-08',
+          s_time: null
+        },
+        {
+          b_price: 1.123,
+          s_price: null,
+          amount: 10000,
+          b_time: '2019-07-08',
+          s_time: null
+        },
+        {
+          b_price: 1.101,
+          s_price: null,
+          amount: 10000,
+          b_time: '2019-07-08',
           s_time: null
         }
       ]
