@@ -96,10 +96,10 @@ const gridData = {
         },
         {
           b_price: 29.06,
-          s_price: null,
+          s_price: 29.7,
           amount: 300,
           b_time: '2019-04-26',
-          s_time: null
+          s_time: '2019-07-15'
         },
         {
           b_price: 28.72,
@@ -268,54 +268,68 @@ const gridData = {
     },
     {
       strategyName: 'dec_150172', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       stockCode: 'sz150172', // 股票代码
       needstampFree: false, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       dealList: [
         {
           b_price: 1.401,
-          s_price: null,
+          s_price: 1.422,
           amount: 10000,
           b_time: '2019-07-08',
-          s_time: null
+          s_time: '2019-07-15'
         },
         {
           b_price: 1.388,
-          s_price: null,
+          s_price: 1.398,
           amount: 10000,
           b_time: '2019-07-08',
-          s_time: null
+          s_time: '2019-07-15'
         }
       ]
     },
     {
       strategyName: 'dec_502012', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       stockCode: 'sh502012', // 股票代码
       needstampFree: false, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       dealList: [
         {
           b_price: 1.143,
-          s_price: null,
+          s_price: 1.149,
           amount: 10000,
           b_time: '2019-07-08',
-          s_time: null
+          s_time: '2019-07-15'
         },
         {
           b_price: 1.123,
-          s_price: null,
+          s_price: 1.133,
           amount: 10000,
           b_time: '2019-07-08',
-          s_time: null
+          s_time: '2019-07-15'
         },
         {
           b_price: 1.101,
-          s_price: null,
+          s_price: 1.115,
           amount: 10000,
           b_time: '2019-07-08',
-          s_time: null
+          s_time: '2019-07-15'
+        },
+        {
+          b_price: 1.08,
+          s_price: 1.09,
+          amount: 10000,
+          b_time: '2019-07-09',
+          s_time: '2019-07-09'
+        },
+        {
+          b_price: 1.076,
+          s_price: 1.09,
+          amount: 10000,
+          b_time: '2019-07-09',
+          s_time: '2019-07-09'
         }
       ]
     },
