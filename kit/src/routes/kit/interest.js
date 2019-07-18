@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import {changeTitle, queryURL, fNum} from 'utils';
 import {Row, Col, Button, Modal, Form, Card, Select, Tabs, Spin, message, Tag, Table, Radio, Tooltip, Icon} from 'antd';
 import {MyInput, MyTable, MyBreadcrumb, DynamicArrayInput} from 'components';
+import Nav from './nav.js';
 import styles from './index.less';
 
 const ButtonGroup = Button.Group;
@@ -123,14 +124,7 @@ class Index extends Component {
     }
     return (
       <div id="mainContent" className={styles.mainContent}>
-        <nav className={styles.my_nav}>
-          <ul>
-            <li><Link to="/kit">我的持仓</Link></li>
-            <li><Link to="/kit/myInterest">我的借贷</Link></li>
-            <li><Link to="/kit/grid">网格工具</Link></li>
-            <li className={styles.active}><Link to="/kit/interest">计息工具</Link></li>
-          </ul>
-        </nav>
+        <Nav activeIndex={3}></Nav>
         <Form style={{marginBottom: '30px'}}>
           <Row gutter={12}>
             {

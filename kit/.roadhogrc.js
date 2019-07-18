@@ -10,8 +10,8 @@ export default {
   entry: 'src/index.js',
   svgSpriteLoaderDirs: svgSpriteDirs,
   theme: "./theme.config.js",
-  // publicPath: `/${version}/`,
-  publicPath: process.env.sit === 'dev' ? `/www/Public/kit-dva/devDist/${version}/` : `/www/Public/kit-dva/dist/${version}/`,
+  publicPath: `/m/${version}/`,
+  // publicPath: process.env.sit === 'dev' ? `/www/Public/kit-dva/devDist/${version}/` : `/www/Public/kit-dva/dist/${version}/`,
   outputPath: process.env.sit === 'dev' ? `./devDist/${version}` : `./dist/${version}`,
   define: {
     "phixSit": process.env.sit,

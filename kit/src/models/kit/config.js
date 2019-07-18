@@ -1,7 +1,7 @@
 // 我的持仓列表
 const gridData = {
   stockCodesList: 'sh000001,sz000002,sh502012,sz150172',
-  closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880',
+  closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000',
   strategyList: [
     {
       strategyName: 'dec_wka', // 策略名

@@ -7,6 +7,7 @@ import {Row, Col, Button, Modal, Form, Card, Select, Tabs, Spin, message, Tag, T
 import {MyInput, MyTable, MyBreadcrumb, DynamicArrayInput, MyEmpty} from 'components';
 import styles from './index.less';
 import {start} from 'pretty-error';
+import Nav from './nav.js';
 
 const ButtonGroup = Button.Group;
 const confirm = Modal.confirm;
@@ -429,19 +430,21 @@ class Index extends Component {
         title: '更新时间',
         dataIndex: 'time',
         key: 'time'
+      },
+      {
+        title: '操作',
+        dataIndex: 'operate',
+        key: 'operate',
+        render: (p, o) => {
+          return <a href={`https://eniu.com/gu/${o.code}`} target="_blank">历史市盈</a>
+          return o.code;
+        }
       }
     ]
     const {match} = this.props;
     return (
       <div id="mainContent" className={styles.mainContent}>
-        <nav className={styles.my_nav}>
-          <ul>
-            <li className={styles.active}><Link to="/kit">我的持仓</Link></li>
-            <li><Link to="/kit/myInterest">我的借贷</Link></li>
-            <li><Link to="/kit/grid">网格工具</Link></li>
-            <li><Link to="/kit/interest">计息工具</Link></li>
-          </ul>
-        </nav>
+        <Nav activeIndex={0}></Nav>
         <Form style={{marginBottom: '30px'}}>
           <Row gutter={12}>
             {
