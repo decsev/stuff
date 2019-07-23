@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh502012,sz150172',
+  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sz002027',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000',
   strategyList: [
     {
@@ -54,17 +54,17 @@ const gridData = {
         },
         {
           b_price: 29.91,
-          s_price: null,
+          s_price: 31.37,
           amount: 500,
           b_time: '2019-04-22',
-          s_time: null
+          s_time: '2019-07-22'
         },
         {
           b_price: 29.6,
-          s_price: null,
+          s_price: 30.79,
           amount: 700,
           b_time: '2019-04-22',
-          s_time: null
+          s_time: '2019-07-19'
         },
         {
           b_price: 29.44,
@@ -198,6 +198,36 @@ const gridData = {
           amount: 400,
           b_time: '2019-07-08',
           s_time: '2019-07-08'
+        },
+        {
+          b_price: 30.59,
+          s_price: null,
+          amount: 400,
+          b_time: '2019-07-23',
+          s_time: null
+        },
+        {
+          b_price: 30.33,
+          s_price: null,
+          amount: 400,
+          b_time: '2019-07-23',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: 'dec_fzcm', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz002027', // 股票代码
+      dealList: [
+        {
+          b_price: 4.74,
+          s_price: null,
+          amount: 1000,
+          b_time: '2019-07-23',
+          s_time: null
         }
       ]
     },
@@ -224,17 +254,17 @@ const gridData = {
         },
         {
           b_price: 30.01,
-          s_price: null,
+          s_price: 31.42,
           amount: 300,
           b_time: '2019-04-22',
-          s_time: null
+          s_time: '2019-07-22'
         },
         {
           b_price: 29.92,
-          s_price: null,
+          s_price: 30.67,
           amount: 200,
           b_time: '2019-04-22',
-          s_time: null
+          s_time: '2019-07-19'
         },
         {
           b_price: 29.52,
@@ -653,7 +683,7 @@ const stockFromData = [{
       text: '显示',
       name: 'showType',
       description: null,
-      value: 1,
+      value: 2,
       options: [
         {label: '全部', value: 1},
         {label: '未了结', value: 2},
