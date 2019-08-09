@@ -282,6 +282,13 @@ const gridData = {
           amount: 400,
           b_time: '2019-08-05',
           s_time: null
+        },
+        {
+          b_price: 26.51,
+          s_price: 26.8,
+          amount: 1600,
+          b_time: '2019-08-06',
+          s_time: '2019-08-06'
         }
       ]
     },
@@ -682,8 +689,8 @@ const gridFromData = [{
       text: '仓位模式',
       name: 'type',
       options: [
-        { label: '等量开仓', value: '1' },
-        { label: '2倍量开仓', value: '2' }
+        {label: '等量开仓', value: '1'},
+        {label: '2倍量开仓', value: '2'}
       ],
       required: true,
       value: '1'
@@ -792,9 +799,9 @@ const stockFromData = [{
       description: null,
       value: 2,
       options: [
-        { label: '全部', value: 1 },
-        { label: '未了结', value: 2 },
-        { label: '已了结', value: 3 }
+        {label: '全部', value: 1},
+        {label: '未了结', value: 2},
+        {label: '已了结', value: 3}
       ]
     },
     {
@@ -844,8 +851,8 @@ const interestFormData = [{
       text: '复利模式',
       name: 'interesetType',
       options: [
-        { label: '是', value: '1' },
-        { label: '否', value: '2' }
+        {label: '是', value: '1'},
+        {label: '否', value: '2'}
       ],
       required: true,
       value: '1'
@@ -896,9 +903,9 @@ const myInterestFormData = [{
       description: null,
       value: 1,
       options: [
-        { label: '全部', value: 1 },
-        { label: '已还', value: 2 },
-        { label: '未还', value: 3 }
+        {label: '全部', value: 1},
+        {label: '已还', value: 2},
+        {label: '未还', value: 3}
       ]
     },
     {
@@ -908,9 +915,9 @@ const myInterestFormData = [{
       description: null,
       value: 1,
       options: [
-        { label: 'all', value: 1 },
-        { label: 'zfb', value: 2 },
-        { label: 'yh', value: 3 }
+        {label: 'all', value: 1},
+        {label: 'zfb', value: 2},
+        {label: 'yh', value: 3}
       ]
     }
   ]
@@ -947,4 +954,4 @@ const myInterestList = [
     capital: 71450.61
   }
 ]
-export { gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList };
+export {gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList};
