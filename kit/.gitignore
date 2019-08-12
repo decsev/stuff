@@ -11,3 +11,5 @@ dist
 .AppleDouble
 .LSOverride
 dist
+
+package-lock.json
