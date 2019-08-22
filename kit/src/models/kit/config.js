@@ -8,45 +8,46 @@ const gridData = {
       isOpen: true, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz000002', // 股票代码
+      stockCode: 'sz000002', // 股票代码 
+      // dividend: 10451.02, // 分红
       dealList: [
         {
-          b_price: 30.36,
+          b_price: 30.36 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-04-22',
           s_time: null
         },
         {
-          b_price: 30.21,
+          b_price: 30.21 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-04-22',
           s_time: null
         },
         {
-          b_price: 30.09,
+          b_price: 30.09 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-04-22',
           s_time: null
         },
         {
-          b_price: 30.02,
+          b_price: 30.02 - 1.045102,
           s_price: null,
           amount: 700,
           b_time: '2019-04-22',
           s_time: null
         },
         {
-          b_price: 30,
+          b_price: 30 - 1.045102,
           s_price: null,
           amount: 600,
           b_time: '2019-04-22',
           s_time: null
         },
         {
-          b_price: 29.96,
+          b_price: 29.96 - 1.045102,
           s_price: null,
           amount: 500,
           b_time: '2019-04-22',
@@ -200,77 +201,77 @@ const gridData = {
           s_time: '2019-07-08'
         },
         {
-          b_price: 30.59,
+          b_price: 30.59 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-07-23',
           s_time: null
         },
         {
-          b_price: 30.33,
+          b_price: 30.33 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-07-23',
           s_time: null
         },
         {
-          b_price: 30.15,
+          b_price: 30.15 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-07-23',
           s_time: null
         },
         {
-          b_price: 29.98,
+          b_price: 29.98 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-07-23',
           s_time: null
         },
         {
-          b_price: 29.81,
+          b_price: 29.81 - 1.045102,
           s_price: null,
           amount: 400,
           b_time: '2019-07-23',
           s_time: null
         },
         {
-          b_price: 29.20,
+          b_price: 29.20 - 1.045102,
           s_price: null,
           amount: 800,
           b_time: '2019-07-31',
           s_time: null
         },
         {
-          b_price: 28.96,
+          b_price: 28.96 - 1.045102,
           s_price: null,
           amount: 800,
           b_time: '2019-07-31',
           s_time: null
         },
         {
-          b_price: 28.82,
+          b_price: 28.82 - 1.045102,
           s_price: null,
           amount: 800,
           b_time: '2019-07-31',
           s_time: null
         },
         {
-          b_price: 28.72,
+          b_price: 28.72 - 1.045102,
           s_price: null,
           amount: 800,
           b_time: '2019-07-31',
           s_time: null
         },
         {
-          b_price: 28.31,
+          b_price: 28.31 - 1.045102,
           s_price: null,
           amount: 800,
           b_time: '2019-08-01',
           s_time: null
         },
         {
-          b_price: 27.73,
+          b_price: 27.73 - 1.045102,
           s_price: null,
           amount: 600,
           b_time: '2019-08-02',
@@ -289,6 +290,13 @@ const gridData = {
           amount: 1600,
           b_time: '2019-08-06',
           s_time: '2019-08-06'
+        },
+        {
+          b_price: 27.09 - 1.045102,
+          s_price: 27.3,
+          amount: 400,
+          b_time: '2019-08-14',
+          s_time: '2019-08-20'
         }
       ]
     },
@@ -314,16 +322,17 @@ const gridData = {
       stockCode: 'sz000002', // 股票代码
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
+      // dividend: 1358.6326, // 分红
       dealList: [
         {
-          b_price: 30.35,
+          b_price: 30.35 - 1.045102,
           s_price: null,
           amount: 300,
           b_time: '2019-04-22',
           s_time: null
         },
         {
-          b_price: 30.11,
+          b_price: 30.11 - 1.045102,
           s_price: null,
           amount: 200,
           b_time: '2019-04-22',
@@ -372,25 +381,32 @@ const gridData = {
           s_time: '2019-07-04'
         },
         {
-          b_price: 29.20,
+          b_price: 29.20 - 1.045102,
           s_price: null,
           amount: 200,
           b_time: '2019-07-31',
           s_time: null
         },
         {
-          b_price: 28.4,
+          b_price: 28.4 - 1.045102,
           s_price: null,
           amount: 200,
           b_time: '2019-08-01',
           s_time: null
         },
         {
-          b_price: 27.75,
+          b_price: 27.75 - 1.045102,
           s_price: null,
           amount: 200,
           b_time: '2019-08-02',
           s_time: null
+        },
+        {
+          b_price: 27.09 - 1.045102,
+          s_price: 27.3,
+          amount: 200,
+          b_time: '2019-08-14',
+          s_time: '2019-08-20'
         }
       ]
     },

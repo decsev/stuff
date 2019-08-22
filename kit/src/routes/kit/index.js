@@ -290,7 +290,7 @@ class Index extends Component {
         dataIndex: 'b_price',
         key: 'b_price',
         render: (param, o) => {
-          return <Tooltip title={`${fNum(o.upRatioPrice, 3)}(${current_upRatio}%) / ${fNum(o.downRatioPrice, 3)}(-${current_downRatio}%)`}>{param}</Tooltip>;
+          return <Tooltip title={`${fNum(o.upRatioPrice, 3)}(${current_upRatio}%) / ${fNum(o.downRatioPrice, 3)}(-${current_downRatio}%)`}>{fNum(param)}</Tooltip>;
         }
       },
       {
