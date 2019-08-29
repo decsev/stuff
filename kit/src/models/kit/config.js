@@ -297,6 +297,13 @@ const gridData = {
           amount: 400,
           b_time: '2019-08-14',
           s_time: '2019-08-20'
+        },
+        {
+          b_price: 26.06,
+          s_price: null,
+          amount: 600,
+          b_time: '2019-08-29',
+          s_time: null
         }
       ]
     },
@@ -407,6 +414,13 @@ const gridData = {
           amount: 200,
           b_time: '2019-08-14',
           s_time: '2019-08-20'
+        },
+        {
+          b_price: 26.06,
+          s_price: null,
+          amount: 200,
+          b_time: '2019-08-29',
+          s_time: null
         }
       ]
     },
