@@ -265,10 +265,10 @@ const gridData = {
         },
         {
           b_price: 28.31 - 1.045102,
-          s_price: null,
+          s_price: 27.54,
           amount: 800,
           b_time: '2019-08-01',
-          s_time: null
+          s_time: '2019-09-11'
         },
         {
           b_price: 27.73 - 1.045102,
@@ -403,10 +403,10 @@ const gridData = {
         },
         {
           b_price: 28.4 - 1.045102,
-          s_price: null,
+          s_price: 27.55,
           amount: 200,
           b_time: '2019-08-01',
-          s_time: null
+          s_time: '2019-09-11'
         },
         {
           b_price: 27.75 - 1.045102,

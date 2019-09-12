@@ -42,7 +42,7 @@ module.exports = {
     "no-extra-parens": 1,                     //多余的括号
     "no-empty": 1,                            //空代码块
     "no-use-before-define": [1, "nofunc"],    //使用前未定义
-    "complexity": [1, 10],                    //圈复杂度大于10 警告
+    "complexity": [1, 100],                    //圈复杂度大于10 警告
 
     //常见错误
     "no-console": 0,

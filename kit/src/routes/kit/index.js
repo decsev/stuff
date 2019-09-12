@@ -320,6 +320,9 @@ class Index extends Component {
           let percent = fNum(Number(p) * 100 / (Number(o.b_price) * Number(o.amount)), 2) + '%';
           return p + '(' + percent + ')';
 
+        },
+        sorter: (a, b) => {
+          return a.realProfit - b.realProfit;
         }
       },
       {
@@ -332,6 +335,9 @@ class Index extends Component {
           }
           let percent = fNum(Number(p) * 100 / (Number(o.b_price) * Number(o.amount)), 2) + '%';
           return p + '(' + percent + ')';
+        },
+        sorter: (a, b) => {
+          return a.selloutProfit - b.selloutProfit;
         }
       },
       {
@@ -345,7 +351,10 @@ class Index extends Component {
       {
         title: '买入时间',
         dataIndex: 'b_time',
-        key: 'b_time'
+        key: 'b_time',
+        sorter: (a, b) => {
+          return new Date(a.b_time) - new Date(b.b_time);
+        }
       },
       {
         title: '卖出时间',
@@ -356,6 +365,9 @@ class Index extends Component {
             return param;
           }
           return '--'
+        },
+        sorter: (a, b) => {
+          return new Date(a.s_time) - new Date(b.s_time);
         }
       },
       {
