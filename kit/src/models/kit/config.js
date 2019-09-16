@@ -258,17 +258,17 @@ const gridData = {
         },
         {
           b_price: 28.72 - 1.045102,
-          s_price: null,
+          s_price: 27.8,
           amount: 800,
           b_time: '2019-07-31',
-          s_time: null
+          s_time: '2019-09-12'
         },
         {
           b_price: 28.31 - 1.045102,
           s_price: 27.54,
           amount: 800,
           b_time: '2019-08-01',
-          s_time: '2019-09-11'
+          s_time: '2019-09-12'
         },
         {
           b_price: 27.73 - 1.045102,
@@ -311,22 +311,6 @@ const gridData = {
           amount: 1600,
           b_time: '2019-09-3',
           s_time: '2019-09-4'
-        }
-      ]
-    },
-    {
-      strategyName: 'dec_fzcm', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz002027', // 股票代码
-      dealList: [
-        {
-          b_price: 4.74,
-          s_price: 4.82,
-          amount: 1000,
-          b_time: '2019-07-23',
-          s_time: '2019-07-30'
         }
       ]
     },
@@ -428,6 +412,22 @@ const gridData = {
           amount: 200,
           b_time: '2019-08-29',
           s_time: '2019-09-5'
+        }
+      ]
+    },
+    {
+      strategyName: 'dec_fzcm', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz002027', // 股票代码
+      dealList: [
+        {
+          b_price: 4.74,
+          s_price: 4.82,
+          amount: 1000,
+          b_time: '2019-07-23',
+          s_time: '2019-07-30'
         }
       ]
     },
