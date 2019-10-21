@@ -291,6 +291,9 @@ class Index extends Component {
         key: 'b_price',
         render: (param, o) => {
           return <Tooltip title={`${fNum(o.upRatioPrice, 3)}(${current_upRatio}%) / ${fNum(o.downRatioPrice, 3)}(-${current_downRatio}%)`}>{fNum(param)}</Tooltip>;
+        },
+        sorter: (a, b) => {
+          return a.b_price - b.b_price;
         }
       },
       {
