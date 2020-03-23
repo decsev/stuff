@@ -3,7 +3,113 @@ const gridData = {
   stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
-
+    {
+      strategyName: 'wka', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000002', // 股票代码 
+      dealList: [
+        {
+          b_price: 26.96,
+          s_price: null,
+          amount: 400,
+          b_time: '2020-03-18',
+          s_time: null
+        },
+        {
+          b_price: 26.52,
+          s_price: null,
+          amount: 400,
+          b_time: '2020-03-18',
+          s_time: null
+        },
+        {
+          b_price: 26.41,
+          s_price: null,
+          amount: 400,
+          b_time: '2020-03-18',
+          s_time: null
+        },
+        {
+          b_price: 26.31,
+          s_price: null,
+          amount: 400,
+          b_time: '2020-03-18',
+          s_time: null
+        },
+        {
+          b_price: 26.21,
+          s_price: null,
+          amount: 600,
+          b_time: '2020-03-18',
+          s_time: null
+        },
+        {
+          b_price: 25.59,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-03-19',
+          s_time: null
+        },
+        {
+          b_price: 25.47,
+          s_price: null,
+          amount: 100,
+          b_time: '2020-03-19',
+          s_time: null
+        },
+        {
+          b_price: 25.19,
+          s_price: null,
+          amount: 1500,
+          b_time: '2020-03-19',
+          s_time: null
+        },
+        {
+          b_price: 25.13,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-03-19',
+          s_time: null
+        },
+        {
+          b_price: 25.03,
+          s_price: 25.21,
+          amount: 1000,
+          b_time: '2020-03-19',
+          s_time: '2020-03-19'
+        },
+        {
+          b_price: 24.4,
+          s_price: 24.8,
+          amount: 400,
+          b_time: '2020-03-19',
+          s_time: '2020-03-19'
+        },
+        {
+          b_price: 24.84,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-03-23',
+          s_time: null
+        },
+        {
+          b_price: 24.61,
+          s_price: null,
+          amount: 300,
+          b_time: '2020-03-23',
+          s_time: null
+        },
+        {
+          b_price: 24.5,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-03-23',
+          s_time: null
+        }
+      ]
+    },
     {
       strategyName: 'A50ETF', // 策略名
       isOpen: true, // 是否当前持仓
@@ -32,9 +138,52 @@ const gridData = {
           amount: 10000,
           b_time: '2020-03-17',
           s_time: null
+        },
+        {
+          b_price: 1.177,
+          s_price: null,
+          amount: 10000,
+          b_time: '2020-03-18',
+          s_time: null
+        },
+        {
+          b_price: 1.160,
+          s_price: null,
+          amount: 20000,
+          b_time: '2020-03-19',
+          s_time: null
+        },
+        {
+          b_price: 1.151,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-03-19',
+          s_time: null
+        },
+        {
+          b_price: 1.142,
+          s_price: null,
+          amount: 1600,
+          b_time: '2020-03-19',
+          s_time: null
+        },
+        {
+          b_price: 1.131,
+          s_price: 1.140,
+          amount: 9100,
+          b_time: '2020-03-19',
+          s_time: '2020-03-19'
+        },
+        {
+          b_price: 1.132,
+          s_price: null,
+          amount: 18800,
+          b_time: '2020-03-23',
+          s_time: null
         }
       ]
     }
+    
     
   ]
 }
@@ -323,6 +472,13 @@ const myInterestList = [
     endTime: null,
     ratio: 4.5,
     capital: 71450.61
+  },
+  {
+    origin: 'yh',
+    startTime: '2020-3-19',
+    endTime: null,
+    ratio: 4.5,
+    capital: 93406.98
   }
 ]
 export {gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList};
