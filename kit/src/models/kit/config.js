@@ -103,10 +103,10 @@ const gridData = {
         },
         {
           b_price: 24.5,
-          s_price: null,
+          s_price: 25.1,
           amount: 500,
           b_time: '2020-03-23',
-          s_time: null
+          s_time: '2020-03-24'
         }
       ]
     },
@@ -162,10 +162,10 @@ const gridData = {
         },
         {
           b_price: 1.142,
-          s_price: null,
+          s_price: 1.173,
           amount: 1600,
           b_time: '2020-03-19',
-          s_time: null
+          s_time: '2020-03-24'
         },
         {
           b_price: 1.131,
@@ -176,10 +176,10 @@ const gridData = {
         },
         {
           b_price: 1.132,
-          s_price: null,
+          s_price: 1.173,
           amount: 18800,
           b_time: '2020-03-23',
-          s_time: null
+          s_time: '2020-03-24'
         }
       ]
     }
