@@ -68,10 +68,10 @@ const gridData = {
         },
         {
           b_price: 25.13,
-          s_price: null,
+          s_price: 25.77,
           amount: 1000,
           b_time: '2020-03-19',
-          s_time: null
+          s_time: '2020-03-25'
         },
         {
           b_price: 25.03,
@@ -89,17 +89,17 @@ const gridData = {
         },
         {
           b_price: 24.84,
-          s_price: null,
+          s_price: 25.54,
           amount: 500,
           b_time: '2020-03-23',
-          s_time: null
+          s_time: '2020-03-25'
         },
         {
           b_price: 24.61,
-          s_price: null,
+          s_price: 25.54,
           amount: 300,
           b_time: '2020-03-23',
-          s_time: null
+          s_time: '2020-03-25'
         },
         {
           b_price: 24.5,
@@ -148,17 +148,17 @@ const gridData = {
         },
         {
           b_price: 1.160,
-          s_price: null,
+          s_price: 1.207,
           amount: 20000,
           b_time: '2020-03-19',
-          s_time: null
+          s_time: '2020-03-25'
         },
         {
           b_price: 1.151,
-          s_price: null,
+          s_price: 1.207,
           amount: 2000,
           b_time: '2020-03-19',
-          s_time: null
+          s_time: '2020-03-25'
         },
         {
           b_price: 1.142,
