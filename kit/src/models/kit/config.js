@@ -54,17 +54,17 @@ const gridData = {
         },
         {
           b_price: 25.47,
-          s_price: null,
+          s_price: 26.41,
           amount: 100,
           b_time: '2020-03-19',
-          s_time: null
+          s_time: '2020-03-25'
         },
         {
           b_price: 25.19,
-          s_price: null,
+          s_price: 26.41,
           amount: 1500,
           b_time: '2020-03-19',
-          s_time: null
+          s_time: '2020-03-25'
         },
         {
           b_price: 25.13,
@@ -479,6 +479,13 @@ const myInterestList = [
     endTime: null,
     ratio: 4.5,
     capital: 93406.98
+  },
+  {
+    origin: 'zfb',
+    startTime: '2020-3-19',
+    endTime: '2020-3-26',
+    ratio: 9,
+    capital: 92000
   }
 ]
 export {gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList};
