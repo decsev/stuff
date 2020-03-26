@@ -47,10 +47,10 @@ const gridData = {
         },
         {
           b_price: 25.59,
-          s_price: null,
+          s_price: 26.2,
           amount: 1000,
           b_time: '2020-03-19',
-          s_time: null
+          s_time: '2019-03-26'
         },
         {
           b_price: 25.47,
