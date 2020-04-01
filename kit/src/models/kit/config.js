@@ -40,10 +40,10 @@ const gridData = {
         },
         {
           b_price: 26.21,
-          s_price: null,
+          s_price: 26.92,
           amount: 600,
           b_time: '2020-03-18',
-          s_time: null
+          s_time: '2020-04-01'
         },
         {
           b_price: 25.59,
@@ -107,6 +107,13 @@ const gridData = {
           amount: 500,
           b_time: '2020-03-23',
           s_time: '2020-03-24'
+        },
+        {
+          b_price: 25.56,
+          s_price: 26.44,
+          amount: 400,
+          b_time: '2020-03-31',
+          s_time: '2020-04-01'
         }
       ]
     },
@@ -141,10 +148,10 @@ const gridData = {
         },
         {
           b_price: 1.177,
-          s_price: null,
+          s_price: 1.213,
           amount: 10000,
           b_time: '2020-03-18',
-          s_time: null
+          s_time: '2020-04-01'
         },
         {
           b_price: 1.160,
@@ -185,17 +192,24 @@ const gridData = {
     },
     {
       strategyName: 'pingan', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh601318', // 股票代码 
       dealList: [
         {
           b_price: 68.88,
-          s_price: 67.20,
+          s_price: 70.20,
           amount: 100,
           b_time: '2020-03-30',
           s_time: '2020-03-31'
+        },
+        {
+          b_price: 69.19,
+          s_price: 70,
+          amount: 200,
+          b_time: '2020-03-31',
+          s_time: '2020-04-01'
         }
       ]
     }
