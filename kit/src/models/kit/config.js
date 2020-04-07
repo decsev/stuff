@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318',
+  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz002027',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -25,18 +25,25 @@ const gridData = {
           s_time: null
         },
         {
-          b_price: 26.41,
+          b_price: 26.99,
           s_price: null,
-          amount: 400,
-          b_time: '2020-03-18',
+          amount: 800,
+          b_time: '2020-04-07',
           s_time: null
         },
         {
-          b_price: 26.31,
-          s_price: null,
+          b_price: 26.41,
+          s_price: 27.13,
           amount: 400,
           b_time: '2020-03-18',
-          s_time: null
+          s_time: '2020-04-07'
+        },
+        {
+          b_price: 26.31,
+          s_price: 27.11,
+          amount: 400,
+          b_time: '2020-03-18',
+          s_time: '2020-04-07'
         },
         {
           b_price: 26.21,
@@ -141,10 +148,10 @@ const gridData = {
         },
         {
           b_price: 1.181,
-          s_price: null,
+          s_price: 1.23,
           amount: 10000,
           b_time: '2020-03-17',
-          s_time: null
+          s_time: '2020-04-07'
         },
         {
           b_price: 1.177,
@@ -187,6 +194,23 @@ const gridData = {
           amount: 18800,
           b_time: '2020-03-23',
           s_time: '2020-03-24'
+        }
+      ]
+    },
+    {
+      strategyName: '分众', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz002027', // 股票代码 
+      // dividend: 10451.02, // 分红
+      dealList: [
+        {
+          b_price: 4.19,
+          s_price: null,
+          amount: 5200,
+          b_time: '2020-04-07',
+          s_time: null
         }
       ]
     },
