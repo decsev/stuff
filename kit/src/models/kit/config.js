@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz002027',
+  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz002027,sz000333',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -210,6 +210,37 @@ const gridData = {
           s_price: null,
           amount: 5200,
           b_time: '2020-04-07',
+          s_time: null
+        },
+        {
+          b_price: 4.12,
+          s_price: null,
+          amount: 5200,
+          b_time: '2020-04-08',
+          s_time: null
+        },
+        {
+          b_price: 4.06,
+          s_price: null,
+          amount: 5200,
+          b_time: '2020-04-08',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '美的', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000333', // 股票代码 
+      // dividend: 10451.02, // 分红
+      dealList: [
+        {
+          b_price: 48.06,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-04-08',
           s_time: null
         }
       ]
