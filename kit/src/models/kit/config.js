@@ -5,30 +5,37 @@ const gridData = {
   strategyList: [
     {
       strategyName: 'wka', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz000002', // 股票代码 
       dealList: [
         {
           b_price: 26.96,
-          s_price: null,
+          s_price: 26.98,
           amount: 400,
           b_time: '2020-03-18',
-          s_time: null
+          s_time: '2020-04-13'
         },
         {
           b_price: 26.52,
-          s_price: null,
+          s_price: 27.21,
           amount: 400,
           b_time: '2020-03-18',
-          s_time: null
+          s_time: '2020-04-10'
         },
         {
           b_price: 26.99,
-          s_price: null,
+          s_price: 26.98,
           amount: 800,
           b_time: '2020-04-07',
+          s_time: '2020-04-13'
+        },
+        {
+          b_price: 26.88,
+          s_price: 26.98,
+          amount: 400,
+          b_time: '2020-04-10',
           s_time: null
         },
         {
@@ -126,7 +133,7 @@ const gridData = {
     },
     {
       strategyName: 'A50ETF', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: false, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh512150', // 股票代码 
@@ -134,17 +141,24 @@ const gridData = {
       dealList: [
         {
           b_price: 1.202,
-          s_price: null,
+          s_price: 1.223,
           amount: 10000,
           b_time: '2020-03-17',
-          s_time: null
+          s_time: '2020-04-13'
+        },
+        {
+          b_price: 1.222,
+          s_price: 1.223,
+          amount: 10000,
+          b_time: '2020-04-10',
+          s_time: '2020-04-13'
         },
         {
           b_price: 1.187,
-          s_price: null,
+          s_price: 1.239,
           amount: 10000,
           b_time: '2020-03-17',
-          s_time: null
+          s_time: '2020-03-18'
         },
         {
           b_price: 1.181,
@@ -220,17 +234,45 @@ const gridData = {
           s_time: null
         },
         {
-          b_price: 4.06,
+          b_price: 4.04,
           s_price: null,
           amount: 5200,
+          b_time: '2020-04-10',
+          s_time: null
+        },
+        {
+          b_price: 4.06,
+          s_price: 4.13,
+          amount: 5200,
           b_time: '2020-04-08',
+          s_time: '2020-04-09'
+        },
+        {
+          b_price: 3.94,
+          s_price: null,
+          amount: 5200,
+          b_time: '2020-04-13',
+          s_time: null
+        },
+        {
+          b_price: 3.91,
+          s_price: null,
+          amount: 3800,
+          b_time: '2020-04-13',
+          s_time: null
+        },
+        {
+          b_price: 3.88,
+          s_price: null,
+          amount: 6300,
+          b_time: '2020-04-13',
           s_time: null
         }
       ]
     },
     {
       strategyName: '美的', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz000333', // 股票代码 
@@ -238,10 +280,10 @@ const gridData = {
       dealList: [
         {
           b_price: 48.06,
-          s_price: null,
+          s_price: 50.25,
           amount: 200,
           b_time: '2020-04-08',
-          s_time: null
+          s_time: '2020-04-13'
         }
       ]
     },
