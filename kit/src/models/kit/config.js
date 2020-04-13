@@ -256,17 +256,17 @@ const gridData = {
         },
         {
           b_price: 3.91,
-          s_price: null,
+          s_price: 3.92,
           amount: 3800,
           b_time: '2020-04-13',
-          s_time: null
+          s_time: '2020-04-13'
         },
         {
           b_price: 3.88,
-          s_price: null,
+          s_price: 3.92,
           amount: 6300,
           b_time: '2020-04-13',
-          s_time: null
+          s_time: '2020-04-13'
         }
       ]
     },
