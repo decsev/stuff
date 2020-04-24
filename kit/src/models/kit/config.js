@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz000333,sh512000,sz002027',
+  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz000333,sh512000,sz000568',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -212,6 +212,101 @@ const gridData = {
       ]
     },
     {
+      strategyName: '万科', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000002', // 股票代码 
+      dealList: [
+        {
+          b_price: 26.95,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-04-15',
+          s_time: null
+        },
+        {
+          b_price: 26.85,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-04-15',
+          s_time: null
+        },
+        {
+          b_price: 26.59,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-04-15',
+          s_time: null
+        },
+        {
+          b_price: 26.22,
+          s_price: 26.53,
+          amount: 800,
+          b_time: '2020-04-20',
+          s_time: '2020-04-20'
+        },
+        {
+          b_price: 26.11,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-04-21',
+          s_time: null
+        },
+        {
+          b_price: 26.01,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-04-21',
+          s_time: null
+        },
+        {
+          b_price: 25.91,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-04-21',
+          s_time: null
+        },
+        {
+          b_price: 25.75,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-04-24',
+          s_time: null
+        },
+        {
+          b_price: 25.60,
+          s_price: null,
+          amount: 400,
+          b_time: '2020-04-24',
+          s_time: null
+        },
+        {
+          b_price: 25.57,
+          s_price: null,
+          amount: 400,
+          b_time: '2020-04-24',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '卢总', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000568', // 股票代码 
+      dealList: [
+        {
+          b_price: 74.54,
+          s_price: 78.06,
+          amount: 400,
+          b_time: '2020-04-21',
+          s_time: '2020-04-23'
+        }
+      ]
+    },
+    {
       strategyName: '券商etf', // 策略名
       isOpen: true, // 是否当前持仓
       needstampFree: false, // 是否需要印花税
@@ -221,16 +316,44 @@ const gridData = {
       dealList: [
         {
           b_price: 0.888,
-          s_price: null,
+          s_price: 0.893,
           amount: 25000,
           b_time: '2020-04-14',
+          s_time: '2020-04-21'
+        },
+        {
+          b_price: 0.888,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-04-21',
+          s_time: null
+        },
+        {
+          b_price: 0.882,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-04-24',
+          s_time: null
+        },
+        {
+          b_price: 0.873,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-04-24',
+          s_time: null
+        },
+        {
+          b_price: 0.869,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-04-24',
           s_time: null
         }
       ]
     },
     {
       strategyName: '分众', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz002027', // 股票代码 
@@ -238,17 +361,17 @@ const gridData = {
       dealList: [
         {
           b_price: 4.19,
-          s_price: null,
+          s_price: 4.37,
           amount: 5200,
           b_time: '2020-04-07',
-          s_time: null
+          s_time: '2020-04-15'
         },
         {
           b_price: 4.12,
-          s_price: null,
+          s_price: 4.21,
           amount: 5200,
           b_time: '2020-04-08',
-          s_time: null
+          s_time: '2020-04-15'
         },
         {
           b_price: 4.04,
