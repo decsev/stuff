@@ -262,31 +262,31 @@ const gridData = {
         },
         {
           b_price: 25.91,
-          s_price: null,
+          s_price: 26.50,
           amount: 800,
           b_time: '2020-04-21',
-          s_time: null
+          s_time: '2020-04-28'
         },
         {
           b_price: 25.75,
-          s_price: null,
+          s_price: 26.37,
           amount: 800,
           b_time: '2020-04-24',
-          s_time: null
+          s_time: '2020-04-28'
         },
         {
           b_price: 25.60,
-          s_price: null,
+          s_price: 26.29,
           amount: 400,
           b_time: '2020-04-24',
-          s_time: null
+          s_time: '2020-04-28'
         },
         {
           b_price: 25.57,
-          s_price: null,
+          s_price: 26.29,
           amount: 400,
           b_time: '2020-04-24',
-          s_time: null
+          s_time: '2020-04-28'
         }
       ]
     },
