@@ -261,6 +261,55 @@ const gridData = {
           s_time: null
         },
         {
+          b_price: 25.88,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-05-12',
+          s_time: null
+        },
+        {
+          b_price: 25.71,
+          s_price: 26.36,
+          amount: 2400,
+          b_time: '2020-05-13',
+          s_time: '2020-05-18'
+        },
+        {
+          b_price: 25.71,
+          s_price: 26.35,
+          amount: 800,
+          b_time: '2020-05-13',
+          s_time: '2020-05-18'
+        },
+        {
+          b_price: 25.68,
+          s_price: 26.24,
+          amount: 1600,
+          b_time: '2020-05-13',
+          s_time: '2020-05-18'
+        },
+        {
+          b_price: 25.51,
+          s_price: 26.24,
+          amount: 500,
+          b_time: '2020-05-14',
+          s_time: '2020-05-18'
+        },
+        {
+          b_price: 25.48,
+          s_price: 26.24,
+          amount: 300,
+          b_time: '2020-05-14',
+          s_time: '2020-05-18'
+        },
+        {
+          b_price: 25.98,
+          s_price: 26.38,
+          amount: 800,
+          b_time: '2020-05-06',
+          s_time: '2020-05-11'
+        },
+        {
           b_price: 26.11,
           s_price: 26.80,
           amount: 800,
@@ -322,7 +371,7 @@ const gridData = {
     },
     {
       strategyName: '券商etf', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: false, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh512000', // 股票代码 
@@ -337,17 +386,17 @@ const gridData = {
         },
         {
           b_price: 0.888,
-          s_price: null,
+          s_price: 0.902,
           amount: 25000,
           b_time: '2020-04-21',
-          s_time: null
+          s_time: '2020-05-18'
         },
         {
           b_price: 0.882,
-          s_price: null,
+          s_price: 0.917,
           amount: 25000,
           b_time: '2020-04-24',
-          s_time: null
+          s_time: '2020-05-11'
         },
         {
           b_price: 0.873,
