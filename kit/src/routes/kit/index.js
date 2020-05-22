@@ -419,6 +419,11 @@ class Index extends Component {
         title: '涨跌幅',
         dataIndex: 'c',
         key: 'c',
+        sorter: (a, b) => { 
+          let ap = fNum(a.last / a.c - 1);
+          let bp = fNum(b.last / b.c - 1);
+          return bp - ap;        
+        },
         render: (param, o) => {
           let a = fNum(o.last - param);
           let b = fNum(a * 100 / param, 2) + '%';

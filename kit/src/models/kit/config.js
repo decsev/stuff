@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz000333,sh512000,sz000568',
+  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz000333,sh512000,sz000568,sh600536,sh600009',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -350,6 +350,153 @@ const gridData = {
           amount: 400,
           b_time: '2020-04-24',
           s_time: '2020-04-28'
+        },
+        {
+          b_price: 25.36,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 25.34,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 25.19,
+          s_price: null,
+          amount: 1100,
+          b_time: '2020-05-22',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '券商etf', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: false, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh512000', // 股票代码 
+      // dividend: 10451.02, // 分红
+      dealList: [
+        {
+          b_price: 0.878,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 0.876,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 0.87,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 0.864,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 0.862,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '上机', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600009', // 股票代码 
+      dealList: [
+        {
+          b_price: 65.93,
+          s_price: null,
+          amount: 300,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 65.76,
+          s_price: null,
+          amount: 300,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 65.51,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 65.03,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '中软', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600536', // 股票代码 
+      dealList: [
+        {
+          b_price: 80.85,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-21',
+          s_time: null
+        },
+        {
+          b_price: 80.19,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 78.71,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 79.3,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 79.02,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: null
         }
       ]
     },
