@@ -262,43 +262,36 @@ const gridData = {
         },
         {
           b_price: 25.88,
-          s_price: null,
+          s_price: 26.24,
           amount: 800,
           b_time: '2020-05-12',
-          s_time: null
+          s_time: '2020-05-18'
         },
         {
           b_price: 25.71,
-          s_price: 26.36,
+          s_price: 26.24,
           amount: 2400,
           b_time: '2020-05-13',
           s_time: '2020-05-18'
         },
         {
           b_price: 25.71,
-          s_price: 26.35,
+          s_price: 26.36,
           amount: 800,
           b_time: '2020-05-13',
           s_time: '2020-05-18'
         },
         {
           b_price: 25.68,
-          s_price: 26.24,
+          s_price: 26.28,
           amount: 1600,
           b_time: '2020-05-13',
           s_time: '2020-05-18'
         },
         {
           b_price: 25.51,
-          s_price: 26.24,
-          amount: 500,
-          b_time: '2020-05-14',
-          s_time: '2020-05-18'
-        },
-        {
-          b_price: 25.48,
-          s_price: 26.24,
-          amount: 300,
+          s_price: 26.35,
+          amount: 800,
           b_time: '2020-05-14',
           s_time: '2020-05-18'
         },
@@ -352,25 +345,46 @@ const gridData = {
           s_time: '2020-04-28'
         },
         {
-          b_price: 25.36,
+          b_price: 25.71,
           s_price: null,
           amount: 800,
-          b_time: '2020-05-22',
+          b_time: '2020-05-20',
           s_time: null
+        },
+        {
+          b_price: 25.58,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-05-20',
+          s_time: null
+        },
+        {
+          b_price: 25.51,
+          s_price: 26.07,
+          amount: 800,
+          b_time: '2020-05-21',
+          s_time: '2020-05-27'
+        },
+        {
+          b_price: 25.36,
+          s_price: 25.95,
+          amount: 800,
+          b_time: '2020-05-22',
+          s_time: '2020-05-27'
         },
         {
           b_price: 25.34,
-          s_price: null,
+          s_price: 25.68,
           amount: 800,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-05-27'
         },
         {
           b_price: 25.19,
-          s_price: null,
+          s_price: 25.48,
           amount: 1100,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-05-25'
         }
       ]
     },
@@ -413,46 +427,60 @@ const gridData = {
         {
           b_price: 0.862,
           s_price: null,
-          amount: 25000,
+          amount: 1400,
           b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 0.857,
+          s_price: null,
+          amount: 23600,
+          b_time: '2020-05-25',
+          s_time: null
+        },
+        {
+          b_price: 0.856,
+          s_price: null,
+          amount: 25000,
+          b_time: '2020-05-27',
           s_time: null
         }
       ]
     },
     {
       strategyName: '上机', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600009', // 股票代码 
       dealList: [
         {
           b_price: 65.93,
-          s_price: null,
+          s_price: 66.43,
           amount: 300,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-05-25'
         },
         {
           b_price: 65.76,
-          s_price: null,
+          s_price: 66.43,
           amount: 300,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-05-25'
         },
         {
           b_price: 65.51,
-          s_price: null,
+          s_price: 66.4,
           amount: 200,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-05-25'
         },
         {
           b_price: 65.03,
-          s_price: null,
+          s_price: 65.89,
           amount: 200,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-05-25'
         }
       ]
     },
@@ -478,7 +506,7 @@ const gridData = {
           s_time: null
         },
         {
-          b_price: 78.71,
+          b_price: 79.71,
           s_price: null,
           amount: 200,
           b_time: '2020-05-22',
@@ -496,6 +524,48 @@ const gridData = {
           s_price: null,
           amount: 200,
           b_time: '2020-05-22',
+          s_time: null
+        },
+        {
+          b_price: 77.82,
+          s_price: 79.24,
+          amount: 200,
+          b_time: '2020-05-25',
+          s_time: '2020-05-26'
+        },
+        {
+          b_price: 77.66,
+          s_price: 78.08,
+          amount: 200,
+          b_time: '2020-05-25',
+          s_time: '2020-05-25'
+        },
+        {
+          b_price: 78.15,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-27',
+          s_time: null
+        },
+        {
+          b_price: 77.65,
+          s_price: 78.16,
+          amount: 200,
+          b_time: '2020-05-27',
+          s_time: '2020-05-27'
+        },
+        {
+          b_price: 77.50,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-27',
+          s_time: null
+        },
+        {
+          b_price: 77.36,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-05-27',
           s_time: null
         }
       ]
