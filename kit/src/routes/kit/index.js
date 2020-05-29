@@ -457,11 +457,23 @@ class Index extends Component {
         key: 'operate',
         render: (p, o) => {
           return <a href={`https://eniu.com/gu/${o.code}`} target="_blank">历史市盈</a>
-          return o.code;
         }
       }
-    ]
+    ];
     const {match} = this.props;
+    let closeProfit = 0;
+    let openProfit = 0;
+    closeList.forEach((item, index) => { 
+      let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen);
+      closeProfit += r.yk;
+    });
+    openList.forEach((item, index) => { 
+      let r = this.calcYK(this.calcHold(item.dealList, item), item.isOpen);
+      openProfit += r.yk;
+    });
+    closeProfit = fNum(closeProfit, 0);
+    openProfit = fNum(openProfit, 0);
+    // console.log('closeProfit', fNum(closeProfit), fNum(openProfit))
     return (
       <div id="mainContent" className={styles.mainContent}>
         <Nav activeIndex={0}></Nav>
@@ -547,7 +559,7 @@ class Index extends Component {
           scroll={{x: true}}
         />
         <Tabs>
-          <TabPane tab="当前持仓" key="0">
+          <TabPane tab={`当前持仓_${openProfit}`} key="0">
             {(openList || []).length > 0 && <Tabs type="card">
               {
                 openList.map((item, index) => {
@@ -568,7 +580,7 @@ class Index extends Component {
                           temp = ` | 分红：${item.dividend} , 扣税：${item.dividendInterest}`;
                           r.yk = fNum(r.yk + item.dividend - item.dividendInterest, 2);
                         }
-                        return r.yk && r.buyAmount ? '累计盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' + ' | 占用资金：' + r.buyAmount + temp : null
+                        return r.yk && r.buyAmount ? '累计盈亏：' + r.yk + ' | 占用资金：' + r.buyAmount + temp : null
                       }}
                     />
                   </TabPane>
@@ -577,7 +589,7 @@ class Index extends Component {
             </Tabs>}
             {(openList || []).length === 0 && <MyEmpty></MyEmpty>}
           </TabPane>
-          <TabPane tab="历史持仓" key="1">
+          <TabPane tab={`历史持仓_${closeProfit}`} key="1">
             {(closeList || []).length > 0 && <Tabs type="card">
               {
                 closeList.map((item, index) => {
@@ -597,7 +609,7 @@ class Index extends Component {
                           temp = `，分红：${item.dividend} , 扣税：${item.dividendInterest}`;
                           r.yk = fNum(r.yk + item.dividend - item.dividendInterest, 2);
                         }
-                        return r.yk && r.buyAmount ? '盈亏：' + r.yk + '(' + fNum(r.yk * 100 / r.buyAmount, 2) + '%)' + temp : null;
+                        return r.yk ? '盈亏：' + r.yk + temp : null;
                       }}
                     />
                   </TabPane>
