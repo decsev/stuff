@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'dva';
 import {routerRedux} from 'dva/router';
 import {Link} from 'react-router-dom';
-import {changeTitle, queryURL, fNum} from 'utils';
+import {changeTitle, queryURL, fNum, fPrice} from 'utils';
 import {Row, Col, Button, Modal, Form, Card, Select, Tabs, Spin, message, Tag, Table, Radio, Tooltip, Icon} from 'antd';
 import {MyInput, MyTable, MyBreadcrumb, DynamicArrayInput, MyEmpty} from 'components';
 import styles from './index.less';
@@ -474,6 +474,11 @@ class Index extends Component {
     closeProfit = fNum(closeProfit, 0);
     openProfit = fNum(openProfit, 0);
     // console.log('closeProfit', fNum(closeProfit), fNum(openProfit))
+    const sumInfo = <div className={styles.sumInfo}>
+      <span>汇总{fPrice(fNum(closeProfit + openProfit, 0))}</span>
+      <span>当前持仓{fPrice(openProfit)}</span>
+      <span>历史持仓{fPrice(closeProfit)}</span>
+    </div>
     return (
       <div id="mainContent" className={styles.mainContent}>
         <Nav activeIndex={0}></Nav>
@@ -558,8 +563,8 @@ class Index extends Component {
           bordered
           scroll={{x: true}}
         />
-        <Tabs>
-          <TabPane tab={`当前持仓_${openProfit}`} key="0">
+        <Tabs tabBarExtraContent={sumInfo}>
+          <TabPane tab={'当前持仓'} key="0">
             {(openList || []).length > 0 && <Tabs type="card">
               {
                 openList.map((item, index) => {
@@ -589,7 +594,7 @@ class Index extends Component {
             </Tabs>}
             {(openList || []).length === 0 && <MyEmpty></MyEmpty>}
           </TabPane>
-          <TabPane tab={`历史持仓_${closeProfit}`} key="1">
+          <TabPane tab={'历史持仓'} key="1">
             {(closeList || []).length > 0 && <Tabs type="card">
               {
                 closeList.map((item, index) => {

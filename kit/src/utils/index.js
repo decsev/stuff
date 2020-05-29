@@ -144,6 +144,29 @@ const changeTitle = (title) => {
 const fNum = (str, tail = 4) => {
   return parseFloat(Number(str).toFixed(tail));
 }
+
+const fPrice = (s) => {
+  if (isNaN(Number(s)) || s === null || typeof s === 'object' || typeof s === 'boolean') {
+    return null;
+  }
+  let b = '';
+  if (s < 0) {
+    b = '-';
+  }
+  s = parseFloat((s + '').replace(/[^\d\\.]/g, '')) + '';
+  let l = s.split('.')[0].split('').reverse();
+  let r = s.split('.')[1];   
+  let t = '';   
+  for (let i = 0; i < l.length; i ++) {   
+    t += l[i] + ((i + 1) % 3 == 0 && i + 1 != l.length ? ',' : '');   
+  }   
+  return b + t.split('').reverse().join('') + (r ? '.' + r : '');   
+}
+const rPrice = (s) => {
+  return parseFloat(s.replace(/[^\d\\.-]/g, '')); 
+}
+
+
 module.exports = {
   config,
   request,
@@ -154,5 +177,6 @@ module.exports = {
   arrayToTree,
   deepClone,
   changeTitle,
-  fNum
+  fNum,
+  fPrice
 }
