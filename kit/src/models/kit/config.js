@@ -255,10 +255,10 @@ const gridData = {
         },
         {
           b_price: 25.96,
-          s_price: null,
+          s_price: 26.49,
           amount: 800,
           b_time: '2020-05-06',
-          s_time: null
+          s_time: '2020-05-28'
         },
         {
           b_price: 25.88,
@@ -346,17 +346,17 @@ const gridData = {
         },
         {
           b_price: 25.71,
-          s_price: null,
+          s_price: 26.22,
           amount: 800,
           b_time: '2020-05-20',
-          s_time: null
+          s_time: '2020-05-28'
         },
         {
           b_price: 25.58,
-          s_price: null,
+          s_price: 26.12,
           amount: 800,
           b_time: '2020-05-20',
-          s_time: null
+          s_time: '2020-05-28'
         },
         {
           b_price: 25.51,
@@ -521,10 +521,10 @@ const gridData = {
         },
         {
           b_price: 79.02,
-          s_price: null,
+          s_price: 79,
           amount: 200,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-05-29'
         },
         {
           b_price: 77.82,
@@ -542,10 +542,10 @@ const gridData = {
         },
         {
           b_price: 78.15,
-          s_price: null,
+          s_price: 80,
           amount: 200,
           b_time: '2020-05-27',
-          s_time: null
+          s_time: '2020-05-28'
         },
         {
           b_price: 77.65,
@@ -556,17 +556,17 @@ const gridData = {
         },
         {
           b_price: 77.50,
-          s_price: null,
+          s_price: 78.15,
           amount: 200,
           b_time: '2020-05-27',
-          s_time: null
+          s_time: '2020-05-28'
         },
         {
           b_price: 77.36,
-          s_price: null,
+          s_price: 78.15,
           amount: 200,
           b_time: '2020-05-27',
-          s_time: null
+          s_time: '2020-05-28'
         }
       ]
     },
