@@ -248,10 +248,10 @@ const gridData = {
         },
         {
           b_price: 26,
-          s_price: null,
+          s_price: 26.37,
           amount: 800,
           b_time: '2020-05-06',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 25.96,
@@ -398,31 +398,31 @@ const gridData = {
       dealList: [
         {
           b_price: 0.878,
-          s_price: null,
+          s_price: 0.897,
           amount: 25000,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 0.876,
-          s_price: null,
+          s_price: 0.889,
           amount: 25000,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 0.87,
-          s_price: null,
+          s_price: 0.885,
           amount: 25000,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 0.864,
-          s_price: null,
+          s_price: 0.885,
           amount: 25000,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 0.862,
@@ -486,38 +486,38 @@ const gridData = {
     },
     {
       strategyName: '中软', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600536', // 股票代码 
       dealList: [
         {
           b_price: 80.85,
-          s_price: null,
+          s_price: 79.58,
           amount: 200,
           b_time: '2020-05-21',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 80.19,
-          s_price: null,
+          s_price: 79.58,
           amount: 200,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 79.71,
-          s_price: null,
+          s_price: 79.38,
           amount: 200,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 79.3,
-          s_price: null,
+          s_price: 79.38,
           amount: 200,
           b_time: '2020-05-22',
-          s_time: null
+          s_time: '2020-06-01'
         },
         {
           b_price: 79.02,
@@ -572,33 +572,40 @@ const gridData = {
     },
     {
       strategyName: '恒瑞', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600276', // 股票代码 
       dealList: [
         {
           b_price: 78,
-          s_price: null,
-          amount: 400,
+          s_price: 79.74,
+          amount: 200,
           b_time: '2020-05-28',
-          s_time: null
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 78,
+          s_price: 80.12,
+          amount: 200,
+          b_time: '2020-05-28',
+          s_time: '2020-06-01'
         }
       ]
     },
     {
       strategyName: '保利', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600048', // 股票代码 
       dealList: [
         {
           b_price: 14.33,
-          s_price: null,
+          s_price: 14.5,
           amount: 1000,
           b_time: '2020-05-29',
-          s_time: null
+          s_time: '2020-06-01'
         }
       ]
     },
