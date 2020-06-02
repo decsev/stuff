@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz000333,sh512000,sz000568,sh600536,sh600009,sh600048,sh600276',
+  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz000333,sh512000,sz000568,sh600536,sh600009,sh600048,sh600276,sh600887',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -234,10 +234,10 @@ const gridData = {
         },
         {
           b_price: 26.59,
-          s_price: null,
+          s_price: 27,
           amount: 800,
           b_time: '2020-04-15',
-          s_time: null
+          s_time: '2020-06-02'
         },
         {
           b_price: 26.22,
@@ -389,8 +389,24 @@ const gridData = {
       ]
     },
     {
-      strategyName: '券商etf', // 策略名
+      strategyName: '伊利', // 策略名
       isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600887', // 股票代码 
+      dealList: [
+        {
+          b_price: 28.72,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-06-02',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '券商etf', // 策略名
+      isOpen: false, // 是否当前持仓
       needstampFree: false, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh512000', // 股票代码 
