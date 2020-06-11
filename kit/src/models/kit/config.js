@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh502012,sz150172,sh512150,sh601318,sz000333,sh512000,sz000568,sh600536,sh600009,sh600048,sh600276,sh600887',
+  stockCodesList: 'sh000001,sz000002,sh600048,sh600377,sh601816,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600276,sh600887,sh600019',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -227,10 +227,10 @@ const gridData = {
         },
         {
           b_price: 26.85,
-          s_price: null,
+          s_price: 27.58,
           amount: 800,
           b_time: '2020-04-15',
-          s_time: null
+          s_time: '2020-06-03'
         },
         {
           b_price: 26.59,
@@ -385,22 +385,193 @@ const gridData = {
           amount: 1100,
           b_time: '2020-05-22',
           s_time: '2020-05-25'
+        },
+        {
+          b_price: 27.12,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-06-03',
+          s_time: null
+        },
+        {
+          b_price: 26.34,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-06-05',
+          s_time: null
+        },
+        {
+          b_price: 26.27,
+          s_price: 26.77,
+          amount: 800,
+          b_time: '2020-06-05',
+          s_time: '2020-06-08'
+        },
+        {
+          b_price: 26.21,
+          s_price: 26.77,
+          amount: 800,
+          b_time: '2020-06-05',
+          s_time: '2020-06-08'
+        },
+        {
+          b_price: 26.16,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-06-10',
+          s_time: null
+        },
+        {
+          b_price: 26.01,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-06-10',
+          s_time: null
+        },
+        {
+          b_price: 26.01,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-06-11',
+          s_time: null
+        },
+        {
+          b_price: 25.87,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-06-11',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '宝钢', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600019', // 股票代码 
+      dealList: [
+        {
+          b_price: 4.61,
+          s_price: null,
+          amount: 10000,
+          b_time: '2020-06-04',
+          s_time: null
+        },
+        {
+          b_price: 4.56,
+          s_price: null,
+          amount: 5000,
+          b_time: '2020-06-11',
+          s_time: null
+        },
+        {
+          b_price: 4.55,
+          s_price: null,
+          amount: 5000,
+          b_time: '2020-06-11',
+          s_time: null
+        },
+        {
+          b_price: 4.53,
+          s_price: null,
+          amount: 5000,
+          b_time: '2020-06-11',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '保利', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600048', // 股票代码 
+      dealList: [
+        {
+          b_price: 14.33,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-06-11',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '宁泸高速', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600377', // 股票代码 
+      dealList: [
+        {
+          b_price: 9.97,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-06-09',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '京泸高铁', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh601816', // 股票代码 
+      dealList: [
+        {
+          b_price: 6.55,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-06-09',
+          s_time: null
+        },
+        {
+          b_price: 6.5,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-06-11',
+          s_time: null
         }
       ]
     },
     {
       strategyName: '伊利', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600887', // 股票代码 
       dealList: [
         {
           b_price: 28.72,
-          s_price: null,
+          s_price: 28.8,
           amount: 1000,
           b_time: '2020-06-02',
-          s_time: null
+          s_time: '2020-06-03'
+        }
+      ]
+    },
+    {
+      strategyName: '南大光电', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300346', // 股票代码 
+      dealList: [
+        {
+          b_price: 41.72,
+          s_price: 41.9,
+          amount: 200,
+          b_time: '2020-06-10',
+          s_time: '2020-06-11'
+        },
+        {
+          b_price: 41.37,
+          s_price: 41.9,
+          amount: 200,
+          b_time: '2020-06-10',
+          s_time: '2020-06-11'
         }
       ]
     },
