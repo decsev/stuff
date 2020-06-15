@@ -483,33 +483,33 @@ const gridData = {
     },
     {
       strategyName: '保利', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600048', // 股票代码 
       dealList: [
         {
           b_price: 14.33,
-          s_price: null,
+          s_price: 14.49,
           amount: 2000,
           b_time: '2020-06-11',
-          s_time: null
+          s_time: '2020-06-15'
         }
       ]
     },
     {
       strategyName: '宁泸高速', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600377', // 股票代码 
       dealList: [
         {
           b_price: 9.97,
-          s_price: null,
+          s_price: 10.08,
           amount: 2000,
           b_time: '2020-06-09',
-          s_time: null
+          s_time: '2020-06-15'
         }
       ]
     },
