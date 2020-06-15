@@ -533,6 +533,29 @@ const gridData = {
           amount: 2000,
           b_time: '2020-06-11',
           s_time: null
+        },
+        {
+          b_price: 6.35,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-06-15',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '上机', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600009', // 股票代码 
+      dealList: [
+        {
+          b_price: 71.6,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-06-15',
+          s_time: null
         }
       ]
     },
