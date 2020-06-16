@@ -467,17 +467,17 @@ const gridData = {
         },
         {
           b_price: 4.55,
-          s_price: null,
+          s_price: 4.61,
           amount: 5000,
           b_time: '2020-06-11',
-          s_time: null
+          s_time: '2020-06-16'
         },
         {
           b_price: 4.53,
-          s_price: null,
+          s_price: 4.6,
           amount: 5000,
           b_time: '2020-06-11',
-          s_time: null
+          s_time: '2020-06-16'
         }
       ]
     },
@@ -552,10 +552,10 @@ const gridData = {
       dealList: [
         {
           b_price: 71.6,
-          s_price: null,
+          s_price: 72.05,
           amount: 200,
           b_time: '2020-06-15',
-          s_time: null
+          s_time: '2020-06-16'
         }
       ]
     },
