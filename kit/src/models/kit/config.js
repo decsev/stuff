@@ -460,10 +460,10 @@ const gridData = {
         },
         {
           b_price: 4.56,
-          s_price: null,
+          s_price: 4.7,
           amount: 5000,
           b_time: '2020-06-11',
-          s_time: null
+          s_time: '2020-06-17'
         },
         {
           b_price: 4.55,
@@ -556,6 +556,13 @@ const gridData = {
           amount: 200,
           b_time: '2020-06-15',
           s_time: '2020-06-16'
+        },
+        {
+          b_price: 70.1,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-06-17',
+          s_time: null
         }
       ]
     },
