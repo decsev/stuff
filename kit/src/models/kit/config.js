@@ -454,9 +454,16 @@ const gridData = {
         {
           b_price: 4.61,
           s_price: null,
-          amount: 10000,
+          amount: 5000,
           b_time: '2020-06-04',
           s_time: null
+        },
+        {
+          b_price: 4.61,
+          s_price: 4.8,
+          amount: 5000,
+          b_time: '2020-06-04',
+          s_time: '2020-06-18'
         },
         {
           b_price: 4.56,
@@ -545,7 +552,7 @@ const gridData = {
     },
     {
       strategyName: '上机', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600009', // 股票代码 
@@ -559,10 +566,10 @@ const gridData = {
         },
         {
           b_price: 70.1,
-          s_price: null,
+          s_price: 71.36,
           amount: 200,
           b_time: '2020-06-17',
-          s_time: null
+          s_time: '2020-06-18'
         }
       ]
     },
