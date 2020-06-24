@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh600048,sh600377,sh601816,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600276,sh600887,sh600019',
+  stockCodesList: 'sh000001,sz000002,sh600048,sh600377,sh601816,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600276,sh600887,sh600019,sh600036',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -437,10 +437,10 @@ const gridData = {
         },
         {
           b_price: 25.87,
-          s_price: null,
+          s_price: 26.41,
           amount: 800,
           b_time: '2020-06-11',
-          s_time: null
+          s_time: '2020-06-24'
         }
       ]
     },
@@ -546,6 +546,22 @@ const gridData = {
           s_price: null,
           amount: 2000,
           b_time: '2020-06-15',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '招商', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600036', // 股票代码 
+      dealList: [
+        {
+          b_price: 33.89,
+          s_price: null,
+          amount: 600,
+          b_time: '2020-06-24',
           s_time: null
         }
       ]
