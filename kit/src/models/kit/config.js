@@ -441,22 +441,29 @@ const gridData = {
           amount: 800,
           b_time: '2020-06-11',
           s_time: '2020-06-24'
+        },
+        {
+          b_price: 25.77,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-06-29',
+          s_time: null
         }
       ]
     },
     {
       strategyName: '宝钢', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600019', // 股票代码 
       dealList: [
         {
           b_price: 4.61,
-          s_price: null,
+          s_price: 4.56,
           amount: 5000,
           b_time: '2020-06-04',
-          s_time: null
+          s_time: '2020-06-29'
         },
         {
           b_price: 4.61,
@@ -552,17 +559,17 @@ const gridData = {
     },
     {
       strategyName: '招商', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh600036', // 股票代码 
       dealList: [
         {
           b_price: 33.89,
-          s_price: null,
+          s_price: 34.22,
           amount: 600,
           b_time: '2020-06-24',
-          s_time: null
+          s_time: '2020-06-29'
         }
       ]
     },
