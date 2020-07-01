@@ -213,17 +213,24 @@ const gridData = {
     },
     {
       strategyName: '万科', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz000002', // 股票代码 
       dealList: [
         {
           b_price: 26.95,
-          s_price: null,
-          amount: 800,
+          s_price: 27.74,
+          amount: 400,
           b_time: '2020-04-15',
-          s_time: null
+          s_time: '2020-07-01'
+        },
+        {
+          b_price: 26.95,
+          s_price: 27.53,
+          amount: 400,
+          b_time: '2020-04-15',
+          s_time: '2020-07-01'
         },
         {
           b_price: 26.85,
@@ -388,17 +395,17 @@ const gridData = {
         },
         {
           b_price: 27.12,
-          s_price: null,
+          s_price: 27.39,
           amount: 800,
           b_time: '2020-06-03',
-          s_time: null
+          s_time: '2020-07-01'
         },
         {
           b_price: 26.34,
-          s_price: null,
+          s_price: 27.27,
           amount: 800,
           b_time: '2020-06-05',
-          s_time: null
+          s_time: '2020-07-01'
         },
         {
           b_price: 26.27,
@@ -416,24 +423,24 @@ const gridData = {
         },
         {
           b_price: 26.16,
-          s_price: null,
+          s_price: 27.06,
           amount: 800,
           b_time: '2020-06-10',
-          s_time: null
+          s_time: '2020-07-01'
         },
         {
           b_price: 26.01,
-          s_price: null,
+          s_price: 26.83,
           amount: 800,
           b_time: '2020-06-10',
-          s_time: null
+          s_time: '2020-07-01'
         },
         {
           b_price: 26.01,
-          s_price: null,
+          s_price: 26.75,
           amount: 800,
           b_time: '2020-06-11',
-          s_time: null
+          s_time: '2020-07-01'
         },
         {
           b_price: 25.87,
@@ -444,10 +451,10 @@ const gridData = {
         },
         {
           b_price: 25.77,
-          s_price: null,
+          s_price: 26.59,
           amount: 800,
           b_time: '2020-06-29',
-          s_time: null
+          s_time: '2020-07-01'
         }
       ]
     },
