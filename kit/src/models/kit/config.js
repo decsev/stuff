@@ -1,8 +1,629 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh600048,sh600377,sh601816,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600276,sh600887,sh600019,sh600036',
+  stockCodesList: 'sh000001,sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,sz300058,sh600276,sz300015,sz300018,sz300585,sz000411,sz300146',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
+    
+    {
+      strategyName: '恒瑞', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600276', // 股票代码 
+      dealList: [
+        {
+          b_price: 91.03,
+          s_price: null,
+          amount: 200,
+          b_time: '2020-07-02',
+          s_time: null
+        },
+        {
+          b_price: 90.21,
+          s_price: 91.57,
+          amount: 200,
+          b_time: '2020-07-02',
+          s_time: '2020-07-03'
+        }
+      ]
+    },
+
+    {
+      strategyName: '蓝色光标', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300058', // 股票代码 
+      dealList: [
+        {
+          b_price: 7.92,
+          s_price: 8.07,
+          amount: 1000,
+          b_time: '2020-07-02',
+          s_time: '2020-07-06'
+        },
+        {
+          b_price: 7.92,
+          s_price: 8.01,
+          amount: 1000,
+          b_time: '2020-07-02',
+          s_time: '2020-07-03'
+        }
+      ]
+    },
+
+    {
+      strategyName: '英特', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000411', // 股票代码 
+      dealList: [
+        {
+          b_price: 12.09,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-07-06',
+          s_time: null
+        }
+      ]
+    },
+
+    {
+      strategyName: '小汤', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300146', // 股票代码 
+      dealList: [
+        {
+          b_price: 20.18,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-06',
+          s_time: null
+        }
+      ]
+    },
+
+    {
+      strategyName: '奥联电子', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300585', // 股票代码 
+      dealList: [
+        {
+          b_price: 14.3,
+          s_price: null,
+          amount: 400,
+          b_time: '2020-07-03',
+          s_time: null
+        },
+        {
+          b_price: 14.3,
+          s_price: 14.61,
+          amount: 300,
+          b_time: '2020-07-03',
+          s_time: '2020-07-06'
+        }
+      ]
+    },
+
+    {
+      strategyName: '中元股份', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300018', // 股票代码 
+      dealList: [
+        {
+          b_price: 5.87,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-03',
+          s_time: null
+        },
+        {
+          b_price: 5.87,
+          s_price: 6.09,
+          amount: 1000,
+          b_time: '2020-07-03',
+          s_time: '2020-07-06'
+        }
+      ]
+    },
+
+    {
+      strategyName: '爱尔眼科', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300015', // 股票代码 
+      dealList: [
+        {
+          b_price: 41.92,
+          s_price: null,
+          amount: 300,
+          b_time: '2020-07-03',
+          s_time: null
+        },
+        {
+          b_price: 41.53,
+          s_price: null,
+          amount: 300,
+          b_time: '2020-07-03',
+          s_time: null
+        },
+        {
+          b_price: 42.29,
+          s_price: 43.26,
+          amount: 600,
+          b_time: '2020-07-06',
+          s_time: '2020-07-06'
+        }
+      ]
+    },
+    // 分界线
+    {
+      strategyName: '招商', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600036', // 股票代码 
+      dealList: [
+        {
+          b_price: 33.89,
+          s_price: 34.22,
+          amount: 600,
+          b_time: '2020-06-24',
+          s_time: '2020-06-29'
+        }
+      ]
+    },
+    {
+      strategyName: '上机', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600009', // 股票代码 
+      dealList: [
+        {
+          b_price: 71.6,
+          s_price: 72.05,
+          amount: 200,
+          b_time: '2020-06-15',
+          s_time: '2020-06-16'
+        },
+        {
+          b_price: 70.1,
+          s_price: 71.36,
+          amount: 200,
+          b_time: '2020-06-17',
+          s_time: '2020-06-18'
+        }
+      ]
+    },
+    {
+      strategyName: '伊利', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600887', // 股票代码 
+      dealList: [
+        {
+          b_price: 28.72,
+          s_price: 28.8,
+          amount: 1000,
+          b_time: '2020-06-02',
+          s_time: '2020-06-03'
+        }
+      ]
+    },
+    {
+      strategyName: '南大光电', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300346', // 股票代码 
+      dealList: [
+        {
+          b_price: 41.72,
+          s_price: 41.9,
+          amount: 200,
+          b_time: '2020-06-10',
+          s_time: '2020-06-11'
+        },
+        {
+          b_price: 41.37,
+          s_price: 41.9,
+          amount: 200,
+          b_time: '2020-06-10',
+          s_time: '2020-06-11'
+        }
+      ]
+    },
+    {
+      strategyName: '券商etf', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: false, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh512000', // 股票代码 
+      // dividend: 10451.02, // 分红
+      dealList: [
+        {
+          b_price: 0.878,
+          s_price: 0.897,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 0.876,
+          s_price: 0.889,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 0.87,
+          s_price: 0.885,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 0.864,
+          s_price: 0.885,
+          amount: 25000,
+          b_time: '2020-05-22',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 0.862,
+          s_price: 0.876,
+          amount: 1400,
+          b_time: '2020-05-22',
+          s_time: '2020-05-28'
+        },
+        {
+          b_price: 0.857,
+          s_price: 0.876,
+          amount: 23600,
+          b_time: '2020-05-25',
+          s_time: '2020-05-28'
+        },
+        {
+          b_price: 0.856,
+          s_price: 0.87,
+          amount: 25000,
+          b_time: '2020-05-27',
+          s_time: '2020-05-28'
+        }
+      ]
+    },
+    {
+      strategyName: '上机', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600009', // 股票代码 
+      dealList: [
+        {
+          b_price: 65.93,
+          s_price: 66.43,
+          amount: 300,
+          b_time: '2020-05-22',
+          s_time: '2020-05-25'
+        },
+        {
+          b_price: 65.76,
+          s_price: 66.43,
+          amount: 300,
+          b_time: '2020-05-22',
+          s_time: '2020-05-25'
+        },
+        {
+          b_price: 65.51,
+          s_price: 66.4,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: '2020-05-25'
+        },
+        {
+          b_price: 65.03,
+          s_price: 65.89,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: '2020-05-25'
+        }
+      ]
+    },
+    {
+      strategyName: '中软', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600536', // 股票代码 
+      dealList: [
+        {
+          b_price: 80.85,
+          s_price: 79.58,
+          amount: 200,
+          b_time: '2020-05-21',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 80.19,
+          s_price: 79.58,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 79.71,
+          s_price: 79.38,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 79.3,
+          s_price: 79.38,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 79.02,
+          s_price: 79,
+          amount: 200,
+          b_time: '2020-05-22',
+          s_time: '2020-05-29'
+        },
+        {
+          b_price: 77.82,
+          s_price: 79.24,
+          amount: 200,
+          b_time: '2020-05-25',
+          s_time: '2020-05-26'
+        },
+        {
+          b_price: 77.66,
+          s_price: 78.08,
+          amount: 200,
+          b_time: '2020-05-25',
+          s_time: '2020-05-25'
+        },
+        {
+          b_price: 78.15,
+          s_price: 80,
+          amount: 200,
+          b_time: '2020-05-27',
+          s_time: '2020-05-28'
+        },
+        {
+          b_price: 77.65,
+          s_price: 78.16,
+          amount: 200,
+          b_time: '2020-05-27',
+          s_time: '2020-05-27'
+        },
+        {
+          b_price: 77.50,
+          s_price: 78.15,
+          amount: 200,
+          b_time: '2020-05-27',
+          s_time: '2020-05-28'
+        },
+        {
+          b_price: 77.36,
+          s_price: 78.15,
+          amount: 200,
+          b_time: '2020-05-27',
+          s_time: '2020-05-28'
+        }
+      ]
+    },
+    {
+      strategyName: '恒瑞', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600276', // 股票代码 
+      dealList: [
+        {
+          b_price: 78,
+          s_price: 79.74,
+          amount: 200,
+          b_time: '2020-05-28',
+          s_time: '2020-06-01'
+        },
+        {
+          b_price: 78,
+          s_price: 80.12,
+          amount: 200,
+          b_time: '2020-05-28',
+          s_time: '2020-06-01'
+        }
+      ]
+    },
+    {
+      strategyName: '保利', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600048', // 股票代码 
+      dealList: [
+        {
+          b_price: 14.33,
+          s_price: 14.5,
+          amount: 1000,
+          b_time: '2020-05-29',
+          s_time: '2020-06-01'
+        }
+      ]
+    },
+    {
+      strategyName: '卢总', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000568', // 股票代码 
+      dealList: [
+        {
+          b_price: 74.54,
+          s_price: 78.06,
+          amount: 400,
+          b_time: '2020-04-21',
+          s_time: '2020-04-23'
+        }
+      ]
+    },
+    {
+      strategyName: '券商etf', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: false, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh512000', // 股票代码 
+      // dividend: 10451.02, // 分红
+      dealList: [
+        {
+          b_price: 0.888,
+          s_price: 0.893,
+          amount: 25000,
+          b_time: '2020-04-14',
+          s_time: '2020-04-21'
+        },
+        {
+          b_price: 0.888,
+          s_price: 0.902,
+          amount: 25000,
+          b_time: '2020-04-21',
+          s_time: '2020-05-18'
+        },
+        {
+          b_price: 0.882,
+          s_price: 0.917,
+          amount: 25000,
+          b_time: '2020-04-24',
+          s_time: '2020-05-11'
+        },
+        {
+          b_price: 0.873,
+          s_price: 0.894,
+          amount: 25000,
+          b_time: '2020-04-24',
+          s_time: '2020-04-30'
+        },
+        {
+          b_price: 0.869,
+          s_price: 0.888,
+          amount: 25000,
+          b_time: '2020-04-24',
+          s_time: '2020-04-30'
+        }
+      ]
+    },
+    {
+      strategyName: '分众', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz002027', // 股票代码 
+      // dividend: 10451.02, // 分红
+      dealList: [
+        {
+          b_price: 4.19,
+          s_price: 4.37,
+          amount: 5200,
+          b_time: '2020-04-07',
+          s_time: '2020-04-15'
+        },
+        {
+          b_price: 4.12,
+          s_price: 4.21,
+          amount: 5200,
+          b_time: '2020-04-08',
+          s_time: '2020-04-15'
+        },
+        {
+          b_price: 4.04,
+          s_price: 4.09,
+          amount: 5200,
+          b_time: '2020-04-10',
+          s_time: '2020-04-14'
+        },
+        {
+          b_price: 4.06,
+          s_price: 4.13,
+          amount: 5200,
+          b_time: '2020-04-08',
+          s_time: '2020-04-09'
+        },
+        {
+          b_price: 3.94,
+          s_price: 4.03,
+          amount: 5200,
+          b_time: '2020-04-13',
+          s_time: '2020-04-14'
+        },
+        {
+          b_price: 3.91,
+          s_price: 3.92,
+          amount: 3800,
+          b_time: '2020-04-13',
+          s_time: '2020-04-13'
+        },
+        {
+          b_price: 3.88,
+          s_price: 3.92,
+          amount: 6300,
+          b_time: '2020-04-13',
+          s_time: '2020-04-13'
+        }
+      ]
+    },
+    {
+      strategyName: '美的', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000333', // 股票代码 
+      // dividend: 10451.02, // 分红
+      dealList: [
+        {
+          b_price: 48.06,
+          s_price: 50.25,
+          amount: 200,
+          b_time: '2020-04-08',
+          s_time: '2020-04-13'
+        }
+      ]
+    },
+    {
+      strategyName: 'pingan', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh601318', // 股票代码 
+      dealList: [
+        {
+          b_price: 68.88,
+          s_price: 70.20,
+          amount: 100,
+          b_time: '2020-03-30',
+          s_time: '2020-03-31'
+        },
+        {
+          b_price: 69.19,
+          s_price: 70,
+          amount: 200,
+          b_time: '2020-03-31',
+          s_time: '2020-04-01'
+        }
+      ]
+    },
     {
       strategyName: 'wka', // 策略名
       isOpen: false, // 是否当前持仓
@@ -536,490 +1157,31 @@ const gridData = {
     },
     {
       strategyName: '京泸高铁', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh601816', // 股票代码 
       dealList: [
         {
           b_price: 6.55,
-          s_price: null,
+          s_price: 6.52,
           amount: 2000,
           b_time: '2020-06-09',
-          s_time: null
+          s_time: '2020-07-03'
         },
         {
           b_price: 6.5,
-          s_price: null,
+          s_price: 6.52,
           amount: 2000,
           b_time: '2020-06-11',
-          s_time: null
+          s_time: '2020-07-03'
         },
         {
           b_price: 6.35,
-          s_price: null,
+          s_price: 6.41,
           amount: 2000,
           b_time: '2020-06-15',
-          s_time: null
-        }
-      ]
-    },
-    {
-      strategyName: '招商', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600036', // 股票代码 
-      dealList: [
-        {
-          b_price: 33.89,
-          s_price: 34.22,
-          amount: 600,
-          b_time: '2020-06-24',
-          s_time: '2020-06-29'
-        }
-      ]
-    },
-    {
-      strategyName: '上机', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600009', // 股票代码 
-      dealList: [
-        {
-          b_price: 71.6,
-          s_price: 72.05,
-          amount: 200,
-          b_time: '2020-06-15',
-          s_time: '2020-06-16'
-        },
-        {
-          b_price: 70.1,
-          s_price: 71.36,
-          amount: 200,
-          b_time: '2020-06-17',
-          s_time: '2020-06-18'
-        }
-      ]
-    },
-    {
-      strategyName: '伊利', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600887', // 股票代码 
-      dealList: [
-        {
-          b_price: 28.72,
-          s_price: 28.8,
-          amount: 1000,
-          b_time: '2020-06-02',
-          s_time: '2020-06-03'
-        }
-      ]
-    },
-    {
-      strategyName: '南大光电', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz300346', // 股票代码 
-      dealList: [
-        {
-          b_price: 41.72,
-          s_price: 41.9,
-          amount: 200,
-          b_time: '2020-06-10',
-          s_time: '2020-06-11'
-        },
-        {
-          b_price: 41.37,
-          s_price: 41.9,
-          amount: 200,
-          b_time: '2020-06-10',
-          s_time: '2020-06-11'
-        }
-      ]
-    },
-    {
-      strategyName: '券商etf', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: false, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh512000', // 股票代码 
-      // dividend: 10451.02, // 分红
-      dealList: [
-        {
-          b_price: 0.878,
-          s_price: 0.897,
-          amount: 25000,
-          b_time: '2020-05-22',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 0.876,
-          s_price: 0.889,
-          amount: 25000,
-          b_time: '2020-05-22',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 0.87,
-          s_price: 0.885,
-          amount: 25000,
-          b_time: '2020-05-22',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 0.864,
-          s_price: 0.885,
-          amount: 25000,
-          b_time: '2020-05-22',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 0.862,
-          s_price: 0.876,
-          amount: 1400,
-          b_time: '2020-05-22',
-          s_time: '2020-05-28'
-        },
-        {
-          b_price: 0.857,
-          s_price: 0.876,
-          amount: 23600,
-          b_time: '2020-05-25',
-          s_time: '2020-05-28'
-        },
-        {
-          b_price: 0.856,
-          s_price: 0.87,
-          amount: 25000,
-          b_time: '2020-05-27',
-          s_time: '2020-05-28'
-        }
-      ]
-    },
-    {
-      strategyName: '上机', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600009', // 股票代码 
-      dealList: [
-        {
-          b_price: 65.93,
-          s_price: 66.43,
-          amount: 300,
-          b_time: '2020-05-22',
-          s_time: '2020-05-25'
-        },
-        {
-          b_price: 65.76,
-          s_price: 66.43,
-          amount: 300,
-          b_time: '2020-05-22',
-          s_time: '2020-05-25'
-        },
-        {
-          b_price: 65.51,
-          s_price: 66.4,
-          amount: 200,
-          b_time: '2020-05-22',
-          s_time: '2020-05-25'
-        },
-        {
-          b_price: 65.03,
-          s_price: 65.89,
-          amount: 200,
-          b_time: '2020-05-22',
-          s_time: '2020-05-25'
-        }
-      ]
-    },
-    {
-      strategyName: '中软', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600536', // 股票代码 
-      dealList: [
-        {
-          b_price: 80.85,
-          s_price: 79.58,
-          amount: 200,
-          b_time: '2020-05-21',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 80.19,
-          s_price: 79.58,
-          amount: 200,
-          b_time: '2020-05-22',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 79.71,
-          s_price: 79.38,
-          amount: 200,
-          b_time: '2020-05-22',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 79.3,
-          s_price: 79.38,
-          amount: 200,
-          b_time: '2020-05-22',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 79.02,
-          s_price: 79,
-          amount: 200,
-          b_time: '2020-05-22',
-          s_time: '2020-05-29'
-        },
-        {
-          b_price: 77.82,
-          s_price: 79.24,
-          amount: 200,
-          b_time: '2020-05-25',
-          s_time: '2020-05-26'
-        },
-        {
-          b_price: 77.66,
-          s_price: 78.08,
-          amount: 200,
-          b_time: '2020-05-25',
-          s_time: '2020-05-25'
-        },
-        {
-          b_price: 78.15,
-          s_price: 80,
-          amount: 200,
-          b_time: '2020-05-27',
-          s_time: '2020-05-28'
-        },
-        {
-          b_price: 77.65,
-          s_price: 78.16,
-          amount: 200,
-          b_time: '2020-05-27',
-          s_time: '2020-05-27'
-        },
-        {
-          b_price: 77.50,
-          s_price: 78.15,
-          amount: 200,
-          b_time: '2020-05-27',
-          s_time: '2020-05-28'
-        },
-        {
-          b_price: 77.36,
-          s_price: 78.15,
-          amount: 200,
-          b_time: '2020-05-27',
-          s_time: '2020-05-28'
-        }
-      ]
-    },
-    {
-      strategyName: '恒瑞', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600276', // 股票代码 
-      dealList: [
-        {
-          b_price: 78,
-          s_price: 79.74,
-          amount: 200,
-          b_time: '2020-05-28',
-          s_time: '2020-06-01'
-        },
-        {
-          b_price: 78,
-          s_price: 80.12,
-          amount: 200,
-          b_time: '2020-05-28',
-          s_time: '2020-06-01'
-        }
-      ]
-    },
-    {
-      strategyName: '保利', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600048', // 股票代码 
-      dealList: [
-        {
-          b_price: 14.33,
-          s_price: 14.5,
-          amount: 1000,
-          b_time: '2020-05-29',
-          s_time: '2020-06-01'
-        }
-      ]
-    },
-    {
-      strategyName: '卢总', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz000568', // 股票代码 
-      dealList: [
-        {
-          b_price: 74.54,
-          s_price: 78.06,
-          amount: 400,
-          b_time: '2020-04-21',
-          s_time: '2020-04-23'
-        }
-      ]
-    },
-    {
-      strategyName: '券商etf', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: false, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh512000', // 股票代码 
-      // dividend: 10451.02, // 分红
-      dealList: [
-        {
-          b_price: 0.888,
-          s_price: 0.893,
-          amount: 25000,
-          b_time: '2020-04-14',
-          s_time: '2020-04-21'
-        },
-        {
-          b_price: 0.888,
-          s_price: 0.902,
-          amount: 25000,
-          b_time: '2020-04-21',
-          s_time: '2020-05-18'
-        },
-        {
-          b_price: 0.882,
-          s_price: 0.917,
-          amount: 25000,
-          b_time: '2020-04-24',
-          s_time: '2020-05-11'
-        },
-        {
-          b_price: 0.873,
-          s_price: 0.894,
-          amount: 25000,
-          b_time: '2020-04-24',
-          s_time: '2020-04-30'
-        },
-        {
-          b_price: 0.869,
-          s_price: 0.888,
-          amount: 25000,
-          b_time: '2020-04-24',
-          s_time: '2020-04-30'
-        }
-      ]
-    },
-    {
-      strategyName: '分众', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz002027', // 股票代码 
-      // dividend: 10451.02, // 分红
-      dealList: [
-        {
-          b_price: 4.19,
-          s_price: 4.37,
-          amount: 5200,
-          b_time: '2020-04-07',
-          s_time: '2020-04-15'
-        },
-        {
-          b_price: 4.12,
-          s_price: 4.21,
-          amount: 5200,
-          b_time: '2020-04-08',
-          s_time: '2020-04-15'
-        },
-        {
-          b_price: 4.04,
-          s_price: 4.09,
-          amount: 5200,
-          b_time: '2020-04-10',
-          s_time: '2020-04-14'
-        },
-        {
-          b_price: 4.06,
-          s_price: 4.13,
-          amount: 5200,
-          b_time: '2020-04-08',
-          s_time: '2020-04-09'
-        },
-        {
-          b_price: 3.94,
-          s_price: 4.03,
-          amount: 5200,
-          b_time: '2020-04-13',
-          s_time: '2020-04-14'
-        },
-        {
-          b_price: 3.91,
-          s_price: 3.92,
-          amount: 3800,
-          b_time: '2020-04-13',
-          s_time: '2020-04-13'
-        },
-        {
-          b_price: 3.88,
-          s_price: 3.92,
-          amount: 6300,
-          b_time: '2020-04-13',
-          s_time: '2020-04-13'
-        }
-      ]
-    },
-    {
-      strategyName: '美的', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz000333', // 股票代码 
-      // dividend: 10451.02, // 分红
-      dealList: [
-        {
-          b_price: 48.06,
-          s_price: 50.25,
-          amount: 200,
-          b_time: '2020-04-08',
-          s_time: '2020-04-13'
-        }
-      ]
-    },
-    {
-      strategyName: 'pingan', // 策略名
-      isOpen: false, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh601318', // 股票代码 
-      dealList: [
-        {
-          b_price: 68.88,
-          s_price: 70.20,
-          amount: 100,
-          b_time: '2020-03-30',
-          s_time: '2020-03-31'
-        },
-        {
-          b_price: 69.19,
-          s_price: 70,
-          amount: 200,
-          b_time: '2020-03-31',
-          s_time: '2020-04-01'
+          s_time: '2020-07-02'
         }
       ]
     }
