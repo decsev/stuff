@@ -1,8 +1,24 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,sz300058,sh600276,sz300015,sz300018,sz300585,sz000411,sz300146',
+  stockCodesList: 'sh000001,sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,sz300058,sh600276,sz300015,sz300018,sz300585,sz000411,sz300146,sh600559',
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
+    {
+      strategyName: '小白', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600559', // 股票代码 
+      dealList: [
+        {
+          b_price: 14.23,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-08',
+          s_time: null
+        }
+      ]
+    },
     
     {
       strategyName: '恒瑞', // 策略名
@@ -14,9 +30,16 @@ const gridData = {
         {
           b_price: 91.03,
           s_price: null,
-          amount: 200,
+          amount: 100,
           b_time: '2020-07-02',
           s_time: null
+        },
+        {
+          b_price: 91.03,
+          s_price: 98.2,
+          amount: 100,
+          b_time: '2020-07-02',
+          s_time: '2020-07-09'
         },
         {
           b_price: 90.21,
@@ -27,7 +50,149 @@ const gridData = {
         }
       ]
     },
+    
 
+    {
+      strategyName: '爱尔眼科', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300015', // 股票代码 
+      dealList: [
+        {
+          b_price: 41.92,
+          s_price: null,
+          amount: 300,
+          b_time: '2020-07-03',
+          s_time: null
+        },
+        {
+          b_price: 41.53,
+          s_price: 44.95,
+          amount: 300,
+          b_time: '2020-07-03',
+          s_time: '2020-07-09'
+        },
+        {
+          b_price: 42.29,
+          s_price: 43.26,
+          amount: 600,
+          b_time: '2020-07-06',
+          s_time: '2020-07-06'
+        },
+        {
+          b_price: 42.84,
+          s_price: 44.24,
+          amount: 600,
+          b_time: '2020-07-07',
+          s_time: '2020-07-07'
+        }
+      ]
+    },
+
+    {
+      strategyName: '小汤', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300146', // 股票代码 
+      dealList: [
+        {
+          b_price: 20.18,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-06',
+          s_time: null
+        }
+      ]
+    },
+
+    {
+      strategyName: '一夜情', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000411', // 股票代码 
+      dealList: [
+        {
+          b_price: 12.09,
+          s_price: 12.12,
+          amount: 2000,
+          b_time: '2020-07-06',
+          s_time: '2020-07-09'
+        },
+        { // 盛天
+          b_price: 24.77,
+          s_price: 25.53,
+          amount: 1600,
+          b_time: '2020-07-08',
+          s_time: '2020-07-09'
+        }
+      ]
+    },
+
+    {
+      strategyName: '奥联电子', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300585', // 股票代码 
+      dealList: [
+        {
+          b_price: 14.3,
+          s_price: 14.99,
+          amount: 400,
+          b_time: '2020-07-03',
+          s_time: '2020-07-08'
+        },
+        {
+          b_price: 14.3,
+          s_price: 14.61,
+          amount: 300,
+          b_time: '2020-07-03',
+          s_time: '2020-07-06'
+        },
+        {
+          b_price: 14.91,
+          s_price: 15.03,
+          amount: 400,
+          b_time: '2020-07-07',
+          s_time: '2020-07-08'
+        },
+        
+        {
+          b_price: 14.82,
+          s_price: 15.24,
+          amount: 400,
+          b_time: '2020-07-08',
+          s_time: '2020-07-08'
+        }
+      ]
+    },
+
+    {
+      strategyName: '中元股份', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300018', // 股票代码 
+      dealList: [
+        {
+          b_price: 5.87,
+          s_price: 6.21,
+          amount: 1000,
+          b_time: '2020-07-03',
+          s_time: '2020-07-08'
+        },
+        {
+          b_price: 5.87,
+          s_price: 6.09,
+          amount: 1000,
+          b_time: '2020-07-03',
+          s_time: '2020-07-06'
+        }
+      ]
+    },
     {
       strategyName: '蓝色光标', // 策略名
       isOpen: false, // 是否当前持仓
@@ -51,133 +216,7 @@ const gridData = {
         }
       ]
     },
-
-    {
-      strategyName: '英特', // 策略名
-      isOpen: true, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz000411', // 股票代码 
-      dealList: [
-        {
-          b_price: 12.09,
-          s_price: null,
-          amount: 2000,
-          b_time: '2020-07-06',
-          s_time: null
-        }
-      ]
-    },
-
-    {
-      strategyName: '小汤', // 策略名
-      isOpen: true, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz300146', // 股票代码 
-      dealList: [
-        {
-          b_price: 20.18,
-          s_price: null,
-          amount: 500,
-          b_time: '2020-07-06',
-          s_time: null
-        }
-      ]
-    },
-
-    {
-      strategyName: '奥联电子', // 策略名
-      isOpen: true, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz300585', // 股票代码 
-      dealList: [
-        {
-          b_price: 14.3,
-          s_price: null,
-          amount: 400,
-          b_time: '2020-07-03',
-          s_time: null
-        },
-        {
-          b_price: 14.91,
-          s_price: null,
-          amount: 400,
-          b_time: '2020-07-07',
-          s_time: null
-        },
-        {
-          b_price: 14.3,
-          s_price: 14.61,
-          amount: 300,
-          b_time: '2020-07-03',
-          s_time: '2020-07-06'
-        }
-      ]
-    },
-
-    {
-      strategyName: '中元股份', // 策略名
-      isOpen: true, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz300018', // 股票代码 
-      dealList: [
-        {
-          b_price: 5.87,
-          s_price: null,
-          amount: 1000,
-          b_time: '2020-07-03',
-          s_time: null
-        },
-        {
-          b_price: 5.87,
-          s_price: 6.09,
-          amount: 1000,
-          b_time: '2020-07-03',
-          s_time: '2020-07-06'
-        }
-      ]
-    },
-
-    {
-      strategyName: '爱尔眼科', // 策略名
-      isOpen: true, // 是否当前持仓
-      needstampFree: true, // 是否需要印花税
-      freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz300015', // 股票代码 
-      dealList: [
-        {
-          b_price: 41.92,
-          s_price: null,
-          amount: 300,
-          b_time: '2020-07-03',
-          s_time: null
-        },
-        {
-          b_price: 41.53,
-          s_price: null,
-          amount: 300,
-          b_time: '2020-07-03',
-          s_time: null
-        },
-        {
-          b_price: 42.29,
-          s_price: 43.26,
-          amount: 600,
-          b_time: '2020-07-06',
-          s_time: '2020-07-06'
-        },
-        {
-          b_price: 42.84,
-          s_price: 44.24,
-          amount: 600,
-          b_time: '2020-07-07',
-          s_time: '2020-07-07'
-        }
-      ]
-    },
+    
     // 分界线
     {
       strategyName: '招商', // 策略名
