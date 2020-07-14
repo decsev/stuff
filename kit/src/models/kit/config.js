@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sh600276,sz300015,sz300146,sh600559,sz002024,sh601069,sz002242,sh600515', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
+  stockCodesList: 'sh000001,sh600276,sz300015,sz300146,sh600559,sz002024,sh601069,sz002242,sh600515,sz002185', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -51,6 +51,19 @@ const gridData = {
           amount: 1000,
           b_time: '2020-07-13',
           s_time: '2020-07-13'
+        },
+        {
+          b_price: 15.01,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-14',
+          s_time: null
+        }, {
+          b_price: 14.75,
+          s_price: 15,
+          amount: 1000,
+          b_time: '2020-07-14',
+          s_time: '2020-07-14'
         }
       ]
     },
@@ -207,6 +220,20 @@ const gridData = {
           amount: 300,
           b_time: '2020-07-13',
           s_time: '2020-07-13'
+        },
+        {
+          b_price: 46.02,
+          s_price: null,
+          amount: 300,
+          b_time: '2020-07-14',
+          s_time: null
+        },
+        {
+          b_price: 45.41,
+          s_price: 46.15,
+          amount: 300,
+          b_time: '2020-07-14',
+          s_time: '2020-07-14'
         }
       ]
     },
@@ -238,6 +265,13 @@ const gridData = {
           amount: 500,
           b_time: '2020-07-10',
           s_time: '2020-07-13'
+        },
+        {
+          b_price: 21.46,
+          s_price: 21.74,
+          amount: 500,
+          b_time: '2020-07-14',
+          s_time: '2020-07-14'
         }
       ]
     },
@@ -247,42 +281,55 @@ const gridData = {
       isOpen: true, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sh600515', // 股票代码 
+      stockCode: 'sz002185', // 股票代码 
       dealList: [
-        {
-          b_price: 12.09,
-          s_price: 12.12,
-          amount: 2000,
-          b_time: '2020-07-06',
-          s_time: '2020-07-09'
-        },
         { // 盛天
           b_price: 24.77,
           s_price: 25.53,
           amount: 1600,
           b_time: '2020-07-08',
-          s_time: '2020-07-09'
+          s_time: '2020-07-09',
+          mark: '盛天'
         },
         { // 600515海航基础
           b_price: 7.29,
           s_price: 8.53,
           amount: 1000,
           b_time: '2020-07-10',
-          s_time: '2020-07-13'
+          s_time: '2020-07-13',
+          mark: '海航基础'
         },
         { // 华天科技
           b_price: 17.7,
-          s_price: 19.01,
+          s_price: null,
           amount: 600,
           b_time: '2020-07-13',
-          s_time: null
+          s_time: null,
+          mark: '华天科技'
+        },
+        { // 华天科技
+          b_price: 19.19,
+          s_price: null,
+          amount: 600,
+          b_time: '2020-07-14',
+          s_time: null,
+          mark: '华天科技'
+        },
+        { // 华天科技
+          b_price: 18.27,
+          s_price: 19.1,
+          amount: 600,
+          b_time: '2020-07-14',
+          s_time: '2020-07-14',
+          mark: '华天科技'
         },
         { // 中欣氟材
           b_price: 21.27,
-          s_price: 22.35,
+          s_price: 23.37,
           amount: 500,
           b_time: '2020-07-13',
-          s_time: null
+          s_time: '2020-07-14',
+          mark: '中欣氟材'
         }
       ]
     },

@@ -179,7 +179,8 @@ class Index extends Component {
         exFreeIntro: exFreeIntro,
         bfree,
         importCapital,
-        exportCapital
+        exportCapital,
+        mark: data.mark
       }
       result.push(param);
     }
@@ -374,21 +375,33 @@ class Index extends Component {
         }
       },
       {
-        title: '卖出价格',
-        dataIndex: 'upRatioPrice',
-        key: 'upRatioPrice',
+        title: '备注',
+        dataIndex: 'mark',
+        key: 'mark',
         render: (param, o) => {
-          return `${fNum(param, 3)}(${current_upRatio}%)`
-        }
-      },
-      {
-        title: '买入价格',
-        dataIndex: 'downRatioPrice',
-        key: 'downRatioPrice',
-        render: (param, o) => {
-          return `${fNum(param, 3)}(-${current_downRatio}%)`
+          console.log('mark', o)
+          if (param) {
+            return `${param}`
+          } 
+          return '--'
         }
       }
+      // {
+      //   title: '卖出价格',
+      //   dataIndex: 'upRatioPrice',
+      //   key: 'upRatioPrice',
+      //   render: (param, o) => {
+      //     return `${fNum(param, 3)}(${current_upRatio}%)`
+      //   }
+      // },
+      // {
+      //   title: '买入价格',
+      //   dataIndex: 'downRatioPrice',
+      //   key: 'downRatioPrice',
+      //   render: (param, o) => {
+      //     return `${fNum(param, 3)}(-${current_downRatio}%)`
+      //   }
+      // }
     ];
     const paginationProps = {
       pageSize: Number(localStorage.getItem('pageSize') || 10),
