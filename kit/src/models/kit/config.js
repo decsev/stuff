@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sh600276,sz300015,sz300146,sh600559,sz002024,sh601069,sz002242,sh600515,sz002185', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
+  stockCodesList: 'sh000001,sh600559,sz002024,sz300494,sz000411,sz000001', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -11,25 +11,197 @@ const gridData = {
       stockCode: 'sh600559', // 股票代码 
       dealList: [
         {
-          b_price: 14.23,
+          b_price: 14.21,
           s_price: null,
           amount: 1000,
-          b_time: '2020-07-08',
+          b_time: '2020-07-16',
           s_time: null
+        },
+        {
+          b_price: 14.07,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 13.74,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 13.65,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 13.61,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 13.45,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 13.4,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-16',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '苏宁', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz002024', // 股票代码 
+      dealList: [
+        {
+          b_price: 11.75,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-15',
+          s_time: null
+        },
+        {
+          b_price: 11.52,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-15',
+          s_time: null
+        },
+        {
+          b_price: 11.33,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-15',
+          s_time: null
+        },
+        {
+          b_price: 11.31,
+          s_price: 11.58,
+          amount: 1000,
+          b_time: '2020-07-15',
+          s_time: '2020-07-16'
+        },
+        {
+          b_price: 11.01,
+          s_price: 11.55,
+          amount: 1000,
+          b_time: '2020-07-16',
+          s_time: '2020-07-16'
+        },
+        {
+          b_price: 11.06,
+          s_price: 11.47,
+          amount: 1000,
+          b_time: '2020-07-16',
+          s_time: '2020-07-16'
+        }
+      ]
+    },
+    {
+      strategyName: '盛天', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300494', // 股票代码 
+      dealList: [
+        {
+          b_price: 21.86,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 20.66,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '英特', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000411', // 股票代码 
+      dealList: [
+        {
+          b_price: 12.3,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 11.94,
+          s_price: null,
+          amount: 500,
+          b_time: '2020-07-16',
+          s_time: null
+        }
+      ]
+    },
+    {
+      strategyName: '平安', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz000001', // 股票代码 
+      dealList: [
+        {
+          b_price: 14.41,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-16',
+          s_time: null
+        }
+      ]
+    },
+
+    {
+      strategyName: '小白1', // 策略名
+      isOpen: false, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sh600559', // 股票代码 
+      dealList: [
+        {
+          b_price: 14.23,
+          s_price: 14.83,
+          amount: 1000,
+          b_time: '2020-07-08',
+          s_time: '2020-07-15'
         },
         {
           b_price: 14.52,
-          s_price: null,
+          s_price: 14.83,
           amount: 1000,
           b_time: '2020-07-10',
-          s_time: null
+          s_time: '2020-07-15'
         },
         {
           b_price: 15.29,
-          s_price: null,
+          s_price: 14.83,
           amount: 1000,
           b_time: '2020-07-10',
-          s_time: null
+          s_time: '2020-07-15'
         },
         {
           b_price: 15.14,
@@ -54,10 +226,10 @@ const gridData = {
         },
         {
           b_price: 15.01,
-          s_price: null,
+          s_price: 14.83,
           amount: 1000,
           b_time: '2020-07-14',
-          s_time: null
+          s_time: '2020-07-15'
         }, {
           b_price: 14.75,
           s_price: 15,
@@ -67,9 +239,8 @@ const gridData = {
         }
       ]
     },
-
     {
-      strategyName: '苏宁', // 策略名
+      strategyName: '苏宁1', // 策略名
       isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
@@ -91,7 +262,6 @@ const gridData = {
         }
       ]
     },
-
     {
       strategyName: '黄金', // 策略名
       isOpen: false, // 是否当前持仓
@@ -174,17 +344,17 @@ const gridData = {
 
     {
       strategyName: '爱尔眼科', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz300015', // 股票代码 
       dealList: [
         {
           b_price: 41.92,
-          s_price: null,
+          s_price: 47.18,
           amount: 300,
           b_time: '2020-07-03',
-          s_time: null
+          s_time: '2020-07-15'
         },
         {
           b_price: 46.03,
@@ -223,10 +393,10 @@ const gridData = {
         },
         {
           b_price: 46.02,
-          s_price: null,
+          s_price: 47.46,
           amount: 300,
           b_time: '2020-07-14',
-          s_time: null
+          s_time: '2020-07-15'
         },
         {
           b_price: 45.41,
@@ -240,17 +410,17 @@ const gridData = {
 
     {
       strategyName: '小汤', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz300146', // 股票代码 
       dealList: [
         {
           b_price: 20.18,
-          s_price: null,
+          s_price: 22.34,
           amount: 500,
           b_time: '2020-07-06',
-          s_time: null
+          s_time: '2020-07-15'
         },
         {
           b_price: 21.54,
@@ -278,7 +448,7 @@ const gridData = {
 
     {
       strategyName: '一夜情', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz002185', // 股票代码 
@@ -301,18 +471,18 @@ const gridData = {
         },
         { // 华天科技
           b_price: 17.7,
-          s_price: null,
+          s_price: 18.62,
           amount: 600,
           b_time: '2020-07-13',
-          s_time: null,
+          s_time: '2020-07-15',
           mark: '华天科技'
         },
         { // 华天科技
           b_price: 19.19,
-          s_price: null,
+          s_price: 18.62,
           amount: 600,
           b_time: '2020-07-14',
-          s_time: null,
+          s_time: '2020-07-15',
           mark: '华天科技'
         },
         { // 华天科技
