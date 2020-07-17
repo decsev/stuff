@@ -58,6 +58,35 @@ const gridData = {
           amount: 1000,
           b_time: '2020-07-16',
           s_time: null
+        },
+        
+        {
+          b_price: 12.97,
+          s_price: 13.44,
+          amount: 2000,
+          b_time: '2020-07-17',
+          s_time: '2020-07-17'
+        },
+        {
+          b_price: 12.91,
+          s_price: 13.34,
+          amount: 1000,
+          b_time: '2020-07-17',
+          s_time: '2020-07-17'
+        },
+        {
+          b_price: 12.87,
+          s_price: 13.35,
+          amount: 1000,
+          b_time: '2020-07-17',
+          s_time: '2020-07-17'
+        },
+        {
+          b_price: 12.71,
+          s_price: 13.39,
+          amount: 1000,
+          b_time: '2020-07-17',
+          s_time: '2020-07-17'
         }
       ]
     },
@@ -77,17 +106,17 @@ const gridData = {
         },
         {
           b_price: 11.52,
-          s_price: null,
+          s_price: 11.51,
           amount: 1000,
           b_time: '2020-07-15',
-          s_time: null
+          s_time: '2020-07-17'
         },
         {
           b_price: 11.33,
-          s_price: null,
+          s_price: 11.53,
           amount: 1000,
           b_time: '2020-07-15',
-          s_time: null
+          s_time: '2020-07-17'
         },
         {
           b_price: 11.31,
@@ -170,6 +199,13 @@ const gridData = {
           s_price: null,
           amount: 1000,
           b_time: '2020-07-16',
+          s_time: null
+        },
+        {
+          b_price: 14.1,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-17',
           s_time: null
         }
       ]
