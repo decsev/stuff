@@ -87,22 +87,36 @@ const gridData = {
           amount: 1000,
           b_time: '2020-07-17',
           s_time: '2020-07-17'
+        },
+        {
+          b_price: 12.45,
+          s_price: 12.98,
+          amount: 1000,
+          b_time: '2020-07-20',
+          s_time: '2020-07-20'
+        },
+        {
+          b_price: 12.41,
+          s_price: 12.98,
+          amount: 1000,
+          b_time: '2020-07-20',
+          s_time: '2020-07-20'
         }
       ]
     },
     {
       strategyName: '苏宁', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz002024', // 股票代码 
       dealList: [
         {
           b_price: 11.75,
-          s_price: null,
+          s_price: 11.53,
           amount: 1000,
           b_time: '2020-07-15',
-          s_time: null
+          s_time: '2020-07-20'
         },
         {
           b_price: 11.52,
@@ -157,56 +171,63 @@ const gridData = {
         },
         {
           b_price: 20.66,
-          s_price: null,
+          s_price: 21.21,
           amount: 500,
           b_time: '2020-07-16',
-          s_time: null
+          s_time: '2020-07-20'
+        },
+        {
+          b_price: 20.56,
+          s_price: 21.08,
+          amount: 500,
+          b_time: '2020-07-20',
+          s_time: '2020-07-20'
         }
       ]
     },
     {
       strategyName: '英特', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz000411', // 股票代码 
       dealList: [
         {
           b_price: 12.3,
-          s_price: null,
+          s_price: 12.19,
           amount: 500,
           b_time: '2020-07-16',
-          s_time: null
+          s_time: '2020-07-20'
         },
         {
           b_price: 11.94,
-          s_price: null,
+          s_price: 12.19,
           amount: 500,
           b_time: '2020-07-16',
-          s_time: null
+          s_time: '2020-07-20'
         }
       ]
     },
     {
       strategyName: '平安', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz000001', // 股票代码 
       dealList: [
         {
           b_price: 14.41,
-          s_price: null,
+          s_price: 14.68,
           amount: 1000,
           b_time: '2020-07-16',
-          s_time: null
+          s_time: '2020-07-20'
         },
         {
           b_price: 14.1,
-          s_price: null,
+          s_price: 14.68,
           amount: 1000,
           b_time: '2020-07-17',
-          s_time: null
+          s_time: '2020-07-20'
         }
       ]
     },
