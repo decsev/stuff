@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sh600559,sh600867,sh603087', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
+  stockCodesList: 'sh000001,sh600559,sh600867,sh603087,sz000795', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -117,6 +117,13 @@ const gridData = {
           amount: 1000,
           b_time: '2020-07-21',
           s_time: null
+        },
+        {
+          b_price: 14.06,
+          s_price: 14.32,
+          amount: 1000,
+          b_time: '2020-07-21',
+          s_time: '2020-07-22'
         }
       ]
     },
@@ -129,9 +136,23 @@ const gridData = {
       dealList: [
         {
           b_price: 209.99,
-          s_price: null,
+          s_price: 217.5,
           amount: 100,
           b_time: '2020-07-21',
+          s_time: '2020-07-22'
+        },
+        {
+          b_price: 207,
+          s_price: null,
+          amount: 100,
+          b_time: '2020-07-22',
+          s_time: null
+        },
+        {
+          b_price: 205.91,
+          s_price: null,
+          amount: 100,
+          b_time: '2020-07-22',
           s_time: null
         }
       ]
@@ -537,10 +558,10 @@ const gridData = {
 
     {
       strategyName: '一夜情', // 策略名
-      isOpen: false, // 是否当前持仓
+      isOpen: true, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz002185', // 股票代码 
+      stockCode: 'sz000795', // 股票代码 
       dealList: [
         { // 盛天
           b_price: 24.77,
@@ -589,6 +610,14 @@ const gridData = {
           b_time: '2020-07-13',
           s_time: '2020-07-14',
           mark: '中欣氟材'
+        },
+        { 
+          b_price: 6.79,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-07-22',
+          s_time: null,
+          mark: '英洛华'
         }
       ]
     },
