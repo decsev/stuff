@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sh600559,sh600867,sh603087,sz000795', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
+  stockCodesList: 'sh000001,sh600559,sh600867,sh603087,sz300058', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -101,6 +101,20 @@ const gridData = {
           amount: 1000,
           b_time: '2020-07-20',
           s_time: '2020-07-20'
+        },
+        {
+          b_price: 12.86,
+          s_price: 13.1,
+          amount: 1000,
+          b_time: '2020-07-23',
+          s_time: '2020-07-23'
+        },
+        {
+          b_price: 12.7,
+          s_price: 13.1,
+          amount: 1000,
+          b_time: '2020-07-23',
+          s_time: '2020-07-23'
         }
       ]
     },
@@ -124,12 +138,19 @@ const gridData = {
           amount: 1000,
           b_time: '2020-07-21',
           s_time: '2020-07-22'
+        },
+        {
+          b_price: 13.9,
+          s_price: 14.01,
+          amount: 1000,
+          b_time: '2020-07-23',
+          s_time: '2020-07-23'
         }
       ]
     },
     {
       strategyName: '甘李', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sh603087', // 股票代码 
@@ -143,17 +164,17 @@ const gridData = {
         },
         {
           b_price: 207,
-          s_price: null,
+          s_price: 223.88,
           amount: 100,
           b_time: '2020-07-22',
-          s_time: null
+          s_time: '2020-07-23'
         },
         {
           b_price: 205.91,
-          s_price: null,
+          s_price: 221.99,
           amount: 100,
           b_time: '2020-07-22',
-          s_time: null
+          s_time: '2020-07-23'
         }
       ]
     },
@@ -558,7 +579,7 @@ const gridData = {
 
     {
       strategyName: '一夜情', // 策略名
-      isOpen: true, // 是否当前持仓
+      isOpen: false, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz000795', // 股票代码 
@@ -613,10 +634,10 @@ const gridData = {
         },
         { 
           b_price: 6.79,
-          s_price: null,
+          s_price: 6.9,
           amount: 2000,
           b_time: '2020-07-22',
-          s_time: null,
+          s_time: '2020-07-23',
           mark: '英洛华'
         }
       ]
@@ -686,7 +707,7 @@ const gridData = {
     },
     {
       strategyName: '蓝色光标', // 策略名
-      isOpen: false, // 是否当前持仓
+      isOpen: true, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
       stockCode: 'sz300058', // 股票代码 
@@ -704,6 +725,13 @@ const gridData = {
           amount: 1000,
           b_time: '2020-07-02',
           s_time: '2020-07-03'
+        },
+        {
+          b_price: 7.37,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-23',
+          s_time: null
         }
       ]
     },
