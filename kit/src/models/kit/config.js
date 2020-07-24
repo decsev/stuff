@@ -1,6 +1,6 @@
 // 我的持仓列表
 const gridData = {
-  stockCodesList: 'sh000001,sh600559,sh600867,sh603087,sz300058', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
+  stockCodesList: 'sh000001,sh600559,sh600867,sh603087,sz300058,sz300113,sz300347', // sz000002,sh600048,sh512150,sh601318,sz000333,sh512000,sz000568,sh600009,sh600048,sh600887,sh600036,
   closeCodeList: 'sz002955,sh600741,sz000069,sz002751,sh512880,sh512000,sz002027,sh601069',
   strategyList: [
     {
@@ -59,7 +59,27 @@ const gridData = {
           b_time: '2020-07-16',
           s_time: null
         },
-        
+        {
+          b_price: 12.87,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-07-24',
+          s_time: null
+        },
+        {
+          b_price: 12.72,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-24',
+          s_time: null
+        },
+        {
+          b_price: 12.42,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-07-24',
+          s_time: null
+        },
         {
           b_price: 12.97,
           s_price: 13.44,
@@ -133,6 +153,34 @@ const gridData = {
           s_time: null
         },
         {
+          b_price: 13.68,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-24',
+          s_time: null
+        },
+        {
+          b_price: 13.51,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-24',
+          s_time: null
+        },
+        {
+          b_price: 13.4,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-24',
+          s_time: null
+        },
+        {
+          b_price: 12.9,
+          s_price: null,
+          amount: 2000,
+          b_time: '2020-07-24',
+          s_time: null
+        },
+        {
           b_price: 14.06,
           s_price: 14.32,
           amount: 1000,
@@ -148,6 +196,31 @@ const gridData = {
         }
       ]
     },
+
+    {
+      strategyName: 'tiger', // 策略名
+      isOpen: true, // 是否当前持仓
+      needstampFree: true, // 是否需要印花税
+      freeRatio: 0.00025, // 交易手续费比率
+      stockCode: 'sz300347', // 股票代码 
+      dealList: [
+        {
+          b_price: 106,
+          s_price: null,
+          amount: 100,
+          b_time: '2020-07-24',
+          s_time: null
+        },
+        {
+          b_price: 104.53,
+          s_price: null,
+          amount: 100,
+          b_time: '2020-07-24',
+          s_time: null
+        }
+      ]
+    },
+
     {
       strategyName: '甘李', // 策略名
       isOpen: false, // 是否当前持仓
@@ -579,10 +652,10 @@ const gridData = {
 
     {
       strategyName: '一夜情', // 策略名
-      isOpen: false, // 是否当前持仓
+      isOpen: true, // 是否当前持仓
       needstampFree: true, // 是否需要印花税
       freeRatio: 0.00025, // 交易手续费比率
-      stockCode: 'sz000795', // 股票代码 
+      stockCode: 'sz300113', // 股票代码 
       dealList: [
         { // 盛天
           b_price: 24.77,
@@ -639,6 +712,14 @@ const gridData = {
           b_time: '2020-07-22',
           s_time: '2020-07-23',
           mark: '英洛华'
+        },
+        { 
+          b_price: 25.99,
+          s_price: null,
+          amount: 800,
+          b_time: '2020-07-24',
+          s_time: null,
+          mark: '顺网科技'
         }
       ]
     },
@@ -731,6 +812,13 @@ const gridData = {
           s_price: null,
           amount: 1000,
           b_time: '2020-07-23',
+          s_time: null
+        },
+        {
+          b_price: 7.23,
+          s_price: null,
+          amount: 1000,
+          b_time: '2020-07-24',
           s_time: null
         }
       ]
