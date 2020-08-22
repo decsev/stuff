@@ -1,9 +1,14 @@
+<!--
+ * @Date: 2019-08-10 11:48:20
+ * @LastEditors: lianggua
+ * @LastEditTime: 2020-08-22 17:19:29
+-->
 开发：
 
 ```bash
 npm run build:dll #第一次npm run dev时需运行此命令，使开发时编译更快
 npm run start:dev #连的是测试环境
-npm run start:prod #连的是生产环境
+npm run start:prod #连的是生产环境  mac cp -r dist/ /data/www/tp5/public/m/
 打开 http://localhost:8000
 ```
 
