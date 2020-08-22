@@ -2098,7 +2098,12 @@ const myInterestFormData = [{
       options: [
         {label: 'all', value: 1},
         {label: 'zfb', value: 2},
-        {label: 'yh', value: 3}
+        {label: 'yh', value: 3},
+        {label: '婷', value: 4},
+        {label: '忠', value: 5},
+        {label: '烽', value: 6},
+        {label: '健', value: 7},
+        {label: '娟', value: 8}
       ]
     }
   ]
@@ -2106,47 +2111,94 @@ const myInterestFormData = [{
 
 // 我的借贷列表
 const myInterestList = [
+  // {
+  //   origin: 'zfb',
+  //   originValue: 2,
+  //   startTime: '2019-4-26',
+  //   endTime: '2019-5-16',
+  //   ratio: 9,
+  //   capital: 30000
+  // },
+  // {
+  //   origin: 'zfb',
+  //   originValue: 2,
+  //   startTime: '2019-4-26',
+  //   endTime: '2019-5-16',
+  //   ratio: 9,
+  //   capital: 40000
+  // },
+  // {
+  //   origin: 'yh',
+  //   originValue: 3,
+  //   startTime: '2019-5-15',
+  //   endTime: null,
+  //   ratio: 4.5,
+  //   capital: 63754.26
+  // },
+  // {
+  //   origin: 'yh',
+  //   originValue: 3,
+  //   startTime: '2019-5-20',
+  //   endTime: null,
+  //   ratio: 4.5,
+  //   capital: 71450.61
+  // },
+  // {
+  //   origin: 'yh',
+  //   originValue: 3,
+  //   startTime: '2020-3-19',
+  //   endTime: null,
+  //   ratio: 4.5,
+  //   capital: 93406.98
+  // },
+  // {
+  //   origin: 'zfb',
+  //   originValue: 2,
+  //   startTime: '2020-3-19',
+  //   endTime: '2020-3-26',
+  //   ratio: 9,
+  //   capital: 92000
+  // },
+
   {
-    origin: 'zfb',
-    startTime: '2019-4-26',
-    endTime: '2019-5-16',
-    ratio: 9,
-    capital: 30000
-  },
-  {
-    origin: 'zfb',
-    startTime: '2019-4-26',
-    endTime: '2019-5-16',
-    ratio: 9,
-    capital: 40000
-  },
-  {
-    origin: 'yh',
-    startTime: '2019-5-15',
+    origin: '婷',
+    originValue: 4,
+    startTime: '2020-8-22',
     endTime: null,
     ratio: 4.5,
-    capital: 63754.26
+    capital: 100000
   },
   {
-    origin: 'yh',
-    startTime: '2019-5-20',
+    origin: '忠',
+    originValue: 5,
+    startTime: '2020-8-22',
     endTime: null,
     ratio: 4.5,
-    capital: 71450.61
+    capital: 10000
   },
   {
-    origin: 'yh',
-    startTime: '2020-3-19',
+    origin: '烽',
+    originValue: 6,
+    startTime: '2020-8-22',
     endTime: null,
     ratio: 4.5,
-    capital: 93406.98
+    capital: 10000
   },
   {
-    origin: 'zfb',
-    startTime: '2020-3-19',
-    endTime: '2020-3-26',
-    ratio: 9,
-    capital: 92000
+    origin: '健',
+    originValue: 7,
+    startTime: '2020-8-22',
+    endTime: null,
+    ratio: 4.5,
+    capital: 60000
+  },
+  {
+    origin: '娟',
+    originValue: 8,
+    startTime: '2020-8-22',
+    endTime: null,
+    ratio: 4.5,
+    capital: 20000
   }
 ]
 export {gridFromData, gridData, stockFromData, interestFormData, myInterestFormData, myInterestList};

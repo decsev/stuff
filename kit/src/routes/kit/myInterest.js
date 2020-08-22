@@ -47,18 +47,24 @@ class Index extends Component {
         return !item.endTime;
       })
     }
-    if (current_myInterestOrigin === 2) {
-      // zfb
+    if (current_myInterestOrigin !== 1) {
+      console.log(current_myInterestOrigin, typeof current_myInterestOrigin)
       arr = arr.filter((item) => {
-        return item.origin === 'zfb';
+        return item.originValue === current_myInterestOrigin;
       })
     }
-    if (current_myInterestOrigin === 3) {
-      // yh
-      arr = arr.filter((item) => {
-        return item.origin === 'yh';
-      })
-    }
+    // if (current_myInterestOrigin === 2) {
+    //   // zfb
+    //   arr = arr.filter((item) => {
+    //     return item.origin === 'zfb';
+    //   })
+    // }
+    // if (current_myInterestOrigin === 3) {
+    //   // yh
+    //   arr = arr.filter((item) => {
+    //     return item.origin === 'yh';
+    //   })
+    // }
     let t = new Date();
     let aDay = 24 * 60 * 60 * 1000;
     let allInterest = 0;
