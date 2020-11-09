@@ -2133,7 +2133,7 @@ const myInterestList = [
     originValue: 3,
     startTime: '2019-5-15',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 63754.26
   },
   {
@@ -2141,7 +2141,7 @@ const myInterestList = [
     originValue: 3,
     startTime: '2019-5-20',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 71450.61
   },
   {
@@ -2149,7 +2149,7 @@ const myInterestList = [
     originValue: 3,
     startTime: '2020-3-19',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 93406.98
   },
   {
@@ -2166,7 +2166,7 @@ const myInterestList = [
     originValue: 4,
     startTime: '2020-8-22',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 100000
   },
   {
@@ -2174,15 +2174,15 @@ const myInterestList = [
     originValue: 5,
     startTime: '2020-8-22',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 10000
   },
   {
     origin: '烽',
     originValue: 6,
     startTime: '2020-8-22',
-    endTime: null,
-    ratio: 4.5,
+    endTime: '2020-10-27',
+    ratio: 5,
     capital: 10000
   },
   {
@@ -2190,7 +2190,7 @@ const myInterestList = [
     originValue: 7,
     startTime: '2020-8-22',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 60000
   },
   {
@@ -2198,7 +2198,7 @@ const myInterestList = [
     originValue: 8,
     startTime: '2020-8-22',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 20000
   },
   {
@@ -2206,7 +2206,7 @@ const myInterestList = [
     originValue: 9,
     startTime: '2020-9-30',
     endTime: null,
-    ratio: 4.5,
+    ratio: 5,
     capital: 10000
   }
 ]
