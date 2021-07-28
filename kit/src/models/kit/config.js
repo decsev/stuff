@@ -2173,7 +2173,7 @@ const myInterestList = [
     origin: '忠',
     originValue: 5,
     startTime: '2020-8-22',
-    endTime: null,
+    endTime: ' 2020-12-27',
     ratio: 5,
     capital: 10000
   },
@@ -2189,7 +2189,7 @@ const myInterestList = [
     origin: '健',
     originValue: 7,
     startTime: '2020-8-22',
-    endTime: null,
+    endTime: '2021-7-30',
     ratio: 5,
     capital: 60000
   },
@@ -2197,7 +2197,7 @@ const myInterestList = [
     origin: '娟',
     originValue: 8,
     startTime: '2020-8-22',
-    endTime: null,
+    endTime: '2021-4-13',
     ratio: 5,
     capital: 20000
   },
@@ -2205,7 +2205,7 @@ const myInterestList = [
     origin: '莲',
     originValue: 9,
     startTime: '2020-9-30',
-    endTime: null,
+    endTime: ' 2021-6-27',
     ratio: 5,
     capital: 10000
   }
